@@ -62,6 +62,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         
     }
     
+    //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
@@ -80,13 +81,14 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }
     
+    //Once the send button is pressed run outgoingData to send and print to console
     @IBAction func clickSendAction(_ sender: AnyObject) {
         outgoingData()
         
     }
     
     
-    
+    //Print out in the console what just got sent out from the input text box
     func outgoingData () {
         let appendString = "\n"
         
@@ -108,7 +110,8 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         
     }
     
-    // Write functions
+    // Write functions --> ESP32
+    //Write a string from the text box
     func writeValue(data: String){
         let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
         //change the "data" to valueString
@@ -119,6 +122,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         }
     }
     
+    //Write a integer
     func writeCharacteristic(val: Int8){
         var val = val
         let ns = NSData(bytes: &val, length: MemoryLayout<Int8>.size)
