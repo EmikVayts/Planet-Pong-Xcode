@@ -6,10 +6,6 @@
 //  Copyright © 2016 Vanguard Logic LLC. All rights reserved.
 //
 
-
-
-
-
 import UIKit
 import CoreBluetooth
 
@@ -26,10 +22,10 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     var peripheral: CBPeripheral!
     private var consoleAsciiText:NSAttributedString? = NSAttributedString(string: "")
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Setting up graphical page settings
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
         self.baseTextView.delegate = self
         self.inputTextField.delegate = self
@@ -42,8 +38,10 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         self.inputTextField.layer.borderWidth = 2.0
         self.inputTextField.layer.borderColor = UIColor.blue.cgColor
         self.inputTextField.layer.cornerRadius = 3.0
+        
         //Create and start the peripheral manager
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        
         //-Notification for updating the text view with incoming text
         updateIncomingData()
     }
@@ -194,7 +192,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
 }
 
-
+//CODE FOR CONVERTING FROM SWIFT 3 EXAMPLE TO NEW VERSION OF SWIFT
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
 	return input.rawValue
