@@ -172,7 +172,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         
         let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerPlanetPong") as! ViewControllerPlanetPong
         
-        uartViewController.peripheral = peripheral
+        //uartViewController.peripheral = peripheral
         
         navigationController?.pushViewController(uartViewController, animated: true)
     }
@@ -284,8 +284,8 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         if ((characteristic.descriptors) != nil) {
             
             for x in characteristic.descriptors!{
-                let descript = x as CBDescriptor!
-                print("function name: DidDiscoverDescriptorForChar \(String(describing: descript?.description))")
+                let descript = x as CBDescriptor
+                print("function name: DidDiscoverDescriptorForChar \(String(describing: descript.description))")
                 print("Rx Value \(String(describing: rxCharacteristic?.value))")
                 print("Tx Value \(String(describing: txCharacteristic?.value))")
             }

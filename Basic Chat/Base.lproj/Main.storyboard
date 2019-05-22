@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yh-2X-Wy2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Yh-2X-Wy2">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -516,7 +516,7 @@ Vote for Planet Pong!</string>
                         <outlet property="button0" destination="EFt-Z6-dL9" id="Rev-Dd-C9Z"/>
                         <outlet property="button1" destination="nwA-oN-57q" id="TDx-2e-h1F"/>
                         <outlet property="button2" destination="g9b-t1-m2f" id="fjG-wC-1SA"/>
-                        <outlet property="button3" destination="KfW-hu-shT" id="rX7-qw-Pvw"/>
+                        <outlet property="button3" destination="KfW-hu-shT" id="KFW-rs-2W6"/>
                         <outlet property="button4" destination="t2k-Td-uPE" id="kbF-lS-OKi"/>
                         <outlet property="button5" destination="MQN-Lb-dY0" id="0vT-LW-1Xv"/>
                         <outlet property="button6" destination="ANA-2j-ldz" id="EQ5-1d-YYe"/>

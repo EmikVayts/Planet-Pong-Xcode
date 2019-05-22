@@ -11,7 +11,7 @@
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
-		D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DDF1DEE393B00D33B5A /* Main.storyboard */; };
+		D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DDF1DEE393B00D33B5A /* Main.storyboard */; settings = {ASSET_TAGS = (Un, ); }; };
 		D5B24DE31DEE393B00D33B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DE21DEE393B00D33B5A /* Assets.xcassets */; };
 		D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */; };
 		D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */; };
@@ -102,6 +102,9 @@
 		D5B24DD01DEE393B00D33B5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Un,
+				);
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Vanguard Logic LLC";
@@ -109,7 +112,7 @@
 					D5B24DD71DEE393B00D33B5A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 72RBJN2RMF;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -119,6 +122,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -302,8 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetpong.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -317,8 +320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetpong.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
