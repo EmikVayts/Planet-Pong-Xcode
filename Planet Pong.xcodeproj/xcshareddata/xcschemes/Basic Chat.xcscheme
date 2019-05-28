@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
-   version = "2.0">
+   LastUpgradeVersion = "1020"
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5B24DD71DEE393B00D33B5A"
-               BuildableName = "Basic Chat.app"
-               BlueprintName = "Basic Chat"
-               ReferencedContainer = "container:Basic Chat.xcodeproj">
+               BuildableName = "Planet Pong.app"
+               BlueprintName = "Planet Pong"
+               ReferencedContainer = "container:Planet Pong.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5B24DD71DEE393B00D33B5A"
-            BuildableName = "Basic Chat.app"
-            BlueprintName = "Basic Chat"
-            ReferencedContainer = "container:Basic Chat.xcodeproj">
+            BuildableName = "Planet Pong.app"
+            BlueprintName = "Planet Pong"
+            ReferencedContainer = "container:Planet Pong.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -43,29 +43,24 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.planetpong.ios"
-         RemotePath = "/var/containers/Bundle/Application/88F4739F-8BEE-416F-BCC8-AADF6BCB7404/Basic Chat.app">
-      </RemoteRunnable>
-      <MacroExpansion>
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5B24DD71DEE393B00D33B5A"
-            BuildableName = "Basic Chat.app"
-            BlueprintName = "Basic Chat"
-            ReferencedContainer = "container:Basic Chat.xcodeproj">
+            BuildableName = "Planet Pong.app"
+            BlueprintName = "Planet Pong"
+            ReferencedContainer = "container:Planet Pong.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5B24DD71DEE393B00D33B5A"
-            BuildableName = "Basic Chat.app"
-            BlueprintName = "Basic Chat"
-            ReferencedContainer = "container:Basic Chat.xcodeproj">
+            BuildableName = "Planet Pong.app"
+            BlueprintName = "Planet Pong"
+            ReferencedContainer = "container:Planet Pong.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

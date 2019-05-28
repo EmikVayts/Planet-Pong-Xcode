@@ -6,11 +6,10 @@
 //  Copyright © 2019 Emik Vayts. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreBluetooth
 
-class ViewControllerPlanetPong: UIViewController {
+class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
 
     //UI
     @IBOutlet weak var button9: UIButton!
@@ -35,17 +34,18 @@ class ViewControllerPlanetPong: UIViewController {
     
     var timer = Timer()
     
+    //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
+        //Array of button objects
         cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
         //CUP ARRAYS
-        cupColor = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]; //Set all cup colors to blue
+        cupColor = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]; //Set all cup colors to blue
         
         //Start timer
         scheduledTimerWithTimeInterval()
         
         //Update score
-        
         
         super.viewDidLoad()
         styleButton();
@@ -53,6 +53,29 @@ class ViewControllerPlanetPong: UIViewController {
         view.setNeedsDisplay();
         //cup0Button.backgroundColor = UIColor.green;
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Create and start the peripheral manager
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        
+        //-Notification for updating the text view with incoming text
+        updateIncomingData()
+    }
+    
+    //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
+    func updateIncomingData () {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
+            notification in
+            //let appendString = "\n"
+            //let myFont = UIFont(name: "Helvetica Neue", size: 15.0)
+            //let myAttributes2 = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): myFont!, convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): UIColor.red]
+            //let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + appendString, attributes: convertToOptionalNSAttributedStringKeyDictionary(myAttributes2))
+            //let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
+            //self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: convertToOptionalNSAttributedStringKeyDictionary(myAttributes2))
+            //newAsciiText.append(attribString)
+            //self.consoleAsciiText = newAsciiText
+            //self.baseTextView.attributedText = self.consoleAsciiText
+            print(characteristicASCIIValue as String)
+        }
     }
     
     func styleButton() {
@@ -67,12 +90,14 @@ class ViewControllerPlanetPong: UIViewController {
         //Update the cup buttons
         for i in 0...9 {
             if cupColor[i] == 0 {
-                cupButtons[i].backgroundColor = UIColor.red;
+                cupButtons[i].backgroundColor = UIColor.black;
             } else if cupColor[i] == 1 {
-                cupButtons[i].backgroundColor = UIColor.green;
+                cupButtons[i].backgroundColor = UIColor.red;
             } else if cupColor[i] == 2 {
-                cupButtons[i].backgroundColor = UIColor.purple;
+                cupButtons[i].backgroundColor = UIColor.green;
             } else if cupColor[i] == 3 {
+                cupButtons[i].backgroundColor = UIColor.purple;
+            } else if cupColor[i] == 4 {
                 cupButtons[i].backgroundColor = UIColor.blue;
             }
         }
@@ -81,15 +106,17 @@ class ViewControllerPlanetPong: UIViewController {
     //Update one cup
     func updateCup(cup: Int) {
         //Update the cup buttons
-            if cupColor[cup] == 0 {
-                cupButtons[cup].backgroundColor = UIColor.red;
-            } else if cupColor[cup] == 1 {
-                cupButtons[cup].backgroundColor = UIColor.green;
-            } else if cupColor[cup] == 2 {
-                cupButtons[cup].backgroundColor = UIColor.purple;
-            } else if cupColor[cup] == 3 {
-                cupButtons[cup].backgroundColor = UIColor.blue;
-            }
+        if cupColor[cup] == 0 {
+            cupButtons[cup].backgroundColor = UIColor.black;
+        } else if cupColor[cup] == 1 {
+            cupButtons[cup].backgroundColor = UIColor.red;
+        } else if cupColor[cup] == 2 {
+            cupButtons[cup].backgroundColor = UIColor.green;
+        } else if cupColor[cup] == 3 {
+            cupButtons[cup].backgroundColor = UIColor.purple;
+        } else if cupColor[cup] == 4 {
+            cupButtons[cup].backgroundColor = UIColor.blue;
+        }
     }
     
     //This starts the timer to execute updateCounting every second
@@ -100,6 +127,14 @@ class ViewControllerPlanetPong: UIViewController {
     
     //THIS GETS RUN EVERY SECOND
     @objc func updateCounting(){
-        NSLog("counting..")
+        //NSLog("counting..")
+    }
+    
+    //Bluetooth Stuff
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        if peripheral.state == .poweredOn {
+            return
+        }
+        print("Peripheral manager is running")
     }
 }

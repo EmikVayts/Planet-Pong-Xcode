@@ -22,7 +22,7 @@
 		7DA0D5932259653500D999BB /* ViewControllerPlanetPong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetPong.swift; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
-		D5B24DD81DEE393B00D33B5A /* Basic Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B24DD81DEE393B00D33B5A /* Planet Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planet Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5B24DE21DEE393B00D33B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		D5B24DD91DEE393B00D33B5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B24DD81DEE393B00D33B5A /* Basic Chat.app */,
+				D5B24DD81DEE393B00D33B5A /* Planet Pong.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5B24DD71DEE393B00D33B5A /* Basic Chat */ = {
+		D5B24DD71DEE393B00D33B5A /* Planet Pong */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Basic Chat" */;
+			buildConfigurationList = D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Planet Pong" */;
 			buildPhases = (
 				D5B24DD41DEE393B00D33B5A /* Sources */,
 				D5B24DD51DEE393B00D33B5A /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = "Basic Chat";
+			name = "Planet Pong";
 			productName = "Basic Chat";
-			productReference = D5B24DD81DEE393B00D33B5A /* Basic Chat.app */;
+			productReference = D5B24DD81DEE393B00D33B5A /* Planet Pong.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -106,7 +106,7 @@
 					Un,
 				);
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Vanguard Logic LLC";
 				TargetAttributes = {
 					D5B24DD71DEE393B00D33B5A = {
@@ -117,12 +117,11 @@
 					};
 				};
 			};
-			buildConfigurationList = D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Basic Chat" */;
+			buildConfigurationList = D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Planet Pong" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -131,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B24DD71DEE393B00D33B5A /* Basic Chat */,
+				D5B24DD71DEE393B00D33B5A /* Planet Pong */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +188,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -234,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -287,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -302,7 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetpong.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,7 +317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planetpong.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -327,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Basic Chat" */ = {
+		D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Planet Pong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B24DE81DEE393B00D33B5A /* Debug */,
@@ -336,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Basic Chat" */ = {
+		D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Planet Pong" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B24DEB1DEE393B00D33B5A /* Debug */,

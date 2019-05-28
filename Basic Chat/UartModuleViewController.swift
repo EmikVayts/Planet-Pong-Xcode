@@ -85,7 +85,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         
     }
     
-    
     //Print out in the console what just got sent out from the input text box
     func outgoingData () {
         let appendString = "\n"
