@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fM-Fn-TJd">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu-->
+        <scene sceneID="GQs-0y-Vt0">
+            <objects>
+                <viewController title="Main Menu" id="aIw-Nz-iXk" customClass="ViewControllerHome" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eJh-qY-VJv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-SX-ptY">
+                                <rect key="frame" x="32" y="152" width="256" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="AbW-1k-1dL"/>
+                                    <constraint firstAttribute="height" constant="128" id="g0x-ah-0bU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="uLk-aI-o2O"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-tu-X6d">
+                                <rect key="frame" x="124" y="300" width="72" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="3vQ-Q9-9d0"/>
+                                    <constraint firstAttribute="width" constant="72" id="KKh-uC-JfT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToPairing:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="nmz-n8-ASh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onb-el-deT">
+                                <rect key="frame" x="124" y="348" width="72" height="32"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="FsV-ek-hd1"/>
+                                    <constraint firstAttribute="height" constant="32" id="ySt-cQ-aAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="SCORES">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="DRe-SN-77I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="onb-el-deT" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="JTE-1L-By0"/>
+                            <constraint firstItem="0mb-tu-X6d" firstAttribute="centerY" secondItem="RQD-uB-B8P" secondAttribute="centerY" id="LCW-Mu-OgS"/>
+                            <constraint firstItem="0mb-tu-X6d" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="PZP-ME-7Px"/>
+                            <constraint firstItem="fgt-SX-ptY" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="UlP-ET-w4a"/>
+                            <constraint firstItem="fgt-SX-ptY" firstAttribute="centerY" secondItem="RQD-uB-B8P" secondAttribute="centerY" constant="-100" id="bvP-bf-bu1"/>
+                            <constraint firstItem="onb-el-deT" firstAttribute="centerY" secondItem="RQD-uB-B8P" secondAttribute="centerY" constant="48" id="t18-tT-BYz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RQD-uB-B8P"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IKQ-Cp-I1K"/>
+                    <connections>
+                        <outlet property="scoreButton" destination="onb-el-deT" id="a7u-HE-Xg8"/>
+                        <outlet property="startButton" destination="0mb-tu-X6d" id="w9H-GN-kRJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfy-yT-Kq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.5" y="158.45070422535213"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X4g-2F-dNW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7fM-Fn-TJd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TKP-uc-rRS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aIw-Nz-iXk" kind="relationship" relationship="rootViewController" id="GkK-u8-GOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3R7-0h-acg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="158.45070422535213"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo2.png" width="600" height="243.75"/>
+    </resources>
+</document>

@@ -167,13 +167,11 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         peripheral.discoverServices([BLEService_UUID])
         
         
-        //Once connected, move to new view controller to manager incoming and outgoing data
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //Once connected, move to new view controller to manage incoming and outgoing data
+        let storyboard = UIStoryboard(name: "Classic", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "UartModuleViewController") as! UartModuleViewController
-        
-        //uartViewController.peripheral = peripheral
-        
+        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerPlanetPong") as! ViewControllerPlanetPong
+                
         navigationController?.pushViewController(uartViewController, animated: true)
     }
     

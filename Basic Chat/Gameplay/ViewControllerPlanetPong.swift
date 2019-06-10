@@ -1,5 +1,8 @@
 //
 //  ViewController.swift
+//
+//  Classic gamemode!
+//
 //  PlanetPongGUI
 //
 //  Created by Emik Vayts on 4/5/19.
@@ -32,10 +35,21 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     lazy var cupButtons = [UIButton]();
     var cupColor = [Int]();
     
+    //Ratchet Fix
+    var ratchetFix = false
+    
+    //Timer
     var timer = Timer()
+    var timeElapsed = 0 //In seconds
     
     //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
+        //Ratchet Fix
+        ratchetFix = false
+        
+        //Timer
+        timeElapsed = 0
+        
         //Array of button objects
         cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
@@ -65,16 +79,30 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
-            //let appendString = "\n"
-            //let myFont = UIFont(name: "Helvetica Neue", size: 15.0)
-            //let myAttributes2 = [convertFromNSAttributedStringKey(NSAttributedString.Key.font): myFont!, convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): UIColor.red]
-            //let attribString = NSAttributedString(string: "[Incoming]: " + (characteristicASCIIValue as String) + appendString, attributes: convertToOptionalNSAttributedStringKeyDictionary(myAttributes2))
-            //let newAsciiText = NSMutableAttributedString(attributedString: self.consoleAsciiText!)
-            //self.baseTextView.attributedText = NSAttributedString(string: characteristicASCIIValue as String , attributes: convertToOptionalNSAttributedStringKeyDictionary(myAttributes2))
-            //newAsciiText.append(attribString)
-            //self.consoleAsciiText = newAsciiText
-            //self.baseTextView.attributedText = self.consoleAsciiText
-            print(characteristicASCIIValue as String)
+            if (self.ratchetFix == false) {
+                self.ratchetFix = true
+            } else {
+                let incomingString = (characteristicASCIIValue as String)
+                print(incomingString)
+                
+                //PARSE THE INCOMING VALUE
+                //IF CUP HIT
+                if (incomingString[incomingString.index(incomingString.startIndex, offsetBy: 0)] == "0") {
+                    print("Cup hit!")
+                    let cupNum = Int(String(incomingString[incomingString.index(incomingString.startIndex, offsetBy: 1)]))
+
+                    //Update the cup color accordingly
+                    self.cupColor[cupNum ?? 0] = 0
+                    self.updateCup(cup: cupNum ?? 0)
+                    
+                }
+                
+                //IF TOTAL BALLS SHOT INCREMENTED
+                if (incomingString[incomingString.index(incomingString.startIndex, offsetBy: 0)] == "1") {
+                    print("Ball shot!")
+                }
+                
+            }
         }
     }
     
@@ -127,7 +155,9 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     
     //THIS GETS RUN EVERY SECOND
     @objc func updateCounting(){
-        //NSLog("counting..")
+        print(timeElapsed)
+        timeElapsed+=1
+        time.text = ("Score: \(timeElapsed)")
     }
     
     //Bluetooth Stuff
