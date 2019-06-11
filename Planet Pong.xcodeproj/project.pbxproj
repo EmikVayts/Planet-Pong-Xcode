@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		040E756522ADD72300E4B1F7 /* Classic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E756422ADD72200E4B1F7 /* Classic.storyboard */; };
 		040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */; };
+		040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E756C22AF49C200E4B1F7 /* GamemodeSelection.storyboard */; };
+		040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E756E22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift */; };
+		040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E757122AF4CF500E4B1F7 /* GameSettings.storyboard */; };
+		040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E757322AF4D2500E4B1F7 /* ViewControllerGameSettings.swift */; };
+		040E757622AF4E1600E4B1F7 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E757522AF4E1600E4B1F7 /* Tutorial.storyboard */; };
+		040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */; };
+		040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E757922AF4E8900E4B1F7 /* GameResults.storyboard */; };
+		040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E757B22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift */; };
 		040F5FB622A4E35F00D243D3 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB522A4E35F00D243D3 /* logo1.png */; };
 		040F5FB822A4E4F600D243D3 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB722A4E4F600D243D3 /* logo2.png */; };
 		040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB922A4E56C00D243D3 /* Home.storyboard */; };
@@ -26,6 +34,14 @@
 /* Begin PBXFileReference section */
 		040E756422ADD72200E4B1F7 /* Classic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Classic.storyboard; sourceTree = "<group>"; };
 		040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerHome.swift; path = "Basic Chat/Main Menu/ViewControllerHome.swift"; sourceTree = SOURCE_ROOT; };
+		040E756C22AF49C200E4B1F7 /* GamemodeSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GamemodeSelection.storyboard; sourceTree = "<group>"; };
+		040E756E22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeSelection.swift; sourceTree = "<group>"; };
+		040E757122AF4CF500E4B1F7 /* GameSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameSettings.storyboard; sourceTree = "<group>"; };
+		040E757322AF4D2500E4B1F7 /* ViewControllerGameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGameSettings.swift; sourceTree = "<group>"; };
+		040E757522AF4E1600E4B1F7 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTutorial.swift; sourceTree = "<group>"; };
+		040E757922AF4E8900E4B1F7 /* GameResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameResults.storyboard; sourceTree = "<group>"; };
+		040E757B22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGameResults.swift; sourceTree = "<group>"; };
 		040F5FB522A4E35F00D243D3 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
 		040F5FB722A4E4F600D243D3 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		040F5FB922A4E56C00D243D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -53,10 +69,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040E756822AF496400E4B1F7 /* Game Results */ = {
+			isa = PBXGroup;
+			children = (
+				040E757922AF4E8900E4B1F7 /* GameResults.storyboard */,
+				040E757B22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift */,
+			);
+			path = "Game Results";
+			sourceTree = "<group>";
+		};
+		040E756922AF496E00E4B1F7 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				040E757522AF4E1600E4B1F7 /* Tutorial.storyboard */,
+				040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		040E756A22AF497500E4B1F7 /* Game Settings */ = {
+			isa = PBXGroup;
+			children = (
+				040E757122AF4CF500E4B1F7 /* GameSettings.storyboard */,
+				040E757322AF4D2500E4B1F7 /* ViewControllerGameSettings.swift */,
+			);
+			path = "Game Settings";
+			sourceTree = "<group>";
+		};
+		040E756B22AF499000E4B1F7 /* Gamemode Selection */ = {
+			isa = PBXGroup;
+			children = (
+				040E756C22AF49C200E4B1F7 /* GamemodeSelection.storyboard */,
+				040E756E22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift */,
+			);
+			path = "Gamemode Selection";
+			sourceTree = "<group>";
+		};
 		040F5FBB22A4E90B00D243D3 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				040E756422ADD72200E4B1F7 /* Classic.storyboard */,
 				D5B24DDF1DEE393B00D33B5A /* Main.storyboard */,
 				D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */,
 				D50657251DF45E04002B7557 /* UartModuleViewController.swift */,
@@ -70,8 +121,8 @@
 		040F5FBC22A4E91900D243D3 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				040E756422ADD72200E4B1F7 /* Classic.storyboard */,
 				7DA0D5932259653500D999BB /* ViewControllerPlanetPong.swift */,
-				040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -79,6 +130,7 @@
 		040F5FBD22A4E92D00D243D3 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */,
 				040F5FB922A4E56C00D243D3 /* Home.storyboard */,
 				040F5FB522A4E35F00D243D3 /* logo1.png */,
 				040F5FB722A4E4F600D243D3 /* logo2.png */,
@@ -105,6 +157,10 @@
 		D5B24DDA1DEE393B00D33B5A /* Basic Chat */ = {
 			isa = PBXGroup;
 			children = (
+				040E756B22AF499000E4B1F7 /* Gamemode Selection */,
+				040E756A22AF497500E4B1F7 /* Game Settings */,
+				040E756922AF496E00E4B1F7 /* Tutorial */,
+				040E756822AF496400E4B1F7 /* Game Results */,
 				040F5FBD22A4E92D00D243D3 /* Main Menu */,
 				040F5FBC22A4E91900D243D3 /* Gameplay */,
 				040F5FBB22A4E90B00D243D3 /* Bluetooth */,
@@ -179,11 +235,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040E757622AF4E1600E4B1F7 /* Tutorial.storyboard in Resources */,
+				040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */,
+				040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */,
 				D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */,
 				040E756522ADD72300E4B1F7 /* Classic.storyboard in Resources */,
 				040F5FB822A4E4F600D243D3 /* logo2.png in Resources */,
 				D5B24DE31DEE393B00D33B5A /* Assets.xcassets in Resources */,
 				040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */,
+				040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */,
 				040F5FB622A4E35F00D243D3 /* logo1.png in Resources */,
 				D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */,
 			);
@@ -196,13 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */,
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
 				D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */,
 				040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */,
 				7DA0D5942259653500D999BB /* ViewControllerPlanetPong.swift in Sources */,
+				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
+				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
+				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
