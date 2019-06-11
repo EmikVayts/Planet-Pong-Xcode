@@ -16,5 +16,5 @@ class ViewControllerGameResults : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
     }
-    
+
 }
