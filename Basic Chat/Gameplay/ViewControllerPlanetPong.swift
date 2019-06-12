@@ -14,6 +14,17 @@ import UIKit
 import CoreBluetooth
 
 class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
+    
+    
+    /*func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == CBManagerState.poweredOn {
+            //
+        } else {
+            print("NOaked")
+            disconnectDevice()
+        }
+    }*/
+    
 
     //UI
     @IBOutlet weak var button9: UIButton!
@@ -32,6 +43,9 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     //Data
     var peripheralManager: CBPeripheralManager?
     var peripheral: CBPeripheral!
+    var centralManager : CBCentralManager!
+    
+    var central: CBCentralManager?
     
     lazy var cupButtons = [UIButton]();
     var cupColor = [Int]();
@@ -43,6 +57,10 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     var timer = Timer()
     var timeElapsed = 0 //In seconds
     
+    //Score
+    var totalShots = 0
+    var shotsMade = 0
+    
     //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
         //Ratchet Fix
@@ -50,6 +68,10 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         
         //Timer
         timeElapsed = 0
+        
+        //Score
+        totalShots = 0
+        shotsMade = 0
         
         //Array of button objects
         cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
@@ -96,11 +118,21 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     self.cupColor[cupNum ?? 0] = 0
                     self.updateCup(cup: cupNum ?? 0)
                     
+                    self.shotsMade+=1
+                    
+                    self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
+                    
+                    //Respond to the ESP32
+                    
                 }
                 
                 //IF TOTAL BALLS SHOT INCREMENTED
                 if (incomingString[incomingString.index(incomingString.startIndex, offsetBy: 0)] == "1") {
                     print("Ball shot!")
+                    
+                    self.totalShots+=1
+                    
+                    self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
                 }
                 
             }
@@ -109,7 +141,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     
     func styleButton() {
         for i in 0...9 {
-            cupButtons[i].backgroundColor = UIColor.blue;
+            cupButtons[i].backgroundColor = UIColor.red;
             cupButtons[i].layer.cornerRadius = 25;
         }
     }
@@ -158,14 +190,27 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @objc func updateCounting(){
         print(timeElapsed)
         timeElapsed+=1
-        time.text = ("Score: \(timeElapsed)")
+        time.text = ("Time: \(timeElapsed)")
     }
     
-    //Bluetooth Stuff
+    //If bluetooth on phone is turned on or off
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
             return
         }
+        if peripheral.state == .poweredOff {
+            disconnectDevice()
+        }
         print("Peripheral manager is running")
+    }
+    
+    //Disconnecting from bluetooth device --> navigate back to pairing screen
+    func disconnectDevice() {
+        //Go back to the pairing screen
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let uartViewController = storyboard.instantiateViewController(withIdentifier: "BLECentralViewController") as! BLECentralViewController
+        navigationController?.dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: false)
+        timer.invalidate()
     }
 }

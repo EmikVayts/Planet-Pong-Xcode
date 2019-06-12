@@ -18,7 +18,6 @@ var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 
 
-
 class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
     //Data
@@ -306,10 +305,13 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         }
     }
     
-    
-    
+    //When the device is disconnected
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        //GO BACK TO THE VIEW
         print("Disconnected")
+        navigationController?.dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: false)
+        timer.invalidate()
     }
     
     
@@ -367,15 +369,18 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             startScan()
             
         } else {
+            navigationController?.dismiss(animated: false, completion: nil)
+            navigationController?.popViewController(animated: false)
+            timer.invalidate()
             //If Bluetooth is off, display a UI alert message saying "Bluetooth is not enable" and "Make sure that your bluetooth is turned on"
-            print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
+            /*print("Bluetooth Disabled- Make sure your Bluetooth is turned on")
             
             let alertVC = UIAlertController(title: "Bluetooth is not enabled", message: "Make sure that your bluetooth is turned on", preferredStyle: UIAlertController.Style.alert)
             let action = UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: { (action: UIAlertAction) -> Void in
                 self.dismiss(animated: true, completion: nil)
             })
             alertVC.addAction(action)
-            self.present(alertVC, animated: true, completion: nil)
+            self.present(alertVC, animated: true, completion: nil)*/
         }
     }
 }
