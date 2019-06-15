@@ -37,8 +37,14 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button0: UIButton!
+    
+    @IBOutlet weak var playerTurn: UILabel!
+    
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var score: UITextField!
+    
+    @IBOutlet weak var island: UIButton!
+    @IBOutlet weak var rerack: UIButton!
     
     //Data
     var peripheralManager: CBPeripheralManager?
@@ -74,10 +80,13 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         shotsMade = 0
         
         //Array of button objects
-        cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
+        cupButtons = [button6, button7, button3, button8, button4, button1, button9, button5, button2, button0];
+        
+        //cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
         //CUP ARRAYS
-        cupColor = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]; //Set all cup colors to blue
+        cupColor = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; //Set all cup colors to green
+        updateCups()
         
         //Start timer
         scheduledTimerWithTimeInterval()
@@ -98,12 +107,22 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         updateIncomingData()
     }
     
+    func viewDidAppear() {
+        ratchetFix = false
+        styleButton()
+    }
+    
     //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
     func updateIncomingData () {
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
             notification in
             if (self.ratchetFix == false) {
                 self.ratchetFix = true
+                //Set initial cups
+                let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
+                self.writeValue(data: inputText)
+                
+                self.updateCups()
             } else {
                 let incomingString = (characteristicASCIIValue as String)
                 print(incomingString)
@@ -115,7 +134,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     let cupNum = Int(String(incomingString[incomingString.index(incomingString.startIndex, offsetBy: 1)]))
 
                     //Update the cup color accordingly
-                    self.cupColor[cupNum ?? 0] = 0
+                    self.cupColor[cupNum ?? 0] = Int.random(in: 1 ... 4)
                     self.updateCup(cup: cupNum ?? 0)
                     
                     self.shotsMade+=1
@@ -123,7 +142,8 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
                     
                     //Respond to the ESP32
-                    
+                    let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
+                    self.writeValue(data: inputText)
                 }
                 
                 //IF TOTAL BALLS SHOT INCREMENTED
@@ -139,11 +159,36 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         }
     }
     
+    // Write functions --> ESP32
+    //Write a string from the text box
+    func writeValue(data: String){
+        let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
+        //change the "data" to valueString
+        if let blePeripheral = blePeripheral{
+            if let txCharacteristic = txCharacteristic {
+                blePeripheral.writeValue(valueString!, for: txCharacteristic, type: CBCharacteristicWriteType.withResponse)
+            }
+        }
+    }
+    
+    //Set the corner radius and all
     func styleButton() {
         for i in 0...9 {
-            cupButtons[i].backgroundColor = UIColor.red;
-            cupButtons[i].layer.cornerRadius = 25;
+            cupButtons[i].layer.borderColor = UIColor.white.cgColor;
+            cupButtons[i].layer.borderWidth = 5;
+            cupButtons[i].backgroundColor = UIColor.black;
+            cupButtons[i].layer.cornerRadius = 30;
         }
+        
+        rerack.layer.borderColor = UIColor.white.cgColor;
+        rerack.layer.borderWidth = 3;
+        rerack.layer.cornerRadius = 3
+        rerack.alpha = 0.5
+        
+        island.layer.borderColor = UIColor.white.cgColor;
+        island.layer.borderWidth = 3;
+        island.layer.cornerRadius = 3;
+        island.alpha = 0.5
     }
     
     //Update all cups
@@ -162,6 +207,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                 cupButtons[i].backgroundColor = UIColor.blue;
             }
         }
+        playerTurn.shadowColor = UIColor.green
     }
     
     //Update one cup
