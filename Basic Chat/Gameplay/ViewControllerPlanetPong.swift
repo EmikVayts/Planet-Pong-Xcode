@@ -59,6 +59,9 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     //Ratchet Fix
     var ratchetFix = false
     
+    //Observer for incoming BLE strings
+    //var notifyObserver = nil
+    
     //Timer
     var timer = Timer()
     var timeElapsed = 0 //In seconds
@@ -85,7 +88,10 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         //cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
         //CUP ARRAYS
-        cupColor = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; //Set all cup colors to green
+        //cupColor = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; //Set all cup colors to red for ARCADE mode
+        cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+        let randCup = Int.random(in: 0 ... 9)
+        cupColor[randCup] = 1
         updateCups()
         
         //Start timer
@@ -112,9 +118,14 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         styleButton()
     }
     
+    func viewDidDisappear() {
+        print("Now removing observer")
+        NotificationCenter.default.removeObserver(NSNotification.Name(rawValue: "Notify"))
+    }
+    
     //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
     func updateIncomingData () {
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil) {
             notification in
             if (self.ratchetFix == false) {
                 self.ratchetFix = true
@@ -133,9 +144,24 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     print("Cup hit!")
                     let cupNum = Int(String(incomingString[incomingString.index(incomingString.startIndex, offsetBy: 1)]))
 
-                    //Update the cup color accordingly
-                    self.cupColor[cupNum ?? 0] = Int.random(in: 1 ... 4)
-                    self.updateCup(cup: cupNum ?? 0)
+                    //Update the cup color accordingly ARCADE MODE
+                    /*var currentColor = self.cupColor[cupNum ?? 0]
+                    currentColor+=1
+                    if (currentColor == 5) {
+                        currentColor = 1
+                    }
+                    
+                    self.cupColor[cupNum ?? 0] = currentColor
+                    
+                    //self.cupColor[cupNum ?? 0] = Int.random(in: 1 ... 4)
+                    self.updateCup(cup: cupNum ?? 0)*/
+                    
+                    //UPDATE A RANDOM CUP SNIPER MODE
+                    self.cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+                    let randCup = Int.random(in: 0 ... 9)
+                    self.cupColor[randCup] = 1
+                    self.updateCups()
+                    //Make sure that the random value isn't the same two shots in a row
                     
                     self.shotsMade+=1
                     
@@ -234,7 +260,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     
     //THIS GETS RUN EVERY SECOND
     @objc func updateCounting(){
-        print(timeElapsed)
+        //print(timeElapsed)
         timeElapsed+=1
         time.text = ("Time: \(timeElapsed)")
     }
