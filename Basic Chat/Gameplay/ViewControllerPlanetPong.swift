@@ -69,6 +69,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     //Score
     var totalShots = 0
     var shotsMade = 0
+    var scorePoints = 0
     
     //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
@@ -81,6 +82,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         //Score
         totalShots = 0
         shotsMade = 0
+        scorePoints = 0
         
         //Array of button objects
         cupButtons = [button6, button7, button3, button8, button4, button1, button9, button5, button2, button0];
@@ -88,10 +90,22 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         //cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
         //CUP ARRAYS
+        //Diagram
+        //
+        //
+        //
+        //
+        //
+        //
+        //
         //cupColor = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; //Set all cup colors to red for ARCADE mode
-        cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
-        let randCup = Int.random(in: 0 ... 9)
-        cupColor[randCup] = 1
+        
+        //cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+        //let randCup = Int.random(in: 0 ... 9)
+        //cupColor[randCup] = 1
+        
+        cupColor = [3, 2, 2, 2, 1, 2, 3, 2, 2, 3]; //Set the colors for DARTS mode
+        
         updateCups()
         
         //Start timer
@@ -157,11 +171,27 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     self.updateCup(cup: cupNum ?? 0)*/
                     
                     //UPDATE A RANDOM CUP SNIPER MODE
-                    self.cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+                    /*self.cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
                     let randCup = Int.random(in: 0 ... 9)
                     self.cupColor[randCup] = 1
-                    self.updateCups()
+                    self.updateCups()*/
                     //Make sure that the random value isn't the same two shots in a row
+                    
+                    //DARTS MODE
+                    if (cupNum==0 || cupNum == 6 || cupNum == 9) {
+                        self.scorePoints += 1
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    } else if (cupNum == 4) {
+                        self.scorePoints += 5
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    } else {
+                        self.scorePoints += 3
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    }
+                    
+                    if (self.scorePoints >= 21) {
+                        self.scorePoints = 0
+                    }
                     
                     self.shotsMade+=1
                     
@@ -262,7 +292,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @objc func updateCounting(){
         //print(timeElapsed)
         timeElapsed+=1
-        time.text = ("Time: \(timeElapsed)")
+        //time.text = ("Time: \(timeElapsed)")
     }
     
     //If bluetooth on phone is turned on or off

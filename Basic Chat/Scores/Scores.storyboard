@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Scores-->
+        <scene sceneID="ABQ-7J-dVm">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerScores" id="rKL-CN-AZ8" customClass="ViewControllerScores" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ANn-sd-8ht">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2c-c9-XEX">
+                                <rect key="frame" x="42.5" y="124" width="235" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Classic Gamemode"/>
+                                <connections>
+                                    <action selector="goToClassicScores:" destination="rKL-CN-AZ8" eventType="touchUpInside" id="eyI-op-LFL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Gamemode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5P-EI-VcO">
+                                <rect key="frame" x="20" y="84" width="280" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i5P-EI-VcO" firstAttribute="top" secondItem="Fzt-Wi-13S" secondAttribute="top" constant="20" id="0XM-V7-9QP"/>
+                            <constraint firstItem="x2c-c9-XEX" firstAttribute="top" secondItem="i5P-EI-VcO" secondAttribute="bottom" constant="8" id="NXc-0n-Xlx"/>
+                            <constraint firstItem="x2c-c9-XEX" firstAttribute="leading" secondItem="Fzt-Wi-13S" secondAttribute="leading" constant="42.5" id="OsO-c4-3Pk"/>
+                            <constraint firstItem="Fzt-Wi-13S" firstAttribute="trailing" secondItem="i5P-EI-VcO" secondAttribute="trailing" constant="20" id="S4Y-wJ-Ytq"/>
+                            <constraint firstItem="Fzt-Wi-13S" firstAttribute="trailing" secondItem="x2c-c9-XEX" secondAttribute="trailing" constant="42.5" id="Xz6-Fs-4xl"/>
+                            <constraint firstItem="Fzt-Wi-13S" firstAttribute="bottom" secondItem="x2c-c9-XEX" secondAttribute="bottom" constant="398" id="gW4-Cc-u2R"/>
+                            <constraint firstItem="i5P-EI-VcO" firstAttribute="leading" secondItem="Fzt-Wi-13S" secondAttribute="leading" constant="20" id="tru-6h-kuA"/>
+                            <constraint firstItem="x2c-c9-XEX" firstAttribute="top" secondItem="i5P-EI-VcO" secondAttribute="bottom" constant="8" id="ybO-A5-lh2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fzt-Wi-13S"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hpO-dL-njN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbX-rr-1Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033.125" y="113.02816901408451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hFP-GR-Ea9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n3S-DZ-3dl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PSI-62-b3S">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rKL-CN-AZ8" kind="relationship" relationship="rootViewController" id="1Uh-ZH-meP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGG-QB-OI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WaV-py-tlU">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+</document>
