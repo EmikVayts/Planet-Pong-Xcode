@@ -37,8 +37,14 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button0: UIButton!
+    
+    @IBOutlet weak var playerTurn: UILabel!
+    
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var score: UITextField!
+    
+    @IBOutlet weak var island: UIButton!
+    @IBOutlet weak var rerack: UIButton!
     
     //Data
     var peripheralManager: CBPeripheralManager?
@@ -53,6 +59,9 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     //Ratchet Fix
     var ratchetFix = false
     
+    //Observer for incoming BLE strings
+    //var notifyObserver = nil
+    
     //Timer
     var timer = Timer()
     var timeElapsed = 0 //In seconds
@@ -60,6 +69,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     //Score
     var totalShots = 0
     var shotsMade = 0
+    var scorePoints = 0
     
     //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
@@ -72,12 +82,31 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         //Score
         totalShots = 0
         shotsMade = 0
+        scorePoints = 0
         
         //Array of button objects
-        cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
+        cupButtons = [button6, button7, button3, button8, button4, button1, button9, button5, button2, button0];
+        
+        //cupButtons = [button0, button1, button2, button3, button4, button5, button6, button7, button8, button9];
         
         //CUP ARRAYS
-        cupColor = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4]; //Set all cup colors to blue
+        //Diagram
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //cupColor = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; //Set all cup colors to red for ARCADE mode
+        
+        //cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+        //let randCup = Int.random(in: 0 ... 9)
+        //cupColor[randCup] = 1
+        
+        cupColor = [3, 2, 2, 2, 1, 2, 3, 2, 2, 3]; //Set the colors for DARTS mode
+        
+        updateCups()
         
         //Start timer
         scheduledTimerWithTimeInterval()
@@ -98,12 +127,27 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         updateIncomingData()
     }
     
+    func viewDidAppear() {
+        ratchetFix = false
+        styleButton()
+    }
+    
+    func viewDidDisappear() {
+        print("Now removing observer")
+        NotificationCenter.default.removeObserver(NSNotification.Name(rawValue: "Notify"))
+    }
+    
     //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
     func updateIncomingData () {
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil){
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil) {
             notification in
             if (self.ratchetFix == false) {
                 self.ratchetFix = true
+                //Set initial cups
+                let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
+                self.writeValue(data: inputText)
+                
+                self.updateCups()
             } else {
                 let incomingString = (characteristicASCIIValue as String)
                 print(incomingString)
@@ -114,9 +158,40 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     print("Cup hit!")
                     let cupNum = Int(String(incomingString[incomingString.index(incomingString.startIndex, offsetBy: 1)]))
 
-                    //Update the cup color accordingly
-                    self.cupColor[cupNum ?? 0] = 0
-                    self.updateCup(cup: cupNum ?? 0)
+                    //Update the cup color accordingly ARCADE MODE
+                    /*var currentColor = self.cupColor[cupNum ?? 0]
+                    currentColor+=1
+                    if (currentColor == 5) {
+                        currentColor = 1
+                    }
+                    
+                    self.cupColor[cupNum ?? 0] = currentColor
+                    
+                    //self.cupColor[cupNum ?? 0] = Int.random(in: 1 ... 4)
+                    self.updateCup(cup: cupNum ?? 0)*/
+                    
+                    //UPDATE A RANDOM CUP SNIPER MODE
+                    /*self.cupColor = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //Set all cup colors to red for SNIPER mode
+                    let randCup = Int.random(in: 0 ... 9)
+                    self.cupColor[randCup] = 1
+                    self.updateCups()*/
+                    //Make sure that the random value isn't the same two shots in a row
+                    
+                    //DARTS MODE
+                    if (cupNum==0 || cupNum == 6 || cupNum == 9) {
+                        self.scorePoints += 1
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    } else if (cupNum == 4) {
+                        self.scorePoints += 5
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    } else {
+                        self.scorePoints += 3
+                        self.time.text = ("Points: \(self.scorePoints)")
+                    }
+                    
+                    if (self.scorePoints >= 21) {
+                        self.scorePoints = 0
+                    }
                     
                     self.shotsMade+=1
                     
@@ -125,7 +200,8 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
                     
                     //Respond to the ESP32
-                    
+                    let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
+                    self.writeValue(data: inputText)
                 }
                 
                 //IF TOTAL BALLS SHOT INCREMENTED
@@ -155,11 +231,25 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
             }
         }
     }
+    
+    //Set the corner radius and all
     func styleButton() {
         for i in 0...9 {
-            cupButtons[i].backgroundColor = UIColor.red;
-            cupButtons[i].layer.cornerRadius = 25;
+            cupButtons[i].layer.borderColor = UIColor.white.cgColor;
+            cupButtons[i].layer.borderWidth = 5;
+            cupButtons[i].backgroundColor = UIColor.black;
+            cupButtons[i].layer.cornerRadius = 30;
         }
+        
+        rerack.layer.borderColor = UIColor.white.cgColor;
+        rerack.layer.borderWidth = 3;
+        rerack.layer.cornerRadius = 3
+        rerack.alpha = 0.5
+        
+        island.layer.borderColor = UIColor.white.cgColor;
+        island.layer.borderWidth = 3;
+        island.layer.cornerRadius = 3;
+        island.alpha = 0.5
     }
     
     //Update all cups
@@ -178,6 +268,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                 cupButtons[i].backgroundColor = UIColor.blue;
             }
         }
+        playerTurn.shadowColor = UIColor.green
     }
     
     //Update one cup
@@ -204,9 +295,9 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     
     //THIS GETS RUN EVERY SECOND
     @objc func updateCounting(){
-        print(timeElapsed)
+        //print(timeElapsed)
         timeElapsed+=1
-        time.text = ("Time: \(timeElapsed)")
+        //time.text = ("Time: \(timeElapsed)")
     }
     
     //If bluetooth on phone is turned on or off
