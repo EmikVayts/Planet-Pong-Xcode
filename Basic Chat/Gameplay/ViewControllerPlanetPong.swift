@@ -195,6 +195,8 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     
                     self.shotsMade+=1
                     
+                    self.outgoingData()
+                    
                     self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
                     
                     //Respond to the ESP32
@@ -215,8 +217,11 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         }
     }
     
-    // Write functions --> ESP32
-    //Write a string from the text box
+    func outgoingData() {
+        let inputString = ("0\(3)\(cupColor[1])\(cupColor[2])\(cupColor[3])\(cupColor[4])\(cupColor[5])\(cupColor[6])\(cupColor[7])\(cupColor[8])\(cupColor[9])")
+        writeValue(data: inputString)
+    }
+    
     func writeValue(data: String){
         let valueString = (data as NSString).data(using: String.Encoding.utf8.rawValue)
         //change the "data" to valueString
