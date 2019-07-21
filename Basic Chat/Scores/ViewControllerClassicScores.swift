@@ -15,15 +15,19 @@ class ViewControllerClassicScores: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     calculateGamesPlayed()
+        calculateAverageStreak()
+        calculateTotalBitchCups()
+        calculateBitchCupPercentage()
         updateLabels()
     }
     
     var totalGamesPlayed : Float = 100
-    var overallAverageStreak : Float = 0
-    var averageStreakLastGame : Float = 0
-    var bitchCupsLastGame : Int = 0
-    var totalBitchCups : Int = 0
+    var overallAverageStreak : Float = 2
+    var averageStreakLastGame : Float = 3
+    var bitchCupsLastGame : Float = 1
+    var totalBitchCups : Float = 0
     var percentageOfBitchCups : Float = 0
+    var totalFirstShots : Float = 0
     var totalRingsOfDeath : Int = 0
     var ringsOfDeathLastGame : Int = 0
     var percentageOfRingsOfDeath : Float = 0
@@ -40,24 +44,31 @@ class ViewControllerClassicScores: UIViewController {
     @IBOutlet weak var totalIslandsLabel: UILabel!
     @IBOutlet weak var islandsPercentageLabel: UILabel!
 
+    func calculateBitchCupPercentage () {
+        percentageOfBitchCups = totalBitchCups / totalFirstShots
+    }
+    func calculateRingOfDeath() {
+        totalRingsOfDeath += ringsOfDeathLastGame
+    }
+    
     func calculateGamesPlayed() {
     totalGamesPlayed += 1
     }
     
     func calculateAverageStreak () {
-        
+        overallAverageStreak = (averageStreakLastGame + overallAverageStreak) / 2
+    }
+    func calculateTotalBitchCups() {
+        totalBitchCups += bitchCupsLastGame
     }
     
    func updateLabels() {
         totalGamesPlayedLabel.text = String(totalGamesPlayed)
+    averageStreakLabel.text = String(overallAverageStreak)
+    totalBitchCupsLabel.text = String(totalBitchCups)
     }
 
     
     
     
-    
-    
-    
-    
-
 }
