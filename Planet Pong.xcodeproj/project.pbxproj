@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040E756522ADD72300E4B1F7 /* Classic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E756422ADD72200E4B1F7 /* Classic.storyboard */; };
+		040E756522ADD72300E4B1F7 /* GamemodeClassic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E756422ADD72200E4B1F7 /* GamemodeClassic.storyboard */; };
 		040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */; };
 		040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E756C22AF49C200E4B1F7 /* GamemodeSelection.storyboard */; };
 		040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E756E22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift */; };
@@ -26,19 +26,19 @@
 		0482ADD822BFF0F700D6FF10 /* ClassicScores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */; };
 		0482ADD922BFF0F700D6FF10 /* Gamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD422BFF0F700D6FF10 /* Gamemode.swift */; };
 		04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */; };
-		7DA0D5942259653500D999BB /* ViewControllerPlanetPong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerPlanetPong.swift */; };
+		7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
-		D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DDF1DEE393B00D33B5A /* Main.storyboard */; settings = {ASSET_TAGS = (Un, ); }; };
+		D5B24DE11DEE393B00D33B5A /* Pairing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DDF1DEE393B00D33B5A /* Pairing.storyboard */; settings = {ASSET_TAGS = (Un, ); }; };
 		D5B24DE31DEE393B00D33B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DE21DEE393B00D33B5A /* Assets.xcassets */; };
 		D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */; };
-		D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */; };
+		D5B24DEE1DEE399800D33B5A /* ViewControllerPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DED1DEE399800D33B5A /* ViewControllerPairing.swift */; };
 		D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040E756422ADD72200E4B1F7 /* Classic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Classic.storyboard; sourceTree = "<group>"; };
+		040E756422ADD72200E4B1F7 /* GamemodeClassic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamemodeClassic.storyboard; sourceTree = "<group>"; };
 		040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewControllerHome.swift; path = "Basic Chat/Main Menu/ViewControllerHome.swift"; sourceTree = SOURCE_ROOT; };
 		040E756C22AF49C200E4B1F7 /* GamemodeSelection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GamemodeSelection.storyboard; sourceTree = "<group>"; };
 		040E756E22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeSelection.swift; sourceTree = "<group>"; };
@@ -57,16 +57,16 @@
 		0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassicScores.storyboard; sourceTree = "<group>"; };
 		0482ADD422BFF0F700D6FF10 /* Gamemode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamemode.swift; sourceTree = "<group>"; };
 		04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
-		7DA0D5932259653500D999BB /* ViewControllerPlanetPong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPlanetPong.swift; sourceTree = "<group>"; };
+		7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeClassic.swift; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
 		D5B24DD81DEE393B00D33B5A /* Planet Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planet Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pairing.storyboard; sourceTree = "<group>"; };
 		D5B24DE21DEE393B00D33B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5B24DE51DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5B24DE71DEE393B00D33B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECentralViewController.swift; sourceTree = "<group>"; };
+		D5B24DED1DEE399800D33B5A /* ViewControllerPairing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPairing.swift; sourceTree = "<group>"; };
 		D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +120,8 @@
 		040F5FBB22A4E90B00D243D3 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				D5B24DDF1DEE393B00D33B5A /* Main.storyboard */,
-				D5B24DED1DEE399800D33B5A /* BLECentralViewController.swift */,
+				D5B24DDF1DEE393B00D33B5A /* Pairing.storyboard */,
+				D5B24DED1DEE399800D33B5A /* ViewControllerPairing.swift */,
 				D50657251DF45E04002B7557 /* UartModuleViewController.swift */,
 				D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */,
 				D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */,
@@ -133,8 +133,8 @@
 		040F5FBC22A4E91900D243D3 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
-				040E756422ADD72200E4B1F7 /* Classic.storyboard */,
-				7DA0D5932259653500D999BB /* ViewControllerPlanetPong.swift */,
+				040E756422ADD72200E4B1F7 /* GamemodeClassic.storyboard */,
+				7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 				040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */,
 				040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */,
 				D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */,
-				040E756522ADD72300E4B1F7 /* Classic.storyboard in Resources */,
+				040E756522ADD72300E4B1F7 /* GamemodeClassic.storyboard in Resources */,
 				040F5FB822A4E4F600D243D3 /* logo2.png in Resources */,
 				D5B24DE31DEE393B00D33B5A /* Assets.xcassets in Resources */,
 				0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */,
@@ -283,7 +283,7 @@
 				0482ADD822BFF0F700D6FF10 /* ClassicScores.storyboard in Resources */,
 				040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */,
 				040F5FB622A4E35F00D243D3 /* logo1.png in Resources */,
-				D5B24DE11DEE393B00D33B5A /* Main.storyboard in Resources */,
+				D5B24DE11DEE393B00D33B5A /* Pairing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,9 +297,9 @@
 				0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */,
 				040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */,
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
-				D5B24DEE1DEE399800D33B5A /* BLECentralViewController.swift in Sources */,
+				D5B24DEE1DEE399800D33B5A /* ViewControllerPairing.swift in Sources */,
 				040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */,
-				7DA0D5942259653500D999BB /* ViewControllerPlanetPong.swift in Sources */,
+				7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */,
 				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
 				0482ADD922BFF0F700D6FF10 /* Gamemode.swift in Sources */,
@@ -314,12 +314,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5B24DDF1DEE393B00D33B5A /* Main.storyboard */ = {
+		D5B24DDF1DEE393B00D33B5A /* Pairing.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D5B24DE01DEE393B00D33B5A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Pairing.storyboard;
 			sourceTree = "<group>";
 		};
 		D5B24DE41DEE393B00D33B5A /* LaunchScreen.storyboard */ = {

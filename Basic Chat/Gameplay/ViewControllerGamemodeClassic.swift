@@ -10,10 +10,13 @@
 //
 //Waddup it's ben
 
+import Foundation
+import AudioToolbox
+import AVFoundation
 import UIKit
 import CoreBluetooth
 
-class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
+class ViewControllerGamemodeClassic: UIViewController, CBPeripheralManagerDelegate {
     
     
     /*func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -24,9 +27,8 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
             disconnectDevice()
         }
     }*/
-    
 
-    //UI
+    //Create links to all of the items displayed on the screen
     @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button7: UIButton!
@@ -46,7 +48,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @IBOutlet weak var island: UIButton!
     @IBOutlet weak var rerack: UIButton!
     
-    //Data
+    //Bluetooth Data
     var peripheralManager: CBPeripheralManager?
     var peripheral: CBPeripheral!
     var centralManager : CBCentralManager!
@@ -54,13 +56,24 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     var central: CBCentralManager?
     
     lazy var cupButtons = [UIButton]();
-    var cupColor = [Int]();
+    //Single player gamemode
+    var cupColor = [[Int]]();
     
-    //Ratchet Fix
+    //Multiplayer gamemode --> Different array for each player
+    var cupColor1 = [Int]();
+    var cupColor2 = [Int]();
+    var cupColor3 = [Int]();
+    var cupColor4 = [Int]();
+    
+    var turn = 0 //The turn of the player currently going
+    var round = 1 //The current round
+    var previousShotMade = false
+    
+    //Ratchet Fix - prevents the BLE signal to carry over from the previous game
     var ratchetFix = false
     
     //Observer for incoming BLE strings
-    //var notifyObserver = nil
+    var observer: NSObjectProtocol!
     
     //Timer
     var timer = Timer()
@@ -73,6 +86,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     
     //RUN WIHEN VIEW LOADS
     override func viewDidLoad() {
+
         //Ratchet Fix
         ratchetFix = false
         
@@ -104,7 +118,21 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         //let randCup = Int.random(in: 0 ... 9)
         //cupColor[randCup] = 1
         
-        cupColor = [3, 2, 2, 2, 1, 2, 3, 2, 2, 3]; //Set the colors for DARTS mode
+        //cupColor = [3, 2, 2, 2, 1, 2, 3, 2, 2, 3]; //Set the colors for DARTS mode
+        
+        cupColor = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]; //Sets the colors for classic MULTIPLAYER mode with a 2D array
+        
+        /*cupColor1 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; //Set the colors for CLASSIC MULTIPLAYER mode
+        cupColor2 = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
+        cupColor3 = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3];
+        cupColor4 = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4];*/
+        
+        //Set the turn of the player currently going (From 0-3)
+        turn = 0
+        round = 1
+        
+        //Set if the previous shot was a make or miss
+        previousShotMade=false
         
         updateCups()
         
@@ -127,25 +155,33 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
         updateIncomingData()
     }
     
-    func viewDidAppear() {
+    override func viewDidAppear(_ animated: Bool) {
         ratchetFix = false
         styleButton()
     }
     
-    func viewDidDisappear() {
-        print("Now removing observer")
-        NotificationCenter.default.removeObserver(NSNotification.Name(rawValue: "Notify"))
+    override func viewDidDisappear(_ animated: Bool) {
+        self.peripheralManager?.stopAdvertising()
+        //self.peripheralManager = nil
+        super.viewDidDisappear(animated)
+        print("Disconnecting, so now removing observer and timer from gamemode classic")
+        //NotificationCenter.default.removeObserver(self)
+        timer.invalidate()
+        NotificationCenter.default.removeObserver(observer)
     }
     
     //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
     func updateIncomingData () {
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil) {
+        observer = NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Notify"), object: nil , queue: nil) {
             notification in
             if (self.ratchetFix == false) {
                 self.ratchetFix = true
                 //Set initial cups
-                let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
-                self.writeValue(data: inputText)
+                self.outgoingData()
+                
+                //Initialize labels
+                let attrString = NSAttributedString(string: "Player 1 Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+                self.playerTurn.attributedText = attrString
                 
                 self.updateCups()
             } else {
@@ -158,6 +194,10 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     print("Cup hit!")
                     let cupNum = Int(String(incomingString[incomingString.index(incomingString.startIndex, offsetBy: 1)]))
 
+                    //Classic mode response to cup getting hit
+                    self.cupColor[cupNum ?? 0][self.turn] = 0
+                    self.updateCup(cup: cupNum ?? 0)
+                    
                     //Update the cup color accordingly ARCADE MODE
                     /*var currentColor = self.cupColor[cupNum ?? 0]
                     currentColor+=1
@@ -178,7 +218,7 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     //Make sure that the random value isn't the same two shots in a row
                     
                     //DARTS MODE
-                    if (cupNum==0 || cupNum == 6 || cupNum == 9) {
+                    /*if (cupNum==0 || cupNum == 6 || cupNum == 9) {
                         self.scorePoints += 1
                         self.time.text = ("Points: \(self.scorePoints)")
                     } else if (cupNum == 4) {
@@ -191,17 +231,22 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     
                     if (self.scorePoints >= 21) {
                         self.scorePoints = 0
-                    }
+                    }*/
+                    
+                    self.previousShotMade = true
                     
                     self.shotsMade+=1
+                    
+                    //Vibrate the phone as positive reinforcement
+                    AudioServicesPlaySystemSound(1013)
                     
                     self.outgoingData()
                     
                     self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
                     
                     //Respond to the ESP32
-                    let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
-                    self.writeValue(data: inputText)
+                    /*let inputText = ("0\(self.cupColor[0])\(self.cupColor[1])\(self.cupColor[2])\(self.cupColor[3])\(self.cupColor[4])\(self.cupColor[5])\(self.cupColor[6])\(self.cupColor[7])\(self.cupColor[8])\(self.cupColor[9])")
+                    self.writeValue(data: inputText)*/
                 }
                 
                 //IF TOTAL BALLS SHOT INCREMENTED
@@ -210,15 +255,50 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
                     
                     self.totalShots+=1
                     
+                    if (self.previousShotMade==false) {
+                        if (self.turn<3) {
+                            self.turn+=1
+                        } else {
+                            self.turn=0
+                            self.round+=1
+                        }
+
+                        let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+                        
+                        //Pick the background color of the players name and turn label
+                        if (self.turn==0) {
+                            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+                            self.playerTurn.attributedText = attrString
+                        } else if (self.turn==1) {
+                            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.green, NSAttributedString.Key.strokeWidth: -7.0])
+                            self.playerTurn.attributedText = attrString
+                        } else if (self.turn==2) {
+                            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.purple, NSAttributedString.Key.strokeWidth: -7.0])
+                            self.playerTurn.attributedText = attrString
+                        } else if (self.turn==3) {
+                            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.blue, NSAttributedString.Key.strokeWidth: -7.0])
+                            self.playerTurn.attributedText = attrString
+                        }
+                        
+                        AudioServicesPlaySystemSound(1103)
+                        
+                    } else {
+                        self.previousShotMade=false
+                    }
+                    
+                    self.updateCups()
+                    
+                    self.outgoingData()
+                    
                     self.score.text = ("Score: \(self.shotsMade)/\(self.totalShots)")
+                    
                 }
-                
             }
         }
     }
     
     func outgoingData() {
-        let inputString = ("0\(3)\(cupColor[1])\(cupColor[2])\(cupColor[3])\(cupColor[4])\(cupColor[5])\(cupColor[6])\(cupColor[7])\(cupColor[8])\(cupColor[9])")
+        let inputString = ("0\(cupColor[0][turn])\(cupColor[1][turn])\(cupColor[2][turn])\(cupColor[3][turn])\(cupColor[4][turn])\(cupColor[5][turn])\(cupColor[6][turn])\(cupColor[7][turn])\(cupColor[8][turn])\(cupColor[9][turn])")
         writeValue(data: inputString)
     }
     
@@ -238,7 +318,10 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
             cupButtons[i].layer.borderColor = UIColor.white.cgColor;
             cupButtons[i].layer.borderWidth = 5;
             cupButtons[i].backgroundColor = UIColor.black;
-            cupButtons[i].layer.cornerRadius = 30;
+            cupButtons[i].layer.cornerRadius = UIScreen.main.bounds.size.width/12;
+            //cupButtons[i].titleLabel?.font = UIFont(name: "Aldrich-Regular", size: 20)
+            //cupButtons[i].setTitle("$30k", for: [])
+            cupButtons[i].titleLabel?.adjustsFontSizeToFitWidth = true
         }
         
         rerack.layer.borderColor = UIColor.white.cgColor;
@@ -256,33 +339,32 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     func updateCups() {
         //Update the cup buttons
         for i in 0...9 {
-            if cupColor[i] == 0 {
+            if cupColor[i][turn] == 0 {
                 cupButtons[i].backgroundColor = UIColor.black;
-            } else if cupColor[i] == 1 {
+            } else if cupColor[i][turn] == 1 {
                 cupButtons[i].backgroundColor = UIColor.red;
-            } else if cupColor[i] == 2 {
+            } else if cupColor[i][turn] == 2 {
                 cupButtons[i].backgroundColor = UIColor.green;
-            } else if cupColor[i] == 3 {
+            } else if cupColor[i][turn] == 3 {
                 cupButtons[i].backgroundColor = UIColor.purple;
-            } else if cupColor[i] == 4 {
+            } else if cupColor[i][turn] == 4 {
                 cupButtons[i].backgroundColor = UIColor.blue;
             }
         }
-        playerTurn.shadowColor = UIColor.green
     }
     
     //Update one cup
     func updateCup(cup: Int) {
         //Update the cup buttons
-        if cupColor[cup] == 0 {
+        if cupColor[cup][turn] == 0 {
             cupButtons[cup].backgroundColor = UIColor.black;
-        } else if cupColor[cup] == 1 {
+        } else if cupColor[cup][turn] == 1 {
             cupButtons[cup].backgroundColor = UIColor.red;
-        } else if cupColor[cup] == 2 {
+        } else if cupColor[cup][turn] == 2 {
             cupButtons[cup].backgroundColor = UIColor.green;
-        } else if cupColor[cup] == 3 {
+        } else if cupColor[cup][turn] == 3 {
             cupButtons[cup].backgroundColor = UIColor.purple;
-        } else if cupColor[cup] == 4 {
+        } else if cupColor[cup][turn] == 4 {
             cupButtons[cup].backgroundColor = UIColor.blue;
         }
     }
@@ -297,7 +379,12 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
     @objc func updateCounting(){
         //print(timeElapsed)
         timeElapsed+=1
-        //time.text = ("Time: \(timeElapsed)")
+        //Display the time and convert to minutes and seconds for display
+        if ((timeElapsed%60)<10) {
+            time.text = ("Time: \(timeElapsed/60):0\(timeElapsed%60)")
+        } else {
+            time.text = ("Time: \(timeElapsed/60):\(timeElapsed%60)")
+        }
     }
     
     //If bluetooth on phone is turned on or off
@@ -306,18 +393,16 @@ class ViewControllerPlanetPong: UIViewController, CBPeripheralManagerDelegate {
             return
         }
         if peripheral.state == .poweredOff {
-            disconnectDevice()
+            //disconnectDevice()
         }
         print("Peripheral manager is running")
     }
     
     //Disconnecting from bluetooth device --> navigate back to pairing screen
-    func disconnectDevice() {
+    /*func disconnectDevice() {
         //Go back to the pairing screen
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "BLECentralViewController") as! BLECentralViewController
         navigationController?.dismiss(animated: false, completion: nil)
         navigationController?.popViewController(animated: false)
         timer.invalidate()
-    }
+    }*/
 }
