@@ -13,7 +13,7 @@
         <!--Main Menu-->
         <scene sceneID="GQs-0y-Vt0">
             <objects>
-                <viewController title="Main Menu" id="aIw-Nz-iXk" customClass="ViewControllerHome" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerHome" title="Main Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aIw-Nz-iXk" customClass="ViewControllerHome" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJh-qY-VJv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

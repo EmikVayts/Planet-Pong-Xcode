@@ -18,7 +18,7 @@ var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 
 
-class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
+class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
     //Data
     var centralManager : CBCentralManager!
@@ -167,11 +167,13 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         
         
         //Once connected, move to new view controller to manage incoming and outgoing data
-        let storyboard = UIStoryboard(name: "Classic", bundle: nil)
+        let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerPlanetPong") as! ViewControllerPlanetPong
+        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
                 
         navigationController?.pushViewController(uartViewController, animated: true)
+        
+        print("Go to gamemode classic")
     }
     
     /*
@@ -309,9 +311,9 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         //GO BACK TO THE VIEW
         print("Disconnected")
-        navigationController?.dismiss(animated: false, completion: nil)
-        navigationController?.popViewController(animated: false)
-        timer.invalidate()
+        //navigationController?.dismiss(animated: false, completion: nil)
+        //navigationController?.popToViewController(viewController: ViewControllerPairing, animated: true) -> [ViewControllerPairing]?
+        //timer.invalidate()
     }
     
     
@@ -369,6 +371,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
             startScan()
             
         } else {
+            print("Bluetooth turned off on iPhone so Disconnect")
             navigationController?.dismiss(animated: false, completion: nil)
             navigationController?.popViewController(animated: false)
             timer.invalidate()

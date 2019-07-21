@@ -25,10 +25,14 @@ class ViewControllerHome: UIViewController {
         print("Go to pairing screen")
         
         //Code to switch screens
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Pairing", bundle: Bundle.main)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "BLECentralViewController") as! BLECentralViewController
+        guard let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerPairing") as?
+            ViewControllerPairing else {
+            return
+        }
         
+        //present (uartViewController, animated: true, completion: nil)
         navigationController?.pushViewController(uartViewController, animated: true)
     }
     

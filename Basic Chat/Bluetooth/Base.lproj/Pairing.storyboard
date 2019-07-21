@@ -29,7 +29,7 @@
         <!--Planet Pong-->
         <scene sceneID="ICt-bz-slO">
             <objects>
-                <viewController storyboardIdentifier="BLECentralViewController" automaticallyAdjustsScrollViewInsets="NO" id="s6h-Zo-tC7" customClass="BLECentralViewController" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerPairing" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s6h-Zo-tC7" customClass="ViewControllerPairing" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LSv-z8-Zyp"/>
                         <viewControllerLayoutGuide type="bottom" id="cCu-cf-R0b"/>

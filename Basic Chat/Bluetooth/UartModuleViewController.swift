@@ -53,11 +53,10 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        // peripheralManager?.stopAdvertising()
-        // self.peripheralManager = nil
+        peripheralManager?.stopAdvertising()
+        self.peripheralManager = nil
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
-        
     }
     
     //Checks if there is an incoming string from the ESP32 and then prints it out on the console if there is one
