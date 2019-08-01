@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,18 +9,97 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aldrich-Regular.ttf">
+            <string>Aldrich</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller Tutorial-->
         <scene sceneID="tbg-Sm-gvV">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerTutorial" id="UAY-nF-XoE" customClass="ViewControllerTutorial" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerTutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UAY-nF-XoE" customClass="ViewControllerTutorial" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kcm-oh-HRM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8kV-s3-bBR">
+                                <rect key="frame" x="-69" y="44" width="552" height="91"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="75"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmA-GQ-oe1">
+                                <rect key="frame" x="10.333333333333343" y="135" width="393.33333333333326" height="387"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-NB-gzh">
+                                <rect key="frame" x="103.66666666666669" y="532" width="207" height="52"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mSj-NB-gzh" secondAttribute="height" multiplier="4" id="bN4-LA-kLi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressBack:" destination="UAY-nF-XoE" eventType="touchUpInside" id="Yte-9s-LXg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brx-yx-197">
+                                <rect key="frame" x="103.66666666666669" y="594" width="207" height="51.666666666666629"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="hitNext:" destination="UAY-nF-XoE" eventType="touchUpInside" id="WWb-nP-0sN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1R-m7-Lop">
+                                <rect key="frame" x="103.66666666666669" y="655.66666666666663" width="207" height="51.666666666666629"/>
+                                <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Play!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="hitPlay:" destination="UAY-nF-XoE" eventType="touchUpInside" id="tKU-pM-mYo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T1R-m7-Lop" firstAttribute="width" secondItem="cbt-4d-Ifi" secondAttribute="width" multiplier="0.5" id="3oO-Vp-vgI"/>
+                            <constraint firstItem="brx-yx-197" firstAttribute="centerX" secondItem="Kcm-oh-HRM" secondAttribute="centerX" id="4Td-0M-cJd"/>
+                            <constraint firstItem="T1R-m7-Lop" firstAttribute="centerX" secondItem="Kcm-oh-HRM" secondAttribute="centerX" id="5In-wC-FZ6"/>
+                            <constraint firstItem="T1R-m7-Lop" firstAttribute="top" secondItem="brx-yx-197" secondAttribute="bottom" constant="10" id="DAb-5j-c1A"/>
+                            <constraint firstItem="CmA-GQ-oe1" firstAttribute="centerX" secondItem="Kcm-oh-HRM" secondAttribute="centerX" id="Jnh-W0-j8a"/>
+                            <constraint firstItem="brx-yx-197" firstAttribute="top" secondItem="mSj-NB-gzh" secondAttribute="bottom" constant="10" id="K38-GN-idQ"/>
+                            <constraint firstItem="cbt-4d-Ifi" firstAttribute="width" secondItem="8kV-s3-bBR" secondAttribute="width" multiplier="0.75" id="Lil-Em-lum"/>
+                            <constraint firstItem="mSj-NB-gzh" firstAttribute="centerX" secondItem="Kcm-oh-HRM" secondAttribute="centerX" id="M75-Ui-8BK"/>
+                            <constraint firstItem="mSj-NB-gzh" firstAttribute="width" secondItem="cbt-4d-Ifi" secondAttribute="width" multiplier="0.5" id="MmK-h5-dnx"/>
+                            <constraint firstItem="mSj-NB-gzh" firstAttribute="top" secondItem="CmA-GQ-oe1" secondAttribute="bottom" constant="10" id="P1D-df-eff"/>
+                            <constraint firstItem="CmA-GQ-oe1" firstAttribute="width" secondItem="cbt-4d-Ifi" secondAttribute="width" multiplier="0.95" id="Smm-fj-ICB"/>
+                            <constraint firstItem="brx-yx-197" firstAttribute="width" secondItem="cbt-4d-Ifi" secondAttribute="width" multiplier="0.5" id="WBb-PT-l0K"/>
+                            <constraint firstItem="8kV-s3-bBR" firstAttribute="bottom" secondItem="CmA-GQ-oe1" secondAttribute="top" id="WOp-em-NA7"/>
+                            <constraint firstItem="8kV-s3-bBR" firstAttribute="centerY" secondItem="Kcm-oh-HRM" secondAttribute="centerY" multiplier="0.2" id="Xa1-IH-hqy"/>
+                            <constraint firstItem="8kV-s3-bBR" firstAttribute="centerX" secondItem="Kcm-oh-HRM" secondAttribute="centerX" id="hHg-qO-Eky"/>
+                            <constraint firstItem="cbt-4d-Ifi" firstAttribute="height" secondItem="8kV-s3-bBR" secondAttribute="height" multiplier="8.5" id="hVf-Bu-zhw"/>
+                            <constraint firstItem="T1R-m7-Lop" firstAttribute="width" secondItem="T1R-m7-Lop" secondAttribute="height" multiplier="4" id="jAF-KM-Xhp"/>
+                            <constraint firstItem="CmA-GQ-oe1" firstAttribute="height" secondItem="cbt-4d-Ifi" secondAttribute="height" multiplier="0.5" id="l9K-pi-r4b"/>
+                            <constraint firstItem="brx-yx-197" firstAttribute="width" secondItem="brx-yx-197" secondAttribute="height" multiplier="4" id="whm-zW-oV8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cbt-4d-Ifi"/>
                     </view>
                     <navigationItem key="navigationItem" id="SYE-BY-Nut"/>
+                    <connections>
+                        <outlet property="videoView" destination="CmA-GQ-oe1" id="qyb-yy-iRK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHA-DJ-97P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

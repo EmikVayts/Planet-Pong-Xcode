@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aldrich-Regular.ttf">
+            <string>Aldrich</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller Gamemode Classic-->
+        <scene sceneID="V5g-bx-1z7">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerGamemodeClassic" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kc5-wX-bza" customClass="ViewControllerGamemodeClassic" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vK4-7F-H7X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-hu-shT" userLabel="Button3">
+                                <rect key="frame" x="77.5" y="147.5" width="53" height="53.5"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KfW-hu-shT" secondAttribute="height" id="Beu-s8-rdF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFt-Z6-dL9" userLabel="Button0">
+                                <rect key="frame" x="133.5" y="243" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EFt-Z6-dL9" secondAttribute="height" id="rZ8-57-mmq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-Td-uPE" userLabel="Button4">
+                                <rect key="frame" x="133.5" y="147.5" width="53" height="53.5"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t2k-Td-uPE" secondAttribute="height" id="MAp-8q-Azg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQN-Lb-dY0" userLabel="Button5">
+                                <rect key="frame" x="189.5" y="147.5" width="53" height="53.5"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MQN-Lb-dY0" secondAttribute="height" id="yWd-9v-cw9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-t1-m2f" userLabel="Button2">
+                                <rect key="frame" x="161.5" y="196" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="g9b-t1-m2f" secondAttribute="height" id="e1Z-Uq-Xc5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-oN-57q" userLabel="Button1">
+                                <rect key="frame" x="105.5" y="196" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nwA-oN-57q" secondAttribute="height" id="hD2-PZ-S0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-ta-FmV" userLabel="Button7">
+                                <rect key="frame" x="105.5" y="98" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hTt-ta-FmV" secondAttribute="height" id="1F9-Ur-UK8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gde-wK-ywE" userLabel="Button8">
+                                <rect key="frame" x="161.5" y="98" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gde-wK-ywE" secondAttribute="height" id="rfF-IQ-6EQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-2j-ldz" userLabel="Button6">
+                                <rect key="frame" x="49.5" y="98" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ANA-2j-ldz" secondAttribute="height" id="GBC-m5-sBb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rH-kM-leZ" userLabel="Button9">
+                                <rect key="frame" x="217.5" y="98" width="53" height="53"/>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5rH-kM-leZ" secondAttribute="height" id="979-Su-7ER"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="40"/>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="Time: 0:00" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AtS-QZ-7dQ">
+                                <rect key="frame" x="0.0" y="360.5" width="160" height="36.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="Score: 0/0" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="g4P-Rh-ubT">
+                                <rect key="frame" x="160" y="360.5" width="160" height="36.5"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Turn #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-dA-GoS">
+                                <rect key="frame" x="40" y="303.5" width="240" height="46.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tya-ch-Uwh">
+                                <rect key="frame" x="16" y="477" width="128" height="68.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="30"/>
+                                <state key="normal" title="Rerack">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P76-hB-RZ4">
+                                <rect key="frame" x="16" y="408.5" width="128" height="68.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="30"/>
+                                <state key="normal" title="Undo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-Sh-ICT">
+                                <rect key="frame" x="176" y="477" width="128" height="68.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="30"/>
+                                <state key="normal" title="Island">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-Xo-yua">
+                                <rect key="frame" x="40" y="15.5" width="240" height="82.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="75"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Z-TX-YMd">
+                                <rect key="frame" x="176" y="408.5" width="128" height="68.5"/>
+                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="30"/>
+                                <state key="normal" title="Miss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KfW-hu-shT" firstAttribute="top" secondItem="hTt-ta-FmV" secondAttribute="bottom" multiplier="0.975" id="1az-HD-TUJ"/>
+                            <constraint firstItem="e9Z-TX-YMd" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.4" id="27e-g4-Niy"/>
+                            <constraint firstItem="tya-ch-Uwh" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="0.5" id="2HG-S2-f1a"/>
+                            <constraint firstItem="EFt-Z6-dL9" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" id="2PO-QQ-Ewm"/>
+                            <constraint firstItem="5rH-kM-leZ" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="1.525" id="2nh-U4-Yyg"/>
+                            <constraint firstItem="P76-hB-RZ4" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="0.5" id="3YB-Vd-OaN"/>
+                            <constraint firstItem="AtS-QZ-7dQ" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="0.5" id="4Wy-lb-he0"/>
+                            <constraint firstItem="hTt-ta-FmV" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="0.825" id="5oM-4m-Krb"/>
+                            <constraint firstItem="g4P-Rh-ubT" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="1:15" id="7Ge-nT-ZhA"/>
+                            <constraint firstItem="gde-wK-ywE" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="7YD-Cw-w6W"/>
+                            <constraint firstItem="e9Z-TX-YMd" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="1.5" id="8SS-ho-1P1"/>
+                            <constraint firstItem="nwA-oN-57q" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="959-Qq-D32"/>
+                            <constraint firstItem="MQN-Lb-dY0" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="1.35" id="AOr-sk-zEW"/>
+                            <constraint firstItem="EFt-Z6-dL9" firstAttribute="top" secondItem="g9b-t1-m2f" secondAttribute="bottom" multiplier="0.975" id="B7H-Xn-QgX"/>
+                            <constraint firstItem="QPF-dA-GoS" firstAttribute="top" secondItem="EFt-Z6-dL9" secondAttribute="bottom" multiplier="1.025" id="BJR-S1-4Jx"/>
+                            <constraint firstItem="P76-hB-RZ4" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.4" id="Beb-jn-cMl"/>
+                            <constraint firstItem="nwH-Xo-yua" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.15" id="EEz-AG-KbC"/>
+                            <constraint firstItem="KfW-hu-shT" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="0.65" id="ORL-2W-ZGm"/>
+                            <constraint firstItem="tya-ch-Uwh" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.4" id="Olb-qB-Udm"/>
+                            <constraint firstItem="QPF-dA-GoS" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.75" id="PKh-dY-m4I"/>
+                            <constraint firstItem="t7g-Sh-ICT" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.4" id="PxX-ho-V7X"/>
+                            <constraint firstItem="gde-wK-ywE" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="1.175" id="QKj-vT-xgX"/>
+                            <constraint firstItem="g9b-t1-m2f" firstAttribute="top" secondItem="MQN-Lb-dY0" secondAttribute="bottom" multiplier="0.975" id="RJq-QJ-h9S"/>
+                            <constraint firstItem="AtS-QZ-7dQ" firstAttribute="top" secondItem="QPF-dA-GoS" secondAttribute="bottom" multiplier="1.03" id="TMa-2S-xtZ"/>
+                            <constraint firstItem="nwA-oN-57q" firstAttribute="top" secondItem="t2k-Td-uPE" secondAttribute="bottom" multiplier="0.975" id="Tii-ii-7V7"/>
+                            <constraint firstItem="nwH-Xo-yua" firstAttribute="centerY" secondItem="vK4-7F-H7X" secondAttribute="centerY" multiplier="0.2" id="Ukr-a0-F70"/>
+                            <constraint firstItem="nwA-oN-57q" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="0.825" id="VGA-FG-FTn"/>
+                            <constraint firstItem="g9b-t1-m2f" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="WFR-Zk-nwb"/>
+                            <constraint firstItem="5rH-kM-leZ" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="YIa-jt-cf7"/>
+                            <constraint firstItem="tya-ch-Uwh" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.125" id="YSs-9m-8L7"/>
+                            <constraint firstItem="AtS-QZ-7dQ" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.5" id="Yao-pa-y26"/>
+                            <constraint firstItem="g9b-t1-m2f" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="1.175" id="Yeh-ru-Cdd"/>
+                            <constraint firstItem="KfW-hu-shT" firstAttribute="top" secondItem="ANA-2j-ldz" secondAttribute="bottom" multiplier="0.975" id="Z2A-Pu-fPW"/>
+                            <constraint firstItem="nwH-Xo-yua" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.75" id="cmX-pT-v3d"/>
+                            <constraint firstItem="MQN-Lb-dY0" firstAttribute="top" secondItem="5rH-kM-leZ" secondAttribute="bottom" multiplier="0.975" id="dcP-pR-eD5"/>
+                            <constraint firstItem="KfW-hu-shT" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="ewG-hz-f4d"/>
+                            <constraint firstItem="nwH-Xo-yua" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" id="hWw-pk-yge"/>
+                            <constraint firstItem="ANA-2j-ldz" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" multiplier="0.475" id="hzO-j4-IYA"/>
+                            <constraint firstItem="EFt-Z6-dL9" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="i1U-4I-tyt"/>
+                            <constraint firstItem="QPF-dA-GoS" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.085" id="i8S-Wo-G7i"/>
+                            <constraint firstItem="ANA-2j-ldz" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="iXJ-9C-mw6"/>
+                            <constraint firstItem="nwA-oN-57q" firstAttribute="top" secondItem="KfW-hu-shT" secondAttribute="bottom" multiplier="0.975" id="jOw-px-8kd"/>
+                            <constraint firstItem="g4P-Rh-ubT" firstAttribute="top" secondItem="QPF-dA-GoS" secondAttribute="bottom" multiplier="1.03" id="ktC-AY-SWa"/>
+                            <constraint firstItem="g4P-Rh-ubT" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="1.5" id="log-5o-Xue"/>
+                            <constraint firstItem="P76-hB-RZ4" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.125" id="luX-BO-n2v"/>
+                            <constraint firstItem="t7g-Sh-ICT" firstAttribute="centerY" secondItem="vK4-7F-H7X" secondAttribute="centerY" multiplier="1.8" id="mXV-rl-PEL"/>
+                            <constraint firstItem="AtS-QZ-7dQ" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="1:15" id="ox0-YW-oBF"/>
+                            <constraint firstItem="QPF-dA-GoS" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" id="q3n-ya-nm1"/>
+                            <constraint firstItem="hTt-ta-FmV" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="qQh-mY-Gdd"/>
+                            <constraint firstItem="t7g-Sh-ICT" firstAttribute="top" secondItem="e9Z-TX-YMd" secondAttribute="bottom" id="s5m-i4-XPJ"/>
+                            <constraint firstItem="g4P-Rh-ubT" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="0.5" id="teN-zK-MYo"/>
+                            <constraint firstItem="gde-wK-ywE" firstAttribute="top" secondItem="nwH-Xo-yua" secondAttribute="bottom" id="uC2-ux-cqC"/>
+                            <constraint firstItem="e9Z-TX-YMd" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.125" id="ujl-Ak-ucZ"/>
+                            <constraint firstItem="t7g-Sh-ICT" firstAttribute="height" secondItem="jwx-1H-N1C" secondAttribute="height" multiplier="0.125" id="vHC-jE-OaX"/>
+                            <constraint firstItem="t2k-Td-uPE" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="vIX-V6-xLS"/>
+                            <constraint firstItem="t7g-Sh-ICT" firstAttribute="centerX" secondItem="vK4-7F-H7X" secondAttribute="centerX" multiplier="1.5" id="vo7-NU-gEv"/>
+                            <constraint firstItem="MQN-Lb-dY0" firstAttribute="width" secondItem="jwx-1H-N1C" secondAttribute="width" multiplier="1:6" id="w8f-zx-BGo"/>
+                            <constraint firstItem="t2k-Td-uPE" firstAttribute="top" secondItem="gde-wK-ywE" secondAttribute="bottom" multiplier="0.975" id="yFp-d6-af5"/>
+                            <constraint firstItem="tya-ch-Uwh" firstAttribute="centerY" secondItem="vK4-7F-H7X" secondAttribute="centerY" multiplier="1.8" id="yKG-CK-Efg"/>
+                            <constraint firstItem="tya-ch-Uwh" firstAttribute="top" secondItem="P76-hB-RZ4" secondAttribute="bottom" id="yMo-3p-UWS"/>
+                            <constraint firstItem="t2k-Td-uPE" firstAttribute="centerX" secondItem="jwx-1H-N1C" secondAttribute="centerX" id="yar-ie-UIn"/>
+                            <constraint firstItem="EFt-Z6-dL9" firstAttribute="top" secondItem="nwA-oN-57q" secondAttribute="bottom" multiplier="0.975" id="yeN-tc-Awh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jwx-1H-N1C"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U5R-wm-TSP"/>
+                    <connections>
+                        <outlet property="button0" destination="EFt-Z6-dL9" id="Rev-Dd-C9Z"/>
+                        <outlet property="button1" destination="nwA-oN-57q" id="TDx-2e-h1F"/>
+                        <outlet property="button2" destination="g9b-t1-m2f" id="fjG-wC-1SA"/>
+                        <outlet property="button3" destination="KfW-hu-shT" id="KFW-rs-2W6"/>
+                        <outlet property="button4" destination="t2k-Td-uPE" id="kbF-lS-OKi"/>
+                        <outlet property="button5" destination="MQN-Lb-dY0" id="0vT-LW-1Xv"/>
+                        <outlet property="button6" destination="ANA-2j-ldz" id="EQ5-1d-YYe"/>
+                        <outlet property="button7" destination="hTt-ta-FmV" id="ATE-ne-diw"/>
+                        <outlet property="button8" destination="gde-wK-ywE" id="DZw-fR-qfH"/>
+                        <outlet property="button9" destination="5rH-kM-leZ" id="DKm-VU-tQi"/>
+                        <outlet property="island" destination="t7g-Sh-ICT" id="NJj-wP-BSj"/>
+                        <outlet property="miss" destination="e9Z-TX-YMd" id="Jd0-dd-O0i"/>
+                        <outlet property="playerTurn" destination="QPF-dA-GoS" id="8Oe-Rx-qM7"/>
+                        <outlet property="rerack" destination="tya-ch-Uwh" id="RAv-tW-hNL"/>
+                        <outlet property="score" destination="g4P-Rh-ubT" id="N5s-Vu-H98"/>
+                        <outlet property="time" destination="AtS-QZ-7dQ" id="8AW-q4-iNA"/>
+                        <outlet property="undo" destination="P76-hB-RZ4" id="wdy-AE-osS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zN-Kb-bOg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226.25" y="661.26760563380287"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0p0-ew-FLC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="J45-rI-EQ6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mln-eU-wCn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kc5-wX-bza" kind="relationship" relationship="rootViewController" id="ffO-UX-Dlf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIj-2t-ogA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.75" y="661.26760563380287"/>
+        </scene>
+    </scenes>
+</document>
