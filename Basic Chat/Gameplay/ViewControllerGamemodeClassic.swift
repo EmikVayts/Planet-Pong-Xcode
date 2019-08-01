@@ -45,6 +45,9 @@ class ViewControllerGamemodeClassic: UIViewController, CBPeripheralManagerDelega
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var score: UITextField!
     
+    @IBOutlet weak var undo: UIButton!
+    @IBOutlet weak var miss: UIButton!
+    
     @IBOutlet weak var island: UIButton!
     @IBOutlet weak var rerack: UIButton!
     
@@ -324,6 +327,16 @@ class ViewControllerGamemodeClassic: UIViewController, CBPeripheralManagerDelega
             cupButtons[i].titleLabel?.adjustsFontSizeToFitWidth = true
         }
         
+        undo.layer.borderColor = UIColor.white.cgColor;
+        undo.layer.borderWidth = 3;
+        undo.layer.cornerRadius = 3
+        undo.alpha = 0.5
+        
+        miss.layer.borderColor = UIColor.white.cgColor;
+        miss.layer.borderWidth = 3;
+        miss.layer.cornerRadius = 3
+        miss.alpha = 0.5
+        
         rerack.layer.borderColor = UIColor.white.cgColor;
         rerack.layer.borderWidth = 3;
         rerack.layer.cornerRadius = 3
@@ -334,6 +347,8 @@ class ViewControllerGamemodeClassic: UIViewController, CBPeripheralManagerDelega
         island.layer.cornerRadius = 3;
         island.alpha = 0.5
     }
+    
+    
     
     //Update all cups
     func updateCups() {

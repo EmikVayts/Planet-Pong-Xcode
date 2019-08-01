@@ -20,12 +20,21 @@
 		040F5FB622A4E35F00D243D3 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB522A4E35F00D243D3 /* logo1.png */; };
 		040F5FB822A4E4F600D243D3 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB722A4E4F600D243D3 /* logo2.png */; };
 		040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB922A4E56C00D243D3 /* Home.storyboard */; };
+		0457BBC822F2A79100188610 /* ViewControllerRulesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */; };
+		0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */; };
+		0457BBCC22F2A81E00188610 /* ViewControllerPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
 		0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */; };
 		0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */; };
 		0482ADD822BFF0F700D6FF10 /* ClassicScores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */; };
 		0482ADD922BFF0F700D6FF10 /* Gamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD422BFF0F700D6FF10 /* Gamemode.swift */; };
+		04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8F0622E432CC0049138E /* ViewControllerRules.swift */; };
 		04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */; };
+		04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */; };
+		04DB86E222EFFB80007E673C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E122EFFB80007E673C /* VideoPlayerView.swift */; };
+		04DB86E422EFFC82007E673C /* VideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E322EFFC82007E673C /* VideoLooperView.swift */; };
+		04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E522EFFD9A007E673C /* VideoClip.swift */; };
+		04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */; };
 		7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
@@ -51,12 +60,21 @@
 		040F5FB522A4E35F00D243D3 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
 		040F5FB722A4E4F600D243D3 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		040F5FB922A4E56C00D243D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesSelection.swift; sourceTree = "<group>"; };
+		0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesController.swift; sourceTree = "<group>"; };
+		0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlay.swift; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
 		0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerClassicScores.swift; sourceTree = "<group>"; };
 		0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerScores.swift; sourceTree = "<group>"; };
 		0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassicScores.storyboard; sourceTree = "<group>"; };
 		0482ADD422BFF0F700D6FF10 /* Gamemode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamemode.swift; sourceTree = "<group>"; };
+		04CE8F0622E432CC0049138E /* ViewControllerRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRules.swift; sourceTree = "<group>"; };
 		04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
+		04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sniper Mode.mp4"; path = "Basic Chat/Sniper Mode.mp4"; sourceTree = "<group>"; };
+		04DB86E122EFFB80007E673C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		04DB86E322EFFC82007E673C /* VideoLooperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLooperView.swift; sourceTree = "<group>"; };
+		04DB86E522EFFD9A007E673C /* VideoClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClip.swift; sourceTree = "<group>"; };
+		04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHallOfFame.swift; sourceTree = "<group>"; };
 		7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeClassic.swift; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +113,9 @@
 			children = (
 				040E757522AF4E1600E4B1F7 /* Tutorial.storyboard */,
 				040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */,
+				04DB86E122EFFB80007E673C /* VideoPlayerView.swift */,
+				04DB86E322EFFC82007E673C /* VideoLooperView.swift */,
+				04DB86E522EFFD9A007E673C /* VideoClip.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -146,6 +167,11 @@
 				040F5FB922A4E56C00D243D3 /* Home.storyboard */,
 				040F5FB522A4E35F00D243D3 /* logo1.png */,
 				040F5FB722A4E4F600D243D3 /* logo2.png */,
+				04CE8F0622E432CC0049138E /* ViewControllerRules.swift */,
+				04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */,
+				0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */,
+				0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */,
+				0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -174,6 +200,7 @@
 		D5B24DCF1DEE393B00D33B5A = {
 			isa = PBXGroup;
 			children = (
+				04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */,
 				D5B24DDA1DEE393B00D33B5A /* Basic Chat */,
 				D5B24DD91DEE393B00D33B5A /* Products */,
 				0482ADCF22BFF0F700D6FF10 /* Scores */,
@@ -270,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */,
 				040E757622AF4E1600E4B1F7 /* Tutorial.storyboard in Resources */,
 				040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */,
 				040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */,
@@ -295,18 +323,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */,
+				04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */,
 				040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */,
+				04DB86E222EFFB80007E673C /* VideoPlayerView.swift in Sources */,
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
+				04DB86E422EFFC82007E673C /* VideoLooperView.swift in Sources */,
 				D5B24DEE1DEE399800D33B5A /* ViewControllerPairing.swift in Sources */,
 				040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */,
 				7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */,
+				04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */,
 				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,
 				D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */,
+				0457BBC822F2A79100188610 /* ViewControllerRulesSelection.swift in Sources */,
 				0482ADD922BFF0F700D6FF10 /* Gamemode.swift in Sources */,
 				0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */,
+				0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
+				04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */,
 				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
+				0457BBCC22F2A81E00188610 /* ViewControllerPlay.swift in Sources */,
 				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +485,7 @@
 		D5B24DEB1DEE393B00D33B5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -464,7 +500,7 @@
 		D5B24DEC1DEE393B00D33B5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
