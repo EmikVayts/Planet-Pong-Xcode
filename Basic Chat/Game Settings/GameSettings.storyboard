@@ -126,6 +126,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-iO-6b3">
+                                <rect key="frame" x="112.5" y="512" width="150" height="75"/>
+                                <state key="normal" title="Start"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -159,6 +163,8 @@
                             <constraint firstItem="2wt-ZD-tsQ" firstAttribute="leading" secondItem="mEp-VK-2fM" secondAttribute="leading" id="fb2-xa-hbh"/>
                             <constraint firstItem="lum-n0-qHM" firstAttribute="top" secondItem="vmm-Gh-fCl" secondAttribute="top" id="fkW-4O-q2l"/>
                             <constraint firstItem="KPT-fG-Hg8" firstAttribute="top" secondItem="pOT-3s-XTd" secondAttribute="top" id="hQe-Xi-QFz"/>
+                            <constraint firstItem="wLR-iO-6b3" firstAttribute="centerX" secondItem="3yH-eA-iKq" secondAttribute="centerX" id="hrN-Eb-ICN"/>
+                            <constraint firstItem="wLR-iO-6b3" firstAttribute="height" secondItem="avf-GO-igm" secondAttribute="height" id="iOb-jo-FgO"/>
                             <constraint firstItem="Sad-qe-5Y6" firstAttribute="height" secondItem="mEp-VK-2fM" secondAttribute="height" id="j5b-a3-VPQ"/>
                             <constraint firstItem="KPT-fG-Hg8" firstAttribute="leading" secondItem="5MY-ht-ENr" secondAttribute="leading" id="k6Q-PZ-IB7"/>
                             <constraint firstItem="mEp-VK-2fM" firstAttribute="width" secondItem="h1Z-l0-V26" secondAttribute="width" multiplier="0.3" id="ndk-V3-9oE"/>
@@ -167,10 +173,12 @@
                             <constraint firstItem="KPT-fG-Hg8" firstAttribute="width" secondItem="KPT-fG-Hg8" secondAttribute="height" multiplier="130:30" id="ogw-gJ-eks"/>
                             <constraint firstItem="OQ4-tP-sk0" firstAttribute="top" secondItem="Sad-qe-5Y6" secondAttribute="bottom" multiplier="1.05" id="qhP-Z2-ZJh"/>
                             <constraint firstItem="avf-GO-igm" firstAttribute="width" secondItem="3yH-eA-iKq" secondAttribute="width" multiplier="0.6" id="qmi-Qu-01Y"/>
+                            <constraint firstItem="wLR-iO-6b3" firstAttribute="bottom" secondItem="h1Z-l0-V26" secondAttribute="bottom" constant="-80" id="r3K-cL-N1B"/>
                             <constraint firstItem="2wt-ZD-tsQ" firstAttribute="width" secondItem="2wt-ZD-tsQ" secondAttribute="height" multiplier="20:7" id="sZd-gg-1TK"/>
                             <constraint firstItem="pOT-3s-XTd" firstAttribute="width" secondItem="pOT-3s-XTd" secondAttribute="height" multiplier="20:7" id="tXT-sT-6Dd"/>
                             <constraint firstItem="Sad-qe-5Y6" firstAttribute="leading" secondItem="mEp-VK-2fM" secondAttribute="trailing" multiplier="1.1" id="vc0-VJ-ZzC"/>
                             <constraint firstItem="OQ4-tP-sk0" firstAttribute="height" secondItem="2wt-ZD-tsQ" secondAttribute="height" id="wCc-QY-Yng"/>
+                            <constraint firstItem="wLR-iO-6b3" firstAttribute="width" secondItem="3yH-eA-iKq" secondAttribute="width" multiplier="0.4" id="xOJ-Uv-O3w"/>
                             <constraint firstItem="mEp-VK-2fM" firstAttribute="top" secondItem="jxf-PT-gPE" secondAttribute="bottom" multiplier="1.25" id="yUt-kc-z1Q"/>
                             <constraint firstItem="vmm-Gh-fCl" firstAttribute="height" secondItem="jxf-PT-gPE" secondAttribute="height" id="zJl-F7-c0e"/>
                             <constraint firstItem="mnA-Y4-CEG" firstAttribute="width" secondItem="mnA-Y4-CEG" secondAttribute="height" multiplier="20:7" id="zsW-0Y-LpI"/>
