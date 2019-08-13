@@ -22,12 +22,15 @@
 		040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB922A4E56C00D243D3 /* Home.storyboard */; };
 		0457BBC822F2A79100188610 /* ViewControllerRulesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */; };
 		0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */; };
-		0457BBCC22F2A81E00188610 /* ViewControllerPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
 		0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */; };
 		0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */; };
 		0482ADD822BFF0F700D6FF10 /* ClassicScores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */; };
 		0482ADD922BFF0F700D6FF10 /* Gamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD422BFF0F700D6FF10 /* Gamemode.swift */; };
+		0499223122FC76B300735F7D /* purplePlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223022FC76B300735F7D /* purplePlanet.png */; };
+		0499223522FC795400735F7D /* greenPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223422FC795400735F7D /* greenPlanet.png */; };
+		0499223722FC795900735F7D /* bluePlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223622FC795800735F7D /* bluePlanet.png */; };
+		0499223922FC795F00735F7D /* redPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223822FC795F00735F7D /* redPlanet.png */; };
 		04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8F0622E432CC0049138E /* ViewControllerRules.swift */; };
 		04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */; };
 		04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */; };
@@ -36,6 +39,7 @@
 		04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E522EFFD9A007E673C /* VideoClip.swift */; };
 		04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */; };
 		7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */; };
+		B1A0C03A91272541C6B0FDD6 /* Pods_Planet_Pong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
 		D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657251DF45E04002B7557 /* UartModuleViewController.swift */; };
 		D5B24DDC1DEE393B00D33B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */; };
@@ -62,20 +66,26 @@
 		040F5FB922A4E56C00D243D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesSelection.swift; sourceTree = "<group>"; };
 		0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesController.swift; sourceTree = "<group>"; };
-		0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPlay.swift; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
 		0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerClassicScores.swift; sourceTree = "<group>"; };
 		0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerScores.swift; sourceTree = "<group>"; };
 		0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClassicScores.storyboard; sourceTree = "<group>"; };
 		0482ADD422BFF0F700D6FF10 /* Gamemode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamemode.swift; sourceTree = "<group>"; };
+		0499223022FC76B300735F7D /* purplePlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purplePlanet.png; path = "Basic Chat/Graphics/purplePlanet.png"; sourceTree = SOURCE_ROOT; };
+		0499223422FC795400735F7D /* greenPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenPlanet.png; path = "Basic Chat/Graphics/greenPlanet.png"; sourceTree = SOURCE_ROOT; };
+		0499223622FC795800735F7D /* bluePlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePlanet.png; path = "Basic Chat/Graphics/bluePlanet.png"; sourceTree = SOURCE_ROOT; };
+		0499223822FC795F00735F7D /* redPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redPlanet.png; path = "Basic Chat/Graphics/redPlanet.png"; sourceTree = SOURCE_ROOT; };
 		04CE8F0622E432CC0049138E /* ViewControllerRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRules.swift; sourceTree = "<group>"; };
 		04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
 		04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sniper Mode.mp4"; path = "Basic Chat/Sniper Mode.mp4"; sourceTree = "<group>"; };
 		04DB86E122EFFB80007E673C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		04DB86E322EFFC82007E673C /* VideoLooperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLooperView.swift; sourceTree = "<group>"; };
 		04DB86E522EFFD9A007E673C /* VideoClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClip.swift; sourceTree = "<group>"; };
+		04DED16122FF1307000D9928 /* Myriad Pro Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Semibold.ttf"; path = "Myriad Pro/Myriad Pro Semibold.ttf"; sourceTree = "<group>"; };
 		04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHallOfFame.swift; sourceTree = "<group>"; };
+		1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planet_Pong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeClassic.swift; sourceTree = "<group>"; };
+		9F8849BABDA5D961FCD7C601 /* Pods-Planet Pong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planet Pong.debug.xcconfig"; path = "Target Support Files/Pods-Planet Pong/Pods-Planet Pong.debug.xcconfig"; sourceTree = "<group>"; };
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
 		D5B24DD81DEE393B00D33B5A /* Planet Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Planet Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +96,7 @@
 		D5B24DE71DEE393B00D33B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5B24DED1DEE399800D33B5A /* ViewControllerPairing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPairing.swift; sourceTree = "<group>"; };
 		D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralTableViewCell.swift; sourceTree = "<group>"; };
+		E97E9DBECEA3C9634F65F33F /* Pods-Planet Pong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planet Pong.release.xcconfig"; path = "Target Support Files/Pods-Planet Pong/Pods-Planet Pong.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A0C03A91272541C6B0FDD6 /* Pods_Planet_Pong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,13 +177,16 @@
 			children = (
 				040E756622ADDB0900E4B1F7 /* ViewControllerHome.swift */,
 				040F5FB922A4E56C00D243D3 /* Home.storyboard */,
+				0499223022FC76B300735F7D /* purplePlanet.png */,
+				0499223422FC795400735F7D /* greenPlanet.png */,
+				0499223622FC795800735F7D /* bluePlanet.png */,
+				0499223822FC795F00735F7D /* redPlanet.png */,
 				040F5FB522A4E35F00D243D3 /* logo1.png */,
 				040F5FB722A4E4F600D243D3 /* logo2.png */,
 				04CE8F0622E432CC0049138E /* ViewControllerRules.swift */,
 				04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */,
 				0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */,
 				0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */,
-				0457BBCB22F2A81E00188610 /* ViewControllerPlay.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -185,16 +200,33 @@
 				0482ADD322BFF0F700D6FF10 /* ClassicScores.storyboard */,
 				0482ADD422BFF0F700D6FF10 /* Gamemode.swift */,
 			);
-			name = Scores;
-			path = "Basic Chat/Scores";
+			path = Scores;
 			sourceTree = "<group>";
 		};
 		04D87EEE22C1A1C100D92C3F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				04DED16122FF1307000D9928 /* Myriad Pro Semibold.ttf */,
 				04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		21408B3B462819635B24DC53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F8849BABDA5D961FCD7C601 /* Pods-Planet Pong.debug.xcconfig */,
+				E97E9DBECEA3C9634F65F33F /* Pods-Planet Pong.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DF6EF9A734EBB47C91AF2DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D5B24DCF1DEE393B00D33B5A = {
@@ -203,7 +235,8 @@
 				04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */,
 				D5B24DDA1DEE393B00D33B5A /* Basic Chat */,
 				D5B24DD91DEE393B00D33B5A /* Products */,
-				0482ADCF22BFF0F700D6FF10 /* Scores */,
+				21408B3B462819635B24DC53 /* Pods */,
+				8DF6EF9A734EBB47C91AF2DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +251,7 @@
 		D5B24DDA1DEE393B00D33B5A /* Basic Chat */ = {
 			isa = PBXGroup;
 			children = (
+				0482ADCF22BFF0F700D6FF10 /* Scores */,
 				04D87EEE22C1A1C100D92C3F /* Fonts */,
 				040E756B22AF499000E4B1F7 /* Gamemode Selection */,
 				040E756A22AF497500E4B1F7 /* Game Settings */,
@@ -240,9 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Planet Pong" */;
 			buildPhases = (
+				445662D4C94FD8794C2CD52A /* [CP] Check Pods Manifest.lock */,
 				D5B24DD41DEE393B00D33B5A /* Sources */,
 				D5B24DD51DEE393B00D33B5A /* Frameworks */,
 				D5B24DD61DEE393B00D33B5A /* Resources */,
+				868C0701DB2D45C982B35011 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,7 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */,
+				0499223522FC795400735F7D /* greenPlanet.png in Resources */,
 				040E757622AF4E1600E4B1F7 /* Tutorial.storyboard in Resources */,
+				0499223922FC795F00735F7D /* redPlanet.png in Resources */,
 				040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */,
 				040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */,
 				D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */,
@@ -312,10 +350,55 @@
 				040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */,
 				040F5FB622A4E35F00D243D3 /* logo1.png in Resources */,
 				D5B24DE11DEE393B00D33B5A /* Pairing.storyboard in Resources */,
+				0499223122FC76B300735F7D /* purplePlanet.png in Resources */,
+				0499223722FC795900735F7D /* bluePlanet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		445662D4C94FD8794C2CD52A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Planet Pong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		868C0701DB2D45C982B35011 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5B24DD41DEE393B00D33B5A /* Sources */ = {
@@ -342,7 +425,6 @@
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 				04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */,
 				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
-				0457BBCC22F2A81E00188610 /* ViewControllerPlay.swift in Sources */,
 				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,8 +566,9 @@
 		};
 		D5B24DEB1DEE393B00D33B5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8849BABDA5D961FCD7C601 /* Pods-Planet Pong.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -499,8 +582,9 @@
 		};
 		D5B24DEC1DEE393B00D33B5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97E9DBECEA3C9634F65F33F /* Pods-Planet Pong.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				DEVELOPMENT_TEAM = 72RBJN2RMF;
 				INFOPLIST_FILE = "Basic Chat/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;

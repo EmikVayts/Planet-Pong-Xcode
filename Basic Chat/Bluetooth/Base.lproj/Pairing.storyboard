@@ -9,13 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Semibold.ttf">
+            <string>MyriadPro-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="kgz-Em-9Pz">
             <objects>
-                <navigationController id="3Yh-2X-Wy2" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="3Yh-2X-Wy2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eSA-TS-cY5">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -26,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="-567" y="-3"/>
         </scene>
-        <!--Planet Pong-->
+        <!--Pairing-->
         <scene sceneID="ICt-bz-slO">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerPairing" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s6h-Zo-tC7" customClass="ViewControllerPairing" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,9 +42,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-Rf-ZHP">
+                                <rect key="frame" x="-392" y="0.0" width="1104" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA6-Et-Wof">
+                                <rect key="frame" x="8" y="480.5" width="304" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nA6-Et-Wof" secondAttribute="height" multiplier="4" id="Vgc-5O-FQi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="14"/>
+                                <state key="normal" title="                   PLAY WITHOUT A MACHINE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playWithoutDevice:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="NzE-cq-UGr"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TenCups" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-Yp-wvg">
+                                <rect key="frame" x="24" y="499" width="64" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8uS-Yp-wvg" secondAttribute="height" multiplier="160:117" id="Brh-KZ-aHE"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-RF-aiZ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="453.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" rowHeight="98" id="LJh-m2-NaE" customClass="PeripheralTableViewCell" customModule="Planet_Pong" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="98"/>
@@ -50,21 +76,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wW-qX-zLz">
-                                                    <rect key="frame" x="14" y="52" width="120" height="21"/>
+                                                    <rect key="frame" x="94" y="52" width="120" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peripheral Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-Uc-DEI">
-                                                    <rect key="frame" x="14" y="23" width="291" height="21"/>
+                                                    <rect key="frame" x="94" y="23" width="291" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlanetPongMachineOn" translatesAutoresizingMaskIntoConstraints="NO" id="Wul-zr-Vrf">
+                                                    <rect key="frame" x="8" y="9" width="78" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="peripheralLabel" destination="0wd-Uc-DEI" id="NrB-Zn-JsO"/>
                                             <outlet property="rssiLabel" destination="0wW-qX-zLz" id="R3R-b1-YlY"/>
@@ -76,16 +107,36 @@
                                     <outlet property="delegate" destination="s6h-Zo-tC7" id="sD9-kA-Vcs"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PurpleFadeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-vp-yZ8">
+                                <rect key="frame" x="-112.5" y="0.0" width="545" height="568"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cCu-cf-R0b" firstAttribute="top" secondItem="iJd-RF-aiZ" secondAttribute="bottom" id="5Ou-z8-zmL"/>
+                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" multiplier="0.35" id="1YW-cO-GsJ"/>
+                            <constraint firstItem="cCu-cf-R0b" firstAttribute="top" secondItem="iJd-RF-aiZ" secondAttribute="bottom" multiplier="1.2" id="5Ou-z8-zmL"/>
+                            <constraint firstItem="nA6-Et-Wof" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="8ni-Ao-Fem"/>
+                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="9w0-h4-az0"/>
+                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" id="D03-R7-RuB"/>
+                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.2" id="JbN-vl-kpk"/>
+                            <constraint firstItem="nA6-Et-Wof" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" multiplier="1.825" id="MuV-Am-fzB"/>
+                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" multiplier="1.84" id="QAC-HK-aRy"/>
                             <constraint firstItem="iJd-RF-aiZ" firstAttribute="leading" secondItem="M0w-Ty-hJr" secondAttribute="leading" id="S69-FI-myd"/>
+                            <constraint firstItem="A7e-vp-yZ8" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" id="YLF-it-Cfi"/>
+                            <constraint firstItem="nA6-Et-Wof" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.95" id="adk-Ue-weu"/>
                             <constraint firstItem="iJd-RF-aiZ" firstAttribute="top" secondItem="LSv-z8-Zyp" secondAttribute="bottom" id="bi9-Wb-uIJ"/>
+                            <constraint firstAttribute="bottom" secondItem="A7e-vp-yZ8" secondAttribute="bottom" id="cJe-A7-l7K"/>
+                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" id="iel-lD-bgc"/>
+                            <constraint firstItem="A7e-vp-yZ8" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="qz5-Yj-PzH"/>
                             <constraint firstAttribute="trailing" secondItem="iJd-RF-aiZ" secondAttribute="trailing" id="vEz-UJ-4BT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Planet Pong" id="w25-yy-fKD">
+                    <navigationItem key="navigationItem" title="Pairing" id="w25-yy-fKD">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="WMK-PA-mOK">
+                            <connections>
+                                <action selector="backAction:" destination="s6h-Zo-tC7" id="pnx-om-ZAp"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="wI8-q6-jjP">
                             <connections>
                                 <action selector="refreshAction:" destination="s6h-Zo-tC7" id="0uP-Tx-3ga"/>
@@ -94,12 +145,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="baseTableView" destination="iJd-RF-aiZ" id="Bqn-an-Cdy"/>
+                        <outlet property="playWithoutDeviceButton" destination="nA6-Et-Wof" id="FMK-NJ-Mq5"/>
                         <outlet property="refreshButton" destination="wI8-q6-jjP" id="Cid-ow-d87"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6E-yO-YNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229.59999999999999" y="-3.1484257871064472"/>
+            <point key="canvasLocation" x="228.75" y="-3.1690140845070425"/>
         </scene>
         <!--Uart Module View Controller-->
         <scene sceneID="GSI-5z-wDd">
@@ -422,4 +474,10 @@ Vote for Planet Pong!</string>
             <point key="canvasLocation" x="229" y="662"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PlanetPongMachineOn" width="408.5" height="459.5"/>
+        <image name="PurpleFadeBackground" width="544.5" height="960"/>
+        <image name="StarsBackground" width="1104" height="1104"/>
+        <image name="TenCups" width="335.5" height="234"/>
+    </resources>
 </document>
