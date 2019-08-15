@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 import CoreBluetooth
-
+import StatusAlert
 
 var txCharacteristic : CBCharacteristic?
 var rxCharacteristic : CBCharacteristic?
@@ -19,6 +19,10 @@ var characteristicASCIIValue = NSString()
 
 
 class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     //Data
     var centralManager : CBCentralManager!
@@ -33,7 +37,36 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
     //UI
     @IBOutlet weak var baseTableView: UITableView!
     @IBOutlet weak var refreshButton: UIBarButtonItem!
+    @IBOutlet weak var playWithoutDeviceButton: UIButton!
     
+    //Go to the new game without all the bluetooth stuff
+    @IBAction func playWithoutDevice(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
+        
+        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
+        uartViewController.bluetoothEnabled = false
+        
+        //Add the fade transition
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        
+        navigationController?.view.layer.add(transition, forKey: nil)
+        
+        navigationController?.pushViewController(uartViewController, animated: false)
+        
+        print("Go to gamemode war without bluetooth functionality")
+    }
+    
+    //Go back to home screen
+    @IBAction func backAction(_ sender: Any) {
+        print("Player hit back on pairing screen to go to home menu")
+        navigationController?.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    //Start the scan for new devices
     @IBAction func refreshAction(_ sender: AnyObject) {
         disconnectFromDevice()
         self.peripherals = []
@@ -42,17 +75,25 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         startScan()
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.baseTableView.delegate = self
         self.baseTableView.dataSource = self
         self.baseTableView.reloadData()
         
+        //Style the button
+        playWithoutDeviceButton.layer.borderColor = UIColor.white.cgColor;
+        playWithoutDeviceButton.layer.borderWidth = 1;
+        playWithoutDeviceButton.layer.cornerRadius = 3;
+        
         /*Our key player in this app will be our CBCentralManager. CBCentralManager objects are used to manage discovered or connected remote peripheral devices (represented by CBPeripheral objects), including scanning for, discovering, and connecting to advertising peripherals.
          */
         centralManager = CBCentralManager(delegate: self, queue: nil)
-        let backButton = UIBarButtonItem(title: "Disconnect", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButton
+        //let backButton = UIBarButtonItem(title: "Disconnect", style: .plain, target: nil, action: nil)
+        //navigationItem.backBarButtonItem = backButton
+        startScan()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,9 +109,32 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         centralManager?.stopScan()
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        let screenTransition = ScreenTransitions()
+        
+        screenTransition.popScreen(nc: navigationController!)
+    }
+    
+    
     /*Okay, now that we have our CBCentalManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
     
     func startScan() {
+        
+        //Create the start scan notification
+        // Creating StatusAlert instance
+        /*let statusAlert = StatusAlert()
+        statusAlert.appearance.tintColor = UIColor.white
+        statusAlert.appearance.titleFont = UIFont(name: "Myriad Pro Semibold", size: 23) ?? UIFont.systemFont(ofSize: 23, weight: UIFont.Weight.regular)
+        statusAlert.appearance.messageFont = UIFont(name: "Myriad Pro Semibold", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
+        statusAlert.image = UIImage(named: "planetPurple")
+        statusAlert.title = "SEARCHING FOR DEVICES..."
+        statusAlert.message = ""
+        statusAlert.alertShowingDuration = 2
+        statusAlert.canBePickedOrDismissed = true
+        
+        // Presenting created instance
+        statusAlert.showInKeyWindow()*/
+        
         peripherals = [] //Array contains all peripherals
         print("Now Scanning...")
         self.timer.invalidate()
@@ -81,6 +145,22 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
     /*We also need to stop scanning at some point so we'll also create a function that calls "stopScan"*/
     @objc func cancelScan() {
         self.centralManager?.stopScan()
+        
+        if (peripherals.count == 0) {
+            /*let statusAlert = StatusAlert()
+            statusAlert.appearance.tintColor = UIColor.white
+            statusAlert.appearance.titleFont = UIFont(name: "Myriad Pro Semibold", size: 23) ?? UIFont.systemFont(ofSize: 23, weight: UIFont.Weight.regular)
+            statusAlert.appearance.messageFont = UIFont(name: "Myriad Pro Semibold", size: 16) ?? UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
+            statusAlert.image = UIImage(named: "planetPurple")
+            statusAlert.title = "NO DEVICES FOUND!"
+            statusAlert.message = "Make sure your Planet Pong machine is powered on and nearby."
+            statusAlert.canBePickedOrDismissed = true
+            statusAlert.alertShowingDuration = 4
+            
+            // Presenting created instance
+            statusAlert.showInKeyWindow()*/
+        }
+        
         print("Scan Stopped")
         print("Number of Peripherals Found: \(peripherals.count)")
     }
@@ -350,7 +430,7 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         } else {
             cell.peripheralLabel.text = peripheral.name
         }
-        cell.rssiLabel.text = "RSSI: \(RSSI)"
+        cell.rssiLabel.text = "Signal Strength: \(RSSI)"
         
         return cell
     }

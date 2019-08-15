@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Aldrich-Regular.ttf</string>
+		<string>PressStart2P-Regular.ttf</string>
+		<string>Myriad Pro Semibold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

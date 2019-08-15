@@ -1,0 +1,16 @@
+PODS:
+  - StatusAlert (1.1.1)
+
+DEPENDENCIES:
+  - StatusAlert (~> 1.1.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - StatusAlert
+
+SPEC CHECKSUMS:
+  StatusAlert: a18ec3c33d36a06d4479c1f2b15ffac67aaf7ab1
+
+PODFILE CHECKSUM: f39e78b7769ec0f016ef1ebdfe58295200390904
+
+COCOAPODS: 1.7.5

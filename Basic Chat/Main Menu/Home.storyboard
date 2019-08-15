@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7fM-Fn-TJd">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,6 +13,9 @@
         <array key="Aldrich-Regular.ttf">
             <string>Aldrich</string>
         </array>
+        <array key="Myriad Pro Semibold.ttf">
+            <string>MyriadPro-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Main Menu-->
@@ -20,7 +23,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewControllerHome" title="Main Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aIw-Nz-iXk" customClass="ViewControllerHome" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eJh-qY-VJv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fgt-SX-ptY">
@@ -30,86 +33,121 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-tu-X6d">
-                                <rect key="frame" x="94" y="280.5" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="247" width="160" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0mb-tu-X6d" secondAttribute="height" multiplier="3" id="T8O-bn-nhX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="32"/>
                                 <state key="normal" title="PLAY">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SiM-R1-aiy" kind="show" id="vaz-N8-fHH"/>
+                                    <action selector="goToPairing:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="5eY-fn-K08"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onb-el-deT">
-                                <rect key="frame" x="94" y="368" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="325.5" width="160" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="onb-el-deT" secondAttribute="height" multiplier="3" id="JSz-nc-x3d"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="22"/>
                                 <state key="normal" title="SCORES">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="DRe-SN-77I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-IN-7j3">
-                                <rect key="frame" x="94" y="455.5" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="403.5" width="160" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1WW-IN-7j3" secondAttribute="height" multiplier="3" id="1l6-Jc-hjR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="20"/>
                                 <state key="normal" title="HOW TO PLAY">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="zZ7-i6-Twg"/>
-                                    <segue destination="hZn-Tc-Br4" kind="show" id="eKQ-g2-DHX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwo-XW-1oV">
-                                <rect key="frame" x="94" y="543" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="482" width="160" height="53.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pwo-XW-1oV" secondAttribute="height" multiplier="3" id="uTv-sg-Kez"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="18"/>
                                 <state key="normal" title="HALL OF FAME">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="goToHallOfFame:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="Sgf-ju-sSj"/>
                                     <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="ioR-Jd-y7O"/>
-                                    <segue destination="Nud-fJ-5el" kind="show" id="H2c-la-hrF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wll-Ej-qae" userLabel="MusicButton">
+                                <rect key="frame" x="10" y="30" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wll-Ej-qae" secondAttribute="height" id="1J7-eF-UB6"/>
+                                </constraints>
+                                <state key="normal" image="MusicIcon"/>
+                                <connections>
+                                    <action selector="musicButtonPressed:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="jFf-qk-oiH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yj3-wC-eYt" userLabel="SettingsButton">
+                                <rect key="frame" x="278" y="30" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yj3-wC-eYt" secondAttribute="height" id="TV5-H5-jkW"/>
+                                </constraints>
+                                <state key="normal" image="SettingsIcon"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="K9x-R2-Xoz">
+                                <rect key="frame" x="0.0" y="62" width="320" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K9x-R2-Xoz" secondAttribute="height" multiplier="2" id="uFc-qI-8Cm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="top" secondItem="wll-Ej-qae" secondAttribute="top" constant="-10" id="0Zy-YN-VJx"/>
                             <constraint firstItem="1WW-IN-7j3" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="56D-2K-waf"/>
                             <constraint firstItem="onb-el-deT" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="9Sq-Ic-mGy"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="A18-b8-aHJ"/>
+                            <constraint firstItem="wll-Ej-qae" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.1" id="HeF-ra-YmS"/>
                             <constraint firstItem="1WW-IN-7j3" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="IHC-90-Z5i"/>
                             <constraint firstItem="onb-el-deT" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="JTE-1L-By0"/>
                             <constraint firstItem="1WW-IN-7j3" firstAttribute="top" secondItem="onb-el-deT" secondAttribute="bottom" constant="25" id="JUz-YR-iWE"/>
+                            <constraint firstItem="0mb-tu-X6d" firstAttribute="top" secondItem="K9x-R2-Xoz" secondAttribute="bottom" constant="25" id="KuQ-vo-AEA"/>
                             <constraint firstItem="0mb-tu-X6d" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="M9P-ds-aD5"/>
                             <constraint firstItem="0mb-tu-X6d" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="PZP-ME-7Px"/>
-                            <constraint firstItem="0mb-tu-X6d" firstAttribute="top" secondItem="fgt-SX-ptY" secondAttribute="bottom" id="QEl-dU-7Fa"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="UlP-ET-w4a"/>
+                            <constraint firstItem="K9x-R2-Xoz" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="biS-Xz-gG6"/>
+                            <constraint firstItem="K9x-R2-Xoz" firstAttribute="centerY" secondItem="eJh-qY-VJv" secondAttribute="centerY" multiplier="0.5" id="cYr-XW-qkR"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="ki6-9p-elz"/>
                             <constraint firstItem="onb-el-deT" firstAttribute="top" secondItem="0mb-tu-X6d" secondAttribute="bottom" constant="25" id="lE3-3X-Pbt"/>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="top" secondItem="Yj3-wC-eYt" secondAttribute="top" constant="-10" id="pZc-7o-byD"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="top" secondItem="1WW-IN-7j3" secondAttribute="bottom" constant="25" id="s5T-u4-idw"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.75" id="sWO-3q-YKx"/>
+                            <constraint firstItem="Yj3-wC-eYt" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.1" id="ufW-Hi-Eo0"/>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="leading" secondItem="wll-Ej-qae" secondAttribute="leading" constant="-10" id="vm7-GM-vW2"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="centerY" secondItem="eJh-qY-VJv" secondAttribute="centerY" multiplier="0.6" id="wHG-s4-kMy"/>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="width" secondItem="K9x-R2-Xoz" secondAttribute="width" id="xnZ-ek-hOn"/>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="trailing" secondItem="Yj3-wC-eYt" secondAttribute="trailing" constant="10" id="ydK-NM-bOe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RQD-uB-B8P"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fgt-SX-ptY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="IKQ-Cp-I1K"/>
                     <connections>
+                        <outlet property="hallOfFameButton" destination="pwo-XW-1oV" id="um1-yB-Lms"/>
+                        <outlet property="howToPlayButton" destination="1WW-IN-7j3" id="TbQ-7M-5o8"/>
+                        <outlet property="musicButton" destination="wll-Ej-qae" id="6Xh-fu-zc7"/>
                         <outlet property="scoreButton" destination="onb-el-deT" id="a7u-HE-Xg8"/>
                         <outlet property="startButton" destination="0mb-tu-X6d" id="w9H-GN-kRJ"/>
                     </connections>
@@ -121,10 +159,9 @@
         <!--Navigation Controller-->
         <scene sceneID="X4g-2F-dNW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7fM-Fn-TJd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="7fM-Fn-TJd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TKP-uc-rRS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -141,11 +178,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewControllerRules" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wwk-Hv-UQo" customClass="ViewControllerRules" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DYj-ba-gcP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucW-t5-Nje">
-                                <rect key="frame" x="94" y="552.5" width="187.5" height="62.5"/>
+                                <rect key="frame" x="80" y="470.5" width="160" height="53"/>
                                 <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ucW-t5-Nje" secondAttribute="height" multiplier="3" id="8cJ-UX-3Se"/>
@@ -160,7 +197,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rF4-rk-HWJ">
-                                <rect key="frame" x="47" y="80" width="281" height="40"/>
+                                <rect key="frame" x="40" y="68" width="240" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rF4-rk-HWJ" secondAttribute="height" multiplier="7" id="QMS-id-zJZ"/>
                                 </constraints>
@@ -169,12 +206,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-LY-Fx2">
-                                <rect key="frame" x="47" y="120" width="281" height="402"/>
+                                <rect key="frame" x="40" y="102.5" width="240" height="342.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ey0-LY-Fx2" secondAttribute="height" multiplier="0.7" id="ju2-E3-ZX7"/>
                                 </constraints>
-                                <mutableString key="text">Find 10 cups and allign them in a bowling pin formation 
+                                <string key="text">Find 10 cups and allign them in a bowling pin formation 
 
 When buying cups avoid brands that use #6 plastic (it's bad for the environment)
 
@@ -186,7 +223,7 @@ From the menu you will be able to select from a variety of gamemodes, which are 
 
 For Planet Pong to keep up with your game, tap the respective cup everytime a shot is made, and tap the 'miss' button everytime a shot is missed 
 
-For a more immersive experience, check out the Planet Pong controller!</mutableString>
+For a more immersive experience, check out the Planet Pong controller!</string>
                                 <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -215,18 +252,17 @@ For a more immersive experience, check out the Planet Pong controller!</mutableS
             <objects>
                 <viewController storyboardIdentifier="ViewControllerHallOfFame" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nud-fJ-5el" customClass="ViewControllerHallOfFame" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N3h-I7-3aP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a15-HM-O0C">
-                                <rect key="frame" x="94" y="552.5" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="470.5" width="160" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="a15-HM-O0C" secondAttribute="height" multiplier="3" id="t3U-Bv-khj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="17"/>
                                 <state key="normal" title="BACK">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="uwf-6Q-GeJ"/>
@@ -234,18 +270,23 @@ For a more immersive experience, check out the Planet Pong controller!</mutableS
                                     <action selector="return:" destination="Wwk-Hv-UQo" eventType="touchUpInside" id="zkw-aL-RhX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hall Of Fame" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-Ux-uJl">
-                                <rect key="frame" x="47" y="76.5" width="281" height="47"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planetRed" translatesAutoresizingMaskIntoConstraints="NO" id="NQK-ed-75C">
+                                <rect key="frame" x="0.0" y="211.5" width="320" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NQK-ed-75C" secondAttribute="height" multiplier="75:34" id="zfP-SU-1gl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HALL OF FAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-Ux-uJl">
+                                <rect key="frame" x="40" y="65" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XbE-Ux-uJl" secondAttribute="height" multiplier="6" id="O6F-8D-VTS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="31"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJu-Mq-hgO">
-                                <rect key="frame" x="47" y="123.5" width="281" height="402"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="40" y="120" width="240" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eJu-Mq-hgO" secondAttribute="height" multiplier="0.7" id="IEV-Ub-wjL"/>
                                 </constraints>
@@ -285,112 +326,49 @@ Kennedy Devries - 1st Trickshot Video
 
 Mr Tschanz - Physics Teacher
 
-Rico Savage - Motivator</string>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
+Rico Savage - Motivator
+
+Daniel Burant - Dank Logo</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XbE-Ux-uJl" firstAttribute="centerY" secondItem="N3h-I7-3aP" secondAttribute="centerY" multiplier="0.3" id="20a-WC-joh"/>
                             <constraint firstItem="a15-HM-O0C" firstAttribute="width" secondItem="gFQ-Bh-CJt" secondAttribute="width" multiplier="0.5" id="4UF-T1-hKR"/>
                             <constraint firstItem="a15-HM-O0C" firstAttribute="centerX" secondItem="N3h-I7-3aP" secondAttribute="centerX" id="5y4-ls-QZO"/>
                             <constraint firstItem="eJu-Mq-hgO" firstAttribute="width" secondItem="gFQ-Bh-CJt" secondAttribute="width" multiplier="0.75" id="71E-Xd-9RE"/>
                             <constraint firstItem="XbE-Ux-uJl" firstAttribute="width" secondItem="gFQ-Bh-CJt" secondAttribute="width" multiplier="0.75" id="9iq-9s-0lT"/>
-                            <constraint firstItem="eJu-Mq-hgO" firstAttribute="top" secondItem="XbE-Ux-uJl" secondAttribute="bottom" id="LOP-8F-zlv"/>
+                            <constraint firstItem="NQK-ed-75C" firstAttribute="width" secondItem="gFQ-Bh-CJt" secondAttribute="width" id="GyZ-0c-WP0"/>
+                            <constraint firstItem="NQK-ed-75C" firstAttribute="centerX" secondItem="N3h-I7-3aP" secondAttribute="centerX" id="HRu-et-Aqw"/>
+                            <constraint firstItem="eJu-Mq-hgO" firstAttribute="top" secondItem="XbE-Ux-uJl" secondAttribute="bottom" constant="15" id="LOP-8F-zlv"/>
                             <constraint firstItem="eJu-Mq-hgO" firstAttribute="centerX" secondItem="N3h-I7-3aP" secondAttribute="centerX" id="Oib-h6-8jw"/>
+                            <constraint firstItem="NQK-ed-75C" firstAttribute="centerY" secondItem="N3h-I7-3aP" secondAttribute="centerY" id="QPH-HT-XZL"/>
                             <constraint firstItem="a15-HM-O0C" firstAttribute="centerY" secondItem="N3h-I7-3aP" secondAttribute="centerY" multiplier="1.75" id="VNb-zs-apy"/>
                             <constraint firstItem="XbE-Ux-uJl" firstAttribute="centerX" secondItem="N3h-I7-3aP" secondAttribute="centerX" id="k9z-2E-rAB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gFQ-Bh-CJt"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="a15-HM-O0C" id="uyq-Mx-ofz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZH-gk-GtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="891"/>
-        </scene>
-        <!--View Controller Play-->
-        <scene sceneID="lw6-LC-TOn">
-            <objects>
-                <viewController storyboardIdentifier="ViewControllerPlay" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SiM-R1-aiy" customClass="ViewControllerPlay" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="j0p-eU-Avm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XS-ft-1Ke">
-                                <rect key="frame" x="94" y="135.5" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="2XS-ft-1Ke" secondAttribute="height" multiplier="3" id="D9f-KO-Nye"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
-                                <state key="normal" title="CONTROLLER PLAY">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="UxC-y5-cBh"/>
-                                    <action selector="play:" destination="SiM-R1-aiy" eventType="touchUpInside" id="MxD-FZ-hIr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48n-Lp-02o">
-                                <rect key="frame" x="94" y="469" width="187.5" height="62.5"/>
-                                <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
-                                <state key="normal" title="NO CONTROLLER">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToScores:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="Exq-Yp-XHg"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You are by a Planet Pong machine and ready to pair!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E69-au-PGb">
-                                <rect key="frame" x="19" y="208" width="337.5" height="90.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You have 10 water-filled cups and are ready to go!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N45-GM-QUB">
-                                <rect key="frame" x="19" y="541.5" width="337.5" height="90.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="2XS-ft-1Ke" firstAttribute="centerY" secondItem="j0p-eU-Avm" secondAttribute="centerY" multiplier="0.5" id="248-g5-icE"/>
-                            <constraint firstItem="2XS-ft-1Ke" firstAttribute="centerX" secondItem="j0p-eU-Avm" secondAttribute="centerX" id="3qo-GK-4jz"/>
-                            <constraint firstItem="2XS-ft-1Ke" firstAttribute="width" secondItem="D1u-pK-uOg" secondAttribute="width" multiplier="0.5" id="66B-MT-3Yy"/>
-                            <constraint firstItem="E69-au-PGb" firstAttribute="centerX" secondItem="j0p-eU-Avm" secondAttribute="centerX" id="6b9-kv-nOq"/>
-                            <constraint firstItem="E69-au-PGb" firstAttribute="top" secondItem="2XS-ft-1Ke" secondAttribute="bottom" constant="10" id="AAN-jV-tqI"/>
-                            <constraint firstItem="48n-Lp-02o" firstAttribute="width" secondItem="D1u-pK-uOg" secondAttribute="width" multiplier="0.5" id="DcR-8f-oKJ"/>
-                            <constraint firstItem="N45-GM-QUB" firstAttribute="width" secondItem="D1u-pK-uOg" secondAttribute="width" multiplier="0.9" id="Edc-P5-ihr"/>
-                            <constraint firstItem="48n-Lp-02o" firstAttribute="centerX" secondItem="j0p-eU-Avm" secondAttribute="centerX" id="JIM-ZN-ClY"/>
-                            <constraint firstItem="48n-Lp-02o" firstAttribute="width" secondItem="48n-Lp-02o" secondAttribute="height" multiplier="3" id="NXO-di-Ifn"/>
-                            <constraint firstItem="48n-Lp-02o" firstAttribute="bottom" secondItem="N45-GM-QUB" secondAttribute="top" constant="-10" id="VJf-H7-VqP"/>
-                            <constraint firstItem="E69-au-PGb" firstAttribute="height" secondItem="D1u-pK-uOg" secondAttribute="height" multiplier="0.15" id="X8L-yA-X8t"/>
-                            <constraint firstItem="N45-GM-QUB" firstAttribute="centerX" secondItem="j0p-eU-Avm" secondAttribute="centerX" id="dle-2Y-dPz"/>
-                            <constraint firstItem="N45-GM-QUB" firstAttribute="height" secondItem="D1u-pK-uOg" secondAttribute="height" multiplier="0.15" id="h5q-ox-3bC"/>
-                            <constraint firstItem="E69-au-PGb" firstAttribute="width" secondItem="j0p-eU-Avm" secondAttribute="width" multiplier="0.9" id="nL8-m0-y4K"/>
-                            <constraint firstItem="48n-Lp-02o" firstAttribute="centerY" secondItem="j0p-eU-Avm" secondAttribute="centerY" multiplier="1.5" id="zX5-2H-BcM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="D1u-pK-uOg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H1w-Kz-9Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1951" y="-591"/>
         </scene>
         <!--View Controller Rules Selection-->
         <scene sceneID="sr4-bV-HMo">
             <objects>
                 <viewController storyboardIdentifier="ViewControllerRulesSelection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hZn-Tc-Br4" customClass="ViewControllerRulesSelection" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmv-to-Oty">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXI-uN-1FC">
-                                <rect key="frame" x="94" y="135.5" width="187.5" height="62.5"/>
+                                <rect key="frame" x="80" y="115.5" width="160" height="53"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EXI-uN-1FC" secondAttribute="height" multiplier="3" id="twF-zg-BFp"/>
@@ -405,7 +383,7 @@ Rico Savage - Motivator</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gak-Wh-wTI">
-                                <rect key="frame" x="94" y="469" width="187.5" height="62.5"/>
+                                <rect key="frame" x="80" y="399.5" width="160" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
                                 <state key="normal" title="NO CONTROLLER">
@@ -417,13 +395,13 @@ Rico Savage - Motivator</string>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="How to play with a Planet Pong controller!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cRV-vh-gpV">
-                                <rect key="frame" x="19" y="208" width="337.5" height="90.5"/>
+                                <rect key="frame" x="16" y="178.5" width="288" height="82.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No controller? No worries! This is how you can play without a controller." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UvW-Z7-1VC">
-                                <rect key="frame" x="19" y="541.5" width="337.5" height="90.5"/>
+                                <rect key="frame" x="16" y="462.5" width="288" height="82.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Aldrich" family="Aldrich" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -459,11 +437,11 @@ Rico Savage - Motivator</string>
             <objects>
                 <viewController storyboardIdentifier="ViewControllerRulesController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gW7-1n-0kK" customClass="ViewControllerRulesController" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ukm-vm-ZtC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9Z-Ga-MhI">
-                                <rect key="frame" x="94" y="552.5" width="187.5" height="62.5"/>
+                                <rect key="frame" x="80" y="470.5" width="160" height="53"/>
                                 <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="M9Z-Ga-MhI" secondAttribute="height" multiplier="3" id="dn6-DM-9lf"/>
@@ -477,7 +455,7 @@ Rico Savage - Motivator</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24p-g0-Uke">
-                                <rect key="frame" x="47" y="80" width="281" height="40"/>
+                                <rect key="frame" x="40" y="68" width="240" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="24p-g0-Uke" secondAttribute="height" multiplier="7" id="Pme-kQ-ceg"/>
                                 </constraints>
@@ -486,7 +464,7 @@ Rico Savage - Motivator</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdp-7B-nuy">
-                                <rect key="frame" x="47" y="120" width="281" height="402"/>
+                                <rect key="frame" x="40" y="102.5" width="240" height="342.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zdp-7B-nuy" secondAttribute="height" multiplier="0.7" id="yq0-nJ-f04"/>
@@ -521,6 +499,10 @@ Press 'Play' on the homescreen to begin.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Logo1" width="217.5" height="236"/>
+        <image name="MusicIcon" width="112.5" height="112.5"/>
+        <image name="SettingsIcon" width="112.5" height="112.5"/>
         <image name="logo2.png" width="600" height="243.75"/>
+        <image name="planetRed" width="290" height="256"/>
     </resources>
 </document>
