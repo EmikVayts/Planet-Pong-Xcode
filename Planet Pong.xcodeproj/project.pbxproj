@@ -20,6 +20,8 @@
 		040F5FB622A4E35F00D243D3 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB522A4E35F00D243D3 /* logo1.png */; };
 		040F5FB822A4E4F600D243D3 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB722A4E4F600D243D3 /* logo2.png */; };
 		040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB922A4E56C00D243D3 /* Home.storyboard */; };
+		044DAC7D230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */; };
+		044DAC7F2302680E00BCA1C1 /* GamemodeWar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DAC7E2302680E00BCA1C1 /* GamemodeWar.storyboard */; };
 		0457BBC822F2A79100188610 /* ViewControllerRulesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */; };
 		0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
@@ -31,7 +33,9 @@
 		0499223522FC795400735F7D /* greenPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223422FC795400735F7D /* greenPlanet.png */; };
 		0499223722FC795900735F7D /* bluePlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223622FC795800735F7D /* bluePlanet.png */; };
 		0499223922FC795F00735F7D /* redPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223822FC795F00735F7D /* redPlanet.png */; };
+		049ACEC92305135800A551F3 /* ScreenTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ACEC82305135800A551F3 /* ScreenTransitions.swift */; };
 		04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8F0622E432CC0049138E /* ViewControllerRules.swift */; };
+		04D4C6D32303AEC90079A72B /* mainMenuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */; };
 		04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */; };
 		04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */; };
 		04DB86E222EFFB80007E673C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E122EFFB80007E673C /* VideoPlayerView.swift */; };
@@ -64,6 +68,8 @@
 		040F5FB522A4E35F00D243D3 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
 		040F5FB722A4E4F600D243D3 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		040F5FB922A4E56C00D243D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeWar.swift; sourceTree = "<group>"; };
+		044DAC7E2302680E00BCA1C1 /* GamemodeWar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamemodeWar.storyboard; sourceTree = "<group>"; };
 		0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesSelection.swift; sourceTree = "<group>"; };
 		0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesController.swift; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
@@ -75,7 +81,9 @@
 		0499223422FC795400735F7D /* greenPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenPlanet.png; path = "Basic Chat/Graphics/greenPlanet.png"; sourceTree = SOURCE_ROOT; };
 		0499223622FC795800735F7D /* bluePlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePlanet.png; path = "Basic Chat/Graphics/bluePlanet.png"; sourceTree = SOURCE_ROOT; };
 		0499223822FC795F00735F7D /* redPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redPlanet.png; path = "Basic Chat/Graphics/redPlanet.png"; sourceTree = SOURCE_ROOT; };
+		049ACEC82305135800A551F3 /* ScreenTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitions.swift; sourceTree = "<group>"; };
 		04CE8F0622E432CC0049138E /* ViewControllerRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRules.swift; sourceTree = "<group>"; };
+		04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mainMenuSong.mp3; path = "Basic Chat/SFX/mainMenuSong.mp3"; sourceTree = SOURCE_ROOT; };
 		04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
 		04DB86DF22EFEDED007E673C /* Sniper Mode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sniper Mode.mp4"; path = "Basic Chat/Sniper Mode.mp4"; sourceTree = "<group>"; };
 		04DB86E122EFFB80007E673C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -166,8 +174,10 @@
 		040F5FBC22A4E91900D243D3 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				044DAC7E2302680E00BCA1C1 /* GamemodeWar.storyboard */,
 				040E756422ADD72200E4B1F7 /* GamemodeClassic.storyboard */,
 				7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */,
+				044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -201,6 +211,23 @@
 				0482ADD422BFF0F700D6FF10 /* Gamemode.swift */,
 			);
 			path = Scores;
+			sourceTree = "<group>";
+		};
+		049ACEC72305133800A551F3 /* Screen Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				049ACEC82305135800A551F3 /* ScreenTransitions.swift */,
+			);
+			path = "Screen Transitions";
+			sourceTree = "<group>";
+		};
+		04D4C6D12303AEAA0079A72B /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */,
+			);
+			name = SFX;
+			path = ../SFX;
 			sourceTree = "<group>";
 		};
 		04D87EEE22C1A1C100D92C3F /* Fonts */ = {
@@ -251,6 +278,8 @@
 		D5B24DDA1DEE393B00D33B5A /* Basic Chat */ = {
 			isa = PBXGroup;
 			children = (
+				049ACEC72305133800A551F3 /* Screen Transitions */,
+				04D4C6D12303AEAA0079A72B /* SFX */,
 				0482ADCF22BFF0F700D6FF10 /* Scores */,
 				04D87EEE22C1A1C100D92C3F /* Fonts */,
 				040E756B22AF499000E4B1F7 /* Gamemode Selection */,
@@ -333,12 +362,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D4C6D32303AEC90079A72B /* mainMenuSong.mp3 in Resources */,
 				04DB86E022EFEDEE007E673C /* Sniper Mode.mp4 in Resources */,
 				0499223522FC795400735F7D /* greenPlanet.png in Resources */,
 				040E757622AF4E1600E4B1F7 /* Tutorial.storyboard in Resources */,
 				0499223922FC795F00735F7D /* redPlanet.png in Resources */,
 				040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */,
 				040E756D22AF49C200E4B1F7 /* GamemodeSelection.storyboard in Resources */,
+				044DAC7F2302680E00BCA1C1 /* GamemodeWar.storyboard in Resources */,
 				D5B24DE61DEE393B00D33B5A /* LaunchScreen.storyboard in Resources */,
 				040E756522ADD72300E4B1F7 /* GamemodeClassic.storyboard in Resources */,
 				040F5FB822A4E4F600D243D3 /* logo2.png in Resources */,
@@ -410,9 +441,11 @@
 				040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */,
 				04DB86E222EFFB80007E673C /* VideoPlayerView.swift in Sources */,
 				D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */,
+				049ACEC92305135800A551F3 /* ScreenTransitions.swift in Sources */,
 				04DB86E422EFFC82007E673C /* VideoLooperView.swift in Sources */,
 				D5B24DEE1DEE399800D33B5A /* ViewControllerPairing.swift in Sources */,
 				040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */,
+				044DAC7D230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift in Sources */,
 				7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */,
 				04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */,
 				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,

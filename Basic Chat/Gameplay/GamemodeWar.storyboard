@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,16 +18,16 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller Gamemode Classic-->
+        <!--View Controller Gamemode War-->
         <scene sceneID="V5g-bx-1z7">
             <objects>
-                <viewController storyboardIdentifier="ViewControllerGamemodeClassic" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kc5-wX-bza" customClass="ViewControllerGamemodeClassic" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerGamemodeWar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kc5-wX-bza" customClass="ViewControllerGamemodeWar" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vK4-7F-H7X">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfW-hu-shT" userLabel="Button3">
-                                <rect key="frame" x="100" y="188.66666666666666" width="69" height="68.999999999999972"/>
+                                <rect key="frame" x="77.5" y="130" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KfW-hu-shT" secondAttribute="height" id="Beu-s8-rdF"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFt-Z6-dL9" userLabel="Button0">
-                                <rect key="frame" x="172.66666666666666" y="312" width="69" height="69"/>
+                                <rect key="frame" x="133.5" y="226.5" width="53" height="53"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EFt-Z6-dL9" secondAttribute="height" id="rZ8-57-mmq"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2k-Td-uPE" userLabel="Button4">
-                                <rect key="frame" x="172.66666666666666" y="188.66666666666666" width="69" height="68.999999999999972"/>
+                                <rect key="frame" x="133.5" y="130" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="t2k-Td-uPE" secondAttribute="height" id="MAp-8q-Azg"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQN-Lb-dY0" userLabel="Button5">
-                                <rect key="frame" x="245" y="188.66666666666666" width="69" height="68.999999999999972"/>
+                                <rect key="frame" x="189.5" y="130" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MQN-Lb-dY0" secondAttribute="height" id="yWd-9v-cw9"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-t1-m2f" userLabel="Button2">
-                                <rect key="frame" x="208.66666666666666" y="251" width="68.999999999999972" height="69"/>
+                                <rect key="frame" x="161.5" y="179" width="53" height="53"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="g9b-t1-m2f" secondAttribute="height" id="e1Z-Uq-Xc5"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwA-oN-57q" userLabel="Button1">
-                                <rect key="frame" x="136.33333333333334" y="251" width="69" height="69"/>
+                                <rect key="frame" x="105.5" y="179" width="53" height="53"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nwA-oN-57q" secondAttribute="height" id="hD2-PZ-S0f"/>
@@ -93,7 +93,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTt-ta-FmV" userLabel="Button7">
-                                <rect key="frame" x="136.33333333333334" y="124.33333333333331" width="69" height="69"/>
+                                <rect key="frame" x="105.5" y="80" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hTt-ta-FmV" secondAttribute="height" id="1F9-Ur-UK8"/>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gde-wK-ywE" userLabel="Button8">
-                                <rect key="frame" x="208.66666666666666" y="124.33333333333331" width="68.999999999999972" height="69"/>
+                                <rect key="frame" x="161.5" y="80" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gde-wK-ywE" secondAttribute="height" id="rfF-IQ-6EQ"/>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-2j-ldz" userLabel="Button6">
-                                <rect key="frame" x="63.666666666666657" y="124.33333333333331" width="69" height="69"/>
+                                <rect key="frame" x="49.5" y="80" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ANA-2j-ldz" secondAttribute="height" id="GBC-m5-sBb"/>
@@ -126,7 +126,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rH-kM-leZ" userLabel="Button9">
-                                <rect key="frame" x="281.33333333333331" y="124.33333333333331" width="69" height="69"/>
+                                <rect key="frame" x="217.5" y="80" width="53" height="53.5"/>
                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5rH-kM-leZ" secondAttribute="height" id="979-Su-7ER"/>
@@ -137,25 +137,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0:00" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AtS-QZ-7dQ">
-                                <rect key="frame" x="75.333333333333314" y="474" width="207" height="48"/>
+                                <rect key="frame" x="58" y="343.5" width="160" height="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VDR-cL-Pmg" userLabel="Streak">
-                                <rect key="frame" x="344.66666666666669" y="474" width="207.00000000000006" height="48"/>
+                                <rect key="frame" x="266" y="343.5" width="160" height="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0/0" adjustsFontForContentSizeCategory="YES" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="g4P-Rh-ubT">
-                                <rect key="frame" x="220.33333333333337" y="474" width="207" height="48"/>
+                                <rect key="frame" x="170" y="343.5" width="160" height="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="28"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER 1 TURN #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="QPF-dA-GoS">
-                                <rect key="frame" x="51.666666666666657" y="390.66666666666669" width="310.66666666666674" height="69.333333333333314"/>
+                                <rect key="frame" x="40" y="286.5" width="240" height="47"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,9 +163,9 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tya-ch-Uwh">
-                                <rect key="frame" x="10.333333333333329" y="624" width="186.33333333333337" height="81.666666666666629"/>
+                                <rect key="frame" x="8" y="450.5" width="144" height="54.5"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
-                                <state key="normal" title="RERACK">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -173,7 +173,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P76-hB-RZ4">
-                                <rect key="frame" x="10.333333333333329" y="532" width="186.33333333333337" height="82"/>
+                                <rect key="frame" x="8" y="385.5" width="144" height="55"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="UNDO">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,23 +183,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-Sh-ICT">
-                                <rect key="frame" x="217.33333333333331" y="624" width="186.33333333333331" height="81.666666666666629"/>
+                                <rect key="frame" x="168" y="450.5" width="144" height="54.5"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
-                                <state key="normal" title="ISLAND">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="islandButtonPress:" destination="kc5-wX-bza" eventType="touchUpInside" id="Zzd-a4-tIL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-Xo-yua">
-                                <rect key="frame" x="51.666666666666657" y="54.999999999999993" width="310.66666666666674" height="69.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwH-Xo-yua">
+                                <rect key="frame" x="40" y="33.5" width="240" height="46.5"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="75"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Z-TX-YMd">
-                                <rect key="frame" x="217.33333333333331" y="532" width="186.33333333333331" height="82"/>
+                                <rect key="frame" x="168" y="385.5" width="144" height="55"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
                                 <state key="normal" title="MISS">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,19 +209,19 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClockImage" translatesAutoresizingMaskIntoConstraints="NO" id="yFN-df-CIO">
-                                <rect key="frame" x="17.333333333333329" y="474" width="48" height="48"/>
+                                <rect key="frame" x="16" y="343.5" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yFN-df-CIO" secondAttribute="height" id="smg-JC-9Oi"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShotsImage" translatesAutoresizingMaskIntoConstraints="NO" id="eAA-0p-lXB">
-                                <rect key="frame" x="162.33333333333334" y="474" width="48.000000000000114" height="48"/>
+                                <rect key="frame" x="128" y="343.5" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eAA-0p-lXB" secondAttribute="height" id="Nla-Pd-M67"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireIcon" translatesAutoresizingMaskIntoConstraints="NO" id="hwL-Fc-ug2">
-                                <rect key="frame" x="286.33333333333331" y="474" width="48.333333333333314" height="48"/>
+                                <rect key="frame" x="224" y="343.5" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hwL-Fc-ug2" secondAttribute="height" id="Zyj-DD-zNd"/>
                                 </constraints>
@@ -309,25 +309,25 @@
                     </view>
                     <navigationItem key="navigationItem" id="U5R-wm-TSP"/>
                     <connections>
-                        <outlet property="button0" destination="EFt-Z6-dL9" id="Rev-Dd-C9Z"/>
-                        <outlet property="button1" destination="nwA-oN-57q" id="TDx-2e-h1F"/>
-                        <outlet property="button2" destination="g9b-t1-m2f" id="fjG-wC-1SA"/>
-                        <outlet property="button3" destination="KfW-hu-shT" id="KFW-rs-2W6"/>
-                        <outlet property="button4" destination="t2k-Td-uPE" id="kbF-lS-OKi"/>
-                        <outlet property="button5" destination="MQN-Lb-dY0" id="0vT-LW-1Xv"/>
-                        <outlet property="button6" destination="ANA-2j-ldz" id="EQ5-1d-YYe"/>
-                        <outlet property="button7" destination="hTt-ta-FmV" id="ATE-ne-diw"/>
-                        <outlet property="button8" destination="gde-wK-ywE" id="DZw-fR-qfH"/>
-                        <outlet property="button9" destination="5rH-kM-leZ" id="DKm-VU-tQi"/>
-                        <outlet property="fireIcon" destination="hwL-Fc-ug2" id="ra2-HP-4Vc"/>
-                        <outlet property="island" destination="t7g-Sh-ICT" id="NJj-wP-BSj"/>
-                        <outlet property="miss" destination="e9Z-TX-YMd" id="Jd0-dd-O0i"/>
-                        <outlet property="playerTurn" destination="QPF-dA-GoS" id="8Oe-Rx-qM7"/>
-                        <outlet property="rerack" destination="tya-ch-Uwh" id="RAv-tW-hNL"/>
-                        <outlet property="score" destination="g4P-Rh-ubT" id="N5s-Vu-H98"/>
-                        <outlet property="streak" destination="VDR-cL-Pmg" id="RSv-sI-Fik"/>
-                        <outlet property="time" destination="AtS-QZ-7dQ" id="8AW-q4-iNA"/>
-                        <outlet property="undo" destination="P76-hB-RZ4" id="wdy-AE-osS"/>
+                        <outlet property="button0" destination="EFt-Z6-dL9" id="RCI-MM-mmY"/>
+                        <outlet property="button1" destination="nwA-oN-57q" id="EJG-SS-hPb"/>
+                        <outlet property="button2" destination="g9b-t1-m2f" id="q0N-Ju-u3J"/>
+                        <outlet property="button3" destination="KfW-hu-shT" id="Iol-dw-hDp"/>
+                        <outlet property="button4" destination="t2k-Td-uPE" id="VGo-o6-IHF"/>
+                        <outlet property="button5" destination="MQN-Lb-dY0" id="Qe0-fr-FUb"/>
+                        <outlet property="button6" destination="ANA-2j-ldz" id="fOv-Uk-KDT"/>
+                        <outlet property="button7" destination="hTt-ta-FmV" id="4H8-LB-YNN"/>
+                        <outlet property="button8" destination="gde-wK-ywE" id="OAQ-66-lGB"/>
+                        <outlet property="button9" destination="5rH-kM-leZ" id="wSt-S2-3Xy"/>
+                        <outlet property="fireIcon" destination="hwL-Fc-ug2" id="E7L-EH-ZvH"/>
+                        <outlet property="island" destination="t7g-Sh-ICT" id="Ris-Ba-raJ"/>
+                        <outlet property="miss" destination="e9Z-TX-YMd" id="zNO-L1-75M"/>
+                        <outlet property="playerTurn" destination="QPF-dA-GoS" id="thN-xb-QTY"/>
+                        <outlet property="rerack" destination="tya-ch-Uwh" id="q56-Y6-i4p"/>
+                        <outlet property="score" destination="g4P-Rh-ubT" id="Cbz-aZ-6tN"/>
+                        <outlet property="streak" destination="VDR-cL-Pmg" id="FDK-0P-Lfh"/>
+                        <outlet property="time" destination="AtS-QZ-7dQ" id="ESS-zc-JNH"/>
+                        <outlet property="undo" destination="P76-hB-RZ4" id="rVF-qd-f7E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zN-Kb-bOg" sceneMemberID="firstResponder"/>
@@ -353,8 +353,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ClockImage" width="135" height="135"/>
-        <image name="ShotsImage" width="423.66665649414062" height="425.66665649414062"/>
-        <image name="fireIcon" width="75" height="75"/>
+        <image name="ClockImage" width="202.5" height="202.5"/>
+        <image name="ShotsImage" width="635.5" height="638.5"/>
+        <image name="fireIcon" width="112.5" height="112.5"/>
     </resources>
 </document>

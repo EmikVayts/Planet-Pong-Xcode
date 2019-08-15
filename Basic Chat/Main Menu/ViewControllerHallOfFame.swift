@@ -11,14 +11,23 @@ import UIKit
 
 class ViewControllerHallOfFame: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        backButton.layer.borderColor = UIColor.white.cgColor;
+        backButton.layer.borderWidth = 3;
+        backButton.layer.cornerRadius = 3;
+        
     }
     
 
     @IBAction func `return`(_ sender: Any) {
-        navigationController?.dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
+        let screenTransition = ScreenTransitions()
+        
+        screenTransition.popScreen(nc: navigationController!)
+        
     }
     
 }

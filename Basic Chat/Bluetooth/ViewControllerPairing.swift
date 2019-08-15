@@ -20,6 +20,10 @@ var characteristicASCIIValue = NSString()
 
 class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     //Data
     var centralManager : CBCentralManager!
     var RSSIs = [NSNumber]()
@@ -37,14 +41,22 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
     
     //Go to the new game without all the bluetooth stuff
     @IBAction func playWithoutDevice(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
+        let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
+        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
         uartViewController.bluetoothEnabled = false
         
-        navigationController?.pushViewController(uartViewController, animated: true)
+        //Add the fade transition
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
         
-        print("Go to gamemode classic without bluetooth functionality")
+        navigationController?.view.layer.add(transition, forKey: nil)
+        
+        navigationController?.pushViewController(uartViewController, animated: false)
+        
+        print("Go to gamemode war without bluetooth functionality")
     }
     
     //Go back to home screen
@@ -96,6 +108,13 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         print("Stop Scanning")
         centralManager?.stopScan()
     }
+    
+    @IBAction func backButton(_ sender: Any) {
+        let screenTransition = ScreenTransitions()
+        
+        screenTransition.popScreen(nc: navigationController!)
+    }
+    
     
     /*Okay, now that we have our CBCentalManager up and running, it's time to start searching for devices. You can do this by calling the "scanForPeripherals" method.*/
     
