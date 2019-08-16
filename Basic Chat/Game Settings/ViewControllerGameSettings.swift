@@ -57,8 +57,8 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
     
     @IBAction func randomButton(_ sender: Any){
         if (activeField != nil) {
-            let firstName = ["Big", "Yeller", "Yoited"]
-            let lastName = ["Mep", "Load", "Jelly", "Nibby", "Kermit", "Marmes"]
+            let firstName = ["Big", "Yeller", "Yoited", "Fat", "Juicy", "Full", "Crazy", "Cash", "Sad", "Yay", "Giant", "Ugly", "Special", "Lil", "Silly", "Hot", "Nice", "Magic", "Clean", "Sugar", "Salty", "Young", "Wide", "Single", "Sexy", "Mega", "Tasty", "Mama", "Father", "Funny", "Fast", "Dank", "Wet", "Fire", "Lit", "Fly", "Clutch", "Magnum", "Small", "Psycho", "Party", "Poopy", "Good", "Rowdy", "Girly", "Funky", "Trigga", "Space", "Sir", "Miss", "Dilly", "Ya", "Yee", "Chunky", "Mighty", "Dark", "Bloody", "Lethal", "Freaky", "Super", "Slow", "Tall", "Short", "Classy", "Drunk", "Wasted", "Boom", "Pregnant", "Double", "Frat", "Beer", "Cool", "Triple", "Smelly", "Grumpy", "The", "A"]
+            let lastName = ["Mep", "Load", "Jelly", "Nibby", "Kermit", "Marmes", "Mama", "Papa", "Squared", "Frog", "Nut", "Send", "Money", "Dump", "Guy", "Daddy", "Fetus", "Mommy", "Girl", "Time", "People", "Club", "Baller", "Shooter", "Sniper", "Diaper", "Player", "Dupes", "Bling", "Tank", "Beast", "Goat", "Mix", "Chop", "Dupes", "Manny", "Ween", "Chap", "Baf", "Golfer", "Piss", "Bunch", "Power", "Pong", "Planet", "Blunt", "Beats", "Dilly", "Yeet", "Dog", "Snake", "Clown", "King", "Slam", "Chug", "Duck", "Cat", "Kitty", "Kiki", "Love", "Man", "Gun", "Yoit", "Ligun", "Bigun", "Freak", "Meep", "Crayon", "Freshman", "Sophomore", "Junior", "Senior", "Teacher", "Blonde", "Midget", "Mess", "Fight", "Blaw", "Bang", "Party", "Fool", "Zoom", "Stick", "Juul", "Vape", "Whammy", "Frat", "Nerd", "Jock", "Dangle", "Tart", "Pickle", "Toast", "Twerk"]
             
             let firstNameFinal = firstName.randomElement()
             
@@ -102,6 +102,17 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if (activeField == nameInput1) {
+            redBacking.alpha = 0.25
+        } else if (activeField == nameInput2) {
+            greenBacking.alpha = 0.25
+        } else if (activeField == nameInput3) {
+            purpleBacking.alpha = 0.25
+        } else if (activeField == nameInput4) {
+            blueBacking.alpha = 0.25
+        }
+        
         activeField?.resignFirstResponder()
         activeField = nil
         return true
