@@ -47,11 +47,11 @@ class ViewControllerGameResults : UIViewController {
     @IBAction func goToAds(_ sender: Any) {
         print("Go to ads screen")
         
-        let storyboard = UIStoryboard(name: "Ads", bundle: nil)
+        //let storyboard = UIStoryboard(name: "Ads", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "BLECentralViewController") as! BLECentralViewController
+        //let uartViewController = storyboard.instantiateViewController(withIdentifier: "BLECentralViewController") as! BLECentralViewController
         
-        navigationController?.pushViewController(uartViewController, animated: true)
+        //navigationController?.pushViewController(uartViewController, animated: true)
     }
 
 }
