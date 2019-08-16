@@ -208,7 +208,7 @@ class ViewControllerGamemodeWar: UIViewController, CBPeripheralManagerDelegate {
             updateIncomingData()
         } else {
             //Initialize labels
-            let attrString = NSAttributedString(string: "Player 1 Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+            let attrString = NSAttributedString(string: "\(playerNames[0]) Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
             self.playerTurn.attributedText = attrString
         }
         
@@ -218,7 +218,7 @@ class ViewControllerGamemodeWar: UIViewController, CBPeripheralManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         print("We still chilling")
-        createPopup(imageFile: "", titleText: "GAME BEGIN", messageText: "PLAYER 1 START!", duration: 2)
+        createPopup(imageFile: "", titleText: "GAME BEGIN", messageText: "\(playerNames[0]) START!", duration: 2)
         ratchetFix = false
         print("Problem 1")
         styleButton()
@@ -790,13 +790,13 @@ class ViewControllerGamemodeWar: UIViewController, CBPeripheralManagerDelegate {
         
         //Pick the background color of the players name and turn label
         if (self.turn==0) {
-            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+            let attrString = NSAttributedString(string: "\(playerNames[0]) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
             self.playerTurn.attributedText = attrString
         } else if (self.turn==1) {
-            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.green, NSAttributedString.Key.strokeWidth: -7.0])
+            let attrString = NSAttributedString(string: "\(playerNames[1]) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.green, NSAttributedString.Key.strokeWidth: -7.0])
             self.playerTurn.attributedText = attrString
         } else if (self.turn==2) {
-            let attrString = NSAttributedString(string: "Player \(self.turn+1) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.purple, NSAttributedString.Key.strokeWidth: -7.0])
+            let attrString = NSAttributedString(string: "\(playerNames[2]) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.purple, NSAttributedString.Key.strokeWidth: -7.0])
             self.playerTurn.attributedText = attrString
         }
     }

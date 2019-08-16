@@ -41,20 +41,13 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
     
     //Go to the new game without all the bluetooth stuff
     @IBAction func playWithoutDevice(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
+        let storyboard = UIStoryboard(name: "GameSettings", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
-        uartViewController.bluetoothEnabled = false
+        let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGameSettings") as! ViewControllerGameSettings
+        newViewController.bluetoothEnabled = false
         
-        //Add the fade transition
-        let transition = CATransition()
-        transition.duration = 0.25
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.fade
-        
-        navigationController?.view.layer.add(transition, forKey: nil)
-        
-        navigationController?.pushViewController(uartViewController, animated: false)
+        let screenTransition = ScreenTransitions()
+        screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
         
         print("Go to gamemode war without bluetooth functionality")
     }
