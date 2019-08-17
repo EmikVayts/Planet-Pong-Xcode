@@ -13,6 +13,9 @@
         <array key="Aldrich-Regular.ttf">
             <string>Aldrich</string>
         </array>
+        <array key="Myriad Pro Bold Italic.ttf">
+            <string>MyriadPro-BoldIt</string>
+        </array>
         <array key="Myriad Pro Semibold.ttf">
             <string>MyriadPro-Semibold</string>
         </array>
@@ -86,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wll-Ej-qae" userLabel="MusicButton">
-                                <rect key="frame" x="10" y="30" width="32" height="32"/>
+                                <rect key="frame" x="278" y="72" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wll-Ej-qae" secondAttribute="height" id="1J7-eF-UB6"/>
                                 </constraints>
@@ -108,10 +111,23 @@
                                     <constraint firstAttribute="width" secondItem="K9x-R2-Xoz" secondAttribute="height" multiplier="2" id="uFc-qI-8Cm"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deP-n4-LbD">
+                                <rect key="frame" x="10" y="27.5" width="128" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="deP-n4-LbD" secondAttribute="height" multiplier="22:15" id="UyA-IK-0FG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-BoldIt" family="Myriad Pro" pointSize="15"/>
+                                <state key="normal" title="BEAST MODE!">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="motdPressed:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="5ed-Cv-JPo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RQD-uB-B8P" firstAttribute="top" secondItem="wll-Ej-qae" secondAttribute="top" constant="-10" id="0Zy-YN-VJx"/>
+                            <constraint firstItem="Yj3-wC-eYt" firstAttribute="bottom" secondItem="wll-Ej-qae" secondAttribute="top" constant="-10" id="0Zy-YN-VJx"/>
                             <constraint firstItem="1WW-IN-7j3" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="56D-2K-waf"/>
                             <constraint firstItem="onb-el-deT" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="9Sq-Ic-mGy"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="A18-b8-aHJ"/>
@@ -123,6 +139,7 @@
                             <constraint firstItem="0mb-tu-X6d" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.5" id="M9P-ds-aD5"/>
                             <constraint firstItem="0mb-tu-X6d" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="PZP-ME-7Px"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="centerX" secondItem="RQD-uB-B8P" secondAttribute="centerX" id="UlP-ET-w4a"/>
+                            <constraint firstItem="deP-n4-LbD" firstAttribute="centerY" secondItem="eJh-qY-VJv" secondAttribute="centerY" multiplier="0.25" id="VKc-WM-8dA"/>
                             <constraint firstItem="K9x-R2-Xoz" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="biS-Xz-gG6"/>
                             <constraint firstItem="K9x-R2-Xoz" firstAttribute="centerY" secondItem="eJh-qY-VJv" secondAttribute="centerY" multiplier="0.5" id="cYr-XW-qkR"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="centerX" secondItem="eJh-qY-VJv" secondAttribute="centerX" id="ki6-9p-elz"/>
@@ -130,8 +147,10 @@
                             <constraint firstItem="RQD-uB-B8P" firstAttribute="top" secondItem="Yj3-wC-eYt" secondAttribute="top" constant="-10" id="pZc-7o-byD"/>
                             <constraint firstItem="pwo-XW-1oV" firstAttribute="top" secondItem="1WW-IN-7j3" secondAttribute="bottom" constant="25" id="s5T-u4-idw"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.75" id="sWO-3q-YKx"/>
+                            <constraint firstItem="deP-n4-LbD" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.4" id="tOx-OS-Un7"/>
+                            <constraint firstItem="deP-n4-LbD" firstAttribute="leading" secondItem="RQD-uB-B8P" secondAttribute="leading" constant="10" id="tj3-eU-cWZ"/>
                             <constraint firstItem="Yj3-wC-eYt" firstAttribute="width" secondItem="RQD-uB-B8P" secondAttribute="width" multiplier="0.1" id="ufW-Hi-Eo0"/>
-                            <constraint firstItem="RQD-uB-B8P" firstAttribute="leading" secondItem="wll-Ej-qae" secondAttribute="leading" constant="-10" id="vm7-GM-vW2"/>
+                            <constraint firstItem="RQD-uB-B8P" firstAttribute="trailing" secondItem="wll-Ej-qae" secondAttribute="trailing" constant="10" id="vm7-GM-vW2"/>
                             <constraint firstItem="fgt-SX-ptY" firstAttribute="centerY" secondItem="eJh-qY-VJv" secondAttribute="centerY" multiplier="0.6" id="wHG-s4-kMy"/>
                             <constraint firstItem="RQD-uB-B8P" firstAttribute="width" secondItem="K9x-R2-Xoz" secondAttribute="width" id="xnZ-ek-hOn"/>
                             <constraint firstItem="RQD-uB-B8P" firstAttribute="trailing" secondItem="Yj3-wC-eYt" secondAttribute="trailing" constant="10" id="ydK-NM-bOe"/>
@@ -147,6 +166,7 @@
                     <connections>
                         <outlet property="hallOfFameButton" destination="pwo-XW-1oV" id="um1-yB-Lms"/>
                         <outlet property="howToPlayButton" destination="1WW-IN-7j3" id="TbQ-7M-5o8"/>
+                        <outlet property="motd" destination="deP-n4-LbD" id="wfp-7h-lR9"/>
                         <outlet property="musicButton" destination="wll-Ej-qae" id="6Xh-fu-zc7"/>
                         <outlet property="scoreButton" destination="onb-el-deT" id="a7u-HE-Xg8"/>
                         <outlet property="startButton" destination="0mb-tu-X6d" id="w9H-GN-kRJ"/>
@@ -154,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfy-yT-Kq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="148"/>
+            <point key="canvasLocation" x="1117.5" y="147.88732394366198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X4g-2F-dNW">

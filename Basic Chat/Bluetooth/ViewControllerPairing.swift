@@ -243,7 +243,8 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
         
         let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
-                
+        
+        //Psh it reall good
         navigationController?.pushViewController(uartViewController, animated: true)
         
         print("Go to gamemode classic")

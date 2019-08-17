@@ -15,6 +15,8 @@ var audioPlayer = AVAudioPlayer()
 
 class ViewControllerHome: UIViewController {
     
+    let motdMessages = ["MUSIC BY DORM ROOM STUDIOS!", "MADE IN THE USA!", "TEAM USA!", "ON WISCONSIN!", "BUCKS IN 6!", "JUMP AROUND!", "GO PACK GO!", "BREW CREW!", "MADE BY COLLEGE STUDENTS!", "PARTY TIME!", "LET'S GET IT!", "BEAST MODE!", "GOAT STATUS!", "FULLY YOITED!", "GAMEDAY!", "GAME TIME!", "THAT ASS WAS FAT!", "OH MY YAK!", "TURN UP THE BASS!", "HAMMER TIME!", "DON'T DRINK AND DRIVE!", "ALWAYS WEAR PROTECTION!", "NO DETOX TONIGHT!", "HIT ME BABY ONE MORE TIME!", "TEACH ME HOW TO DOUGIE!", "YOU'RE A RICH GIRL!", "STRAIGHT OUTTA WISCOMPTON!", "DRINK WISCONSIBLY!", "SAFTB!", "FULL SEND!", "FOR THE GUYS!", "HOLD MY BEER!", "BLACKOUT!", "DON'T DO DRUGS, KIDS!", "SLAV SQUAT!", "MIFFLIN BLOCK PARTY!", "GO BADGERS!"]
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -26,6 +28,8 @@ class ViewControllerHome: UIViewController {
     @IBOutlet weak var hallOfFameButton: UIButton!
     
     @IBOutlet weak var musicButton: UIButton!
+    
+    @IBOutlet weak var motd: UIButton!
     
     var timer = Timer()
     var xPos = 0
@@ -55,9 +59,31 @@ class ViewControllerHome: UIViewController {
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        //motd.centerVertically()
+    }
+    
+    
+    @IBAction func motdPressed(_ sender: Any) {
+        motd.shake()
+        motd.setTitle(motdMessages.randomElement(), for: .normal)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad();
+        
+        //Setup the message of the day
+        motd.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
+        motd.titleLabel!.numberOfLines = 3
+        
+        //motd.titleLabel!.font = UIFont(name: "Myriad Pro Black Italic.otf", size: 20)
+        
+        motd.setTitle(motdMessages.randomElement(), for: .normal)
+        
+        motd.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
+        
+        motd.shake()
         
         //Create the stars and purple fade for aesthetic
         let image = UIImage(named: "StarsBackground")
@@ -196,4 +222,26 @@ class ViewControllerHome: UIViewController {
     }
     
     
+}
+
+extension UITextView {
+    
+    func centerVertically() {
+        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
+        let size = sizeThatFits(fittingSize)
+        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
+        let positiveTopOffset = max(1, topOffset)
+        contentOffset.y = -positiveTopOffset
+    }
+    
+}
+
+extension UIButton {
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.6
+        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
+    }
 }

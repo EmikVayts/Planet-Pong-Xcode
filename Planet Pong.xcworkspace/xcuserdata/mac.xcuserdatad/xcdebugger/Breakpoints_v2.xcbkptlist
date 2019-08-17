@@ -127,7 +127,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "223"
             endingLineNumber = "223"
-            landmarkName = "startGame(_:)"
+            landmarkName = "minusButtonPress(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

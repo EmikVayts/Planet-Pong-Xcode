@@ -24,6 +24,8 @@
 		044DAC7F2302680E00BCA1C1 /* GamemodeWar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DAC7E2302680E00BCA1C1 /* GamemodeWar.storyboard */; };
 		0457BBC822F2A79100188610 /* ViewControllerRulesSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */; };
 		0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */; };
+		046628752307E26A00F3ADA4 /* Myriad Pro Black Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 046628732307E00900F3ADA4 /* Myriad Pro Black Italic.otf */; };
+		046628762307E27B00F3ADA4 /* Myriad Pro Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 046628742307E01F00F3ADA4 /* Myriad Pro Bold Italic.ttf */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
 		0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */; };
 		0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */; };
@@ -72,6 +74,8 @@
 		044DAC7E2302680E00BCA1C1 /* GamemodeWar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamemodeWar.storyboard; sourceTree = "<group>"; };
 		0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesSelection.swift; sourceTree = "<group>"; };
 		0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRulesController.swift; sourceTree = "<group>"; };
+		046628732307E00900F3ADA4 /* Myriad Pro Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Black Italic.otf"; path = "Myriad Pro/Myriad Pro Black Italic.otf"; sourceTree = "<group>"; };
+		046628742307E01F00F3ADA4 /* Myriad Pro Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Bold Italic.ttf"; path = "Myriad Pro/Myriad Pro Bold Italic.ttf"; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
 		0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerClassicScores.swift; sourceTree = "<group>"; };
 		0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerScores.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 		04D87EEE22C1A1C100D92C3F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				046628742307E01F00F3ADA4 /* Myriad Pro Bold Italic.ttf */,
+				046628732307E00900F3ADA4 /* Myriad Pro Black Italic.otf */,
 				04DED16122FF1307000D9928 /* Myriad Pro Semibold.ttf */,
 				04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */,
 			);
@@ -378,7 +384,9 @@
 				040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */,
 				04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */,
 				0482ADD822BFF0F700D6FF10 /* ClassicScores.storyboard in Resources */,
+				046628752307E26A00F3ADA4 /* Myriad Pro Black Italic.otf in Resources */,
 				040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */,
+				046628762307E27B00F3ADA4 /* Myriad Pro Bold Italic.ttf in Resources */,
 				040F5FB622A4E35F00D243D3 /* logo1.png in Resources */,
 				D5B24DE11DEE393B00D33B5A /* Pairing.storyboard in Resources */,
 				0499223122FC76B300735F7D /* purplePlanet.png in Resources */,

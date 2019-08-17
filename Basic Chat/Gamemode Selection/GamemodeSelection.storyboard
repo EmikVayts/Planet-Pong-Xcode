@@ -23,9 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JG9-oI-XAH">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAMEMODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzu-zM-tNn">
                                 <rect key="frame" x="62" y="54" width="290" height="62"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
@@ -39,24 +36,50 @@
                                 </constraints>
                                 <state key="normal" image="BackArrowIcon"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umV-b0-viG">
+                                <rect key="frame" x="0.0" y="126" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="6Zi-51-Cii" style="IBUITableViewCellStyleDefault" id="4X2-9Y-HHz">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4X2-9Y-HHz" id="e4g-kU-KdF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Yo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Zi-51-Cii">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JG9-oI-XAH" firstAttribute="trailing" secondItem="JLL-Ly-mvD" secondAttribute="trailing" id="19L-01-Mbu"/>
-                            <constraint firstItem="JG9-oI-XAH" firstAttribute="top" secondItem="JLL-Ly-mvD" secondAttribute="top" constant="100" id="4t1-xj-g0q"/>
                             <constraint firstItem="JpH-kK-5db" firstAttribute="top" secondItem="JLL-Ly-mvD" secondAttribute="top" constant="10" id="82a-4H-Ype"/>
+                            <constraint firstItem="umV-b0-viG" firstAttribute="bottom" secondItem="JLL-Ly-mvD" secondAttribute="bottom" id="Ae3-ie-jUl"/>
+                            <constraint firstItem="umV-b0-viG" firstAttribute="trailing" secondItem="JLL-Ly-mvD" secondAttribute="trailing" id="GMn-0q-Gtx"/>
                             <constraint firstItem="JpH-kK-5db" firstAttribute="leading" secondItem="JLL-Ly-mvD" secondAttribute="leading" constant="10" id="IGD-6i-RjU"/>
+                            <constraint firstItem="umV-b0-viG" firstAttribute="leading" secondItem="JLL-Ly-mvD" secondAttribute="leading" id="Pl2-ex-gRt"/>
                             <constraint firstItem="Yzu-zM-tNn" firstAttribute="centerX" secondItem="vqb-ZV-Tkf" secondAttribute="centerX" id="YqV-Bn-pAm"/>
                             <constraint firstItem="Yzu-zM-tNn" firstAttribute="bottom" secondItem="JpH-kK-5db" secondAttribute="bottom" id="bEp-E3-k3T"/>
                             <constraint firstItem="Yzu-zM-tNn" firstAttribute="top" secondItem="JpH-kK-5db" secondAttribute="top" id="cAn-8w-R0L"/>
+                            <constraint firstItem="umV-b0-viG" firstAttribute="top" secondItem="Yzu-zM-tNn" secondAttribute="bottom" constant="10" id="cyh-bp-EpV"/>
                             <constraint firstItem="JpH-kK-5db" firstAttribute="width" secondItem="JLL-Ly-mvD" secondAttribute="width" multiplier="0.15" id="f4A-rh-st2"/>
                             <constraint firstItem="Yzu-zM-tNn" firstAttribute="width" secondItem="JLL-Ly-mvD" secondAttribute="width" multiplier="0.7" id="fAK-Pw-qtG"/>
-                            <constraint firstItem="JG9-oI-XAH" firstAttribute="bottom" secondItem="JLL-Ly-mvD" secondAttribute="bottom" id="pr7-oN-QAn"/>
-                            <constraint firstItem="JG9-oI-XAH" firstAttribute="leading" secondItem="JLL-Ly-mvD" secondAttribute="leading" id="zyW-c7-EsA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLL-Ly-mvD"/>
                     </view>
                     <navigationItem key="navigationItem" id="g4T-aa-dAC"/>
+                    <connections>
+                        <outlet property="tableView" destination="umV-b0-viG" id="HLg-0g-OJf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvH-Wx-goH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
