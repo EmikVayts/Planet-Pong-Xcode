@@ -522,7 +522,7 @@ Press 'Play' on the homescreen to begin.</string>
         <image name="Logo1" width="217.5" height="236"/>
         <image name="MusicIcon" width="112.5" height="112.5"/>
         <image name="SettingsIcon" width="112.5" height="112.5"/>
-        <image name="logo2.png" width="600" height="243.75"/>
+        <image name="logo2.png" width="322.8865966796875" height="350.35052490234375"/>
         <image name="planetRed" width="290" height="256"/>
     </resources>
 </document>

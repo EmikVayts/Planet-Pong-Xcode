@@ -13,13 +13,9 @@ import AVFoundation
 //Initialize the audio player
 var audioPlayer = AVAudioPlayer()
 
-class ViewControllerHome: UIViewController {
+class ViewControllerHome: SpaceVibe {
     
-    let motdMessages = ["MUSIC BY DORM ROOM STUDIOS!", "MADE IN THE USA!", "TEAM USA!", "ON WISCONSIN!", "BUCKS IN 6!", "JUMP AROUND!", "GO PACK GO!", "BREW CREW!", "MADE BY COLLEGE STUDENTS!", "PARTY TIME!", "LET'S GET IT!", "BEAST MODE!", "GOAT STATUS!", "FULLY YOITED!", "GAMEDAY!", "GAME TIME!", "THAT ASS WAS FAT!", "OH MY YAK!", "TURN UP THE BASS!", "HAMMER TIME!", "DON'T DRINK AND DRIVE!", "ALWAYS WEAR PROTECTION!", "NO DETOX TONIGHT!", "HIT ME BABY ONE MORE TIME!", "TEACH ME HOW TO DOUGIE!", "YOU'RE A RICH GIRL!", "STRAIGHT OUTTA WISCOMPTON!", "DRINK WISCONSIBLY!", "SAFTB!", "FULL SEND!", "FOR THE GUYS!", "HOLD MY BEER!", "BLACKOUT!", "DON'T DO DRUGS, KIDS!", "SLAV SQUAT!", "MIFFLIN BLOCK PARTY!", "GO BADGERS!"]
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
+    let motdMessages = ["MUSIC BY DORM ROOM STUDIOS!", "MADE IN THE USA!", "TEAM USA!", "ON WISCONSIN!", "BUCKS IN 6!", "JUMP AROUND!", "GO PACK GO!", "BREW CREW!", "MADE BY COLLEGE STUDENTS!", "PARTY TIME!", "LET'S GET IT!", "BEAST MODE!", "GOAT STATUS!", "FULLY YOITED!", "GAMEDAY!", "GAME TIME!", "THAT ASS WAS FAT!", "OH MY YAK!", "TURN UP THE BASS!", "HAMMER TIME!", "DON'T DRINK AND DRIVE!", "ALWAYS WEAR PROTECTION!", "NO DETOX TONIGHT!", "HIT ME BABY ONE MORE TIME!", "TEACH ME HOW TO DOUGIE!", "YOU'RE A RICH GIRL!", "STRAIGHT OUTTA WISCOMPTON!", "DRINK WISCONSIBLY!", "SAFTB!", "FULL SEND!", "FOR THE GUYS!", "HOLD MY BEER!", "BLACKOUT!", "DON'T DO DRUGS, KIDS!", "SLAV SQUAT!", "MIFFLIN BLOCK PARTY!", "GO BADGERS!", "YEE YEE!", "YARDY KNOW WHAT TIME IT IS!", "YA YEET!", "BREWERS > CUBS!", "DON'T BLOW MY SPEAKERS!", "OMG!", "TEQUILA!", "CENTIPEDE!", "B*TCH CUP!", "NAKED LAP!", "JUST GONNA SEND IT!", "SAVE THE ENVIRONMENT!", "DON'T USE #6 PLASTIC!", "DON'T MISS!", "DO A FLIP!", "CANNONBALL!", "BELLYFLOP!", "TSUNAMI!", "SWEET CAROLINE!", "RIP MAC!", "RIP NIPSEY!", "SHOW SOME LOVE!", "DON'T GET ADDICTED!", "ARE WE IN THE MATRIX?", "IT'S PAST MY BEDTIME!", "I SHOULD BE STUDYING RN!", "SHE'S A BAD MAMA JAMA!", "THE BOYS!", "TAKE ONE FOR THE TEAM!", "FBGM!", "IT'S MICKEY MOUSE CLUB HOUSE!", "SHLUMP GANG!", "FLOP GANG!", "DOMINATION!", "MASK OFF!", "DON'T BE A BULLY!", "FRESHMAN!", "NO HIGHSCHOOLERS ALLOWED!", "GAME NIGHT!", "PUMP UP THE JAM!", "IF YOU AIN'T FIRST YOU'RE LAST!"]
     
     //MARK: Properties
     @IBOutlet weak var startButton: UIButton! //Takes you to the pairing screen
@@ -30,14 +26,6 @@ class ViewControllerHome: UIViewController {
     @IBOutlet weak var musicButton: UIButton!
     
     @IBOutlet weak var motd: UIButton!
-    
-    var timer = Timer()
-    var xPos = 0
-    
-    var starsAlpha = 0.5
-    var alphaDir = 0 //0 is up, 1 is down
-    
-    var imageView1: UIImageView?
     
     @IBAction func musicButtonPressed(_ sender: Any) {
         if (musicButton.alpha == 1) {
@@ -76,27 +64,9 @@ class ViewControllerHome: UIViewController {
         //Setup the message of the day
         motd.titleLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         motd.titleLabel!.numberOfLines = 3
-        
-        //motd.titleLabel!.font = UIFont(name: "Myriad Pro Black Italic.otf", size: 20)
-        
         motd.setTitle(motdMessages.randomElement(), for: .normal)
-        
         motd.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/4)
-        
         motd.shake()
-        
-        //Create the stars and purple fade for aesthetic
-        let image = UIImage(named: "StarsBackground")
-        let imageView = UIImageView(image: image!)
-        imageView.frame = self.view.frame
-        imageView.layer.zPosition = -100
-        view.addSubview(imageView)
-        
-        let image1 = UIImage(named: "PurpleFadeBackground")?.withRenderingMode(.alwaysTemplate)
-        imageView1 = UIImageView(image: image1!)
-        imageView1!.tintColor = .purple
-        imageView1!.frame = self.view.frame
-        view.addSubview(imageView1!)
         
         //Create a notification for when the app comes back into the foreground
         let notificationCenter = NotificationCenter.default
@@ -127,10 +97,6 @@ class ViewControllerHome: UIViewController {
             audioPlayer.setVolume(0.0, fadeDuration: 0)
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
-        
-        xPos = 0
-        
         startButton.layer.borderColor = UIColor.white.cgColor;
         startButton.layer.borderWidth = 3;
         startButton.layer.cornerRadius = 3;
@@ -147,54 +113,16 @@ class ViewControllerHome: UIViewController {
         hallOfFameButton.layer.borderColor = UIColor.white.cgColor;
         hallOfFameButton.layer.borderWidth = 3;
         hallOfFameButton.layer.cornerRadius = 3;
-        
-        /*starsBackground.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)*/
-        starsAlpha = 0.5
-        alphaDir = 0
-        
-    }
-    
-    @objc func updateCounter() {
-        if (alphaDir == 0) {
-            starsAlpha += 0.01
-            imageView1!.alpha = CGFloat(starsAlpha)
-            if (starsAlpha>=1) {
-                alphaDir = 1
-            }
-            
-        } else {
-            starsAlpha -= 0.01
-            imageView1!.alpha = CGFloat(starsAlpha)
-            if (starsAlpha<=0.25) {
-                alphaDir = 0
-                if (imageView1?.tintColor == .green) {
-                    imageView1!.tintColor = .purple
-                } else if (imageView1?.tintColor == .purple) {
-                    imageView1!.tintColor = .blue
-                } else if (imageView1?.tintColor == .blue) {
-                    imageView1!.tintColor = .red
-                } else if (imageView1?.tintColor == .red) {
-                    imageView1!.tintColor = .green
-                }
-                
-            }
-            
-        }
-        /*xPos = xPos+10
-        starsBackground.center = CGPoint(x: ((self.view.frame.width/2)+CGFloat(xPos)), y: self.view.frame.height/2)*/
     }
     
     //Action to go to pairing screen
     @IBAction func goToPairing(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Pairing", bundle: Bundle.main)
         
-        guard let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerPairing") as?
-            ViewControllerPairing else {
-                return
-        }
+        let newViewController = (storyboard.instantiateViewController(withIdentifier: "ViewControllerPairing") as?
+            ViewControllerPairing)!
         
-        let screenTransition = ScreenTransitions()
-        screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
+        fadeOutAnimationPush(vc: newViewController)
     }
     
     @IBAction func goToScores(_ sender: Any) {
@@ -224,24 +152,21 @@ class ViewControllerHome: UIViewController {
     
 }
 
-extension UITextView {
-    
-    func centerVertically() {
-        let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
-        let size = sizeThatFits(fittingSize)
-        let topOffset = (bounds.size.height - size.height * zoomScale) / 2
-        let positiveTopOffset = max(1, topOffset)
-        contentOffset.y = -positiveTopOffset
-    }
-    
-}
-
+//For shake effects on the MOTD. Only needed on the home screen
 extension UIButton {
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = 0.6
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
+    }
+    
+    func lilShake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.08
+        animation.values = [-2.0, 1.0, -1.5, 0.5]
         layer.add(animation, forKey: "shake")
     }
 }

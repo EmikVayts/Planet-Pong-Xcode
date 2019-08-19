@@ -18,7 +18,7 @@ var blePeripheral : CBPeripheral?
 var characteristicASCIIValue = NSString()
 
 
-class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
+class ViewControllerPairing : SpaceVibe, CBCentralManagerDelegate, CBPeripheralDelegate, UITableViewDelegate, UITableViewDataSource{
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -46,29 +46,19 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGameSettings") as! ViewControllerGameSettings
         newViewController.bluetoothEnabled = false
         
-        let screenTransition = ScreenTransitions()
-        screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
+        fadeOutAnimationPush(vc: newViewController)
         
         print("Go to gamemode war without bluetooth functionality")
     }
     
-    //Go back to home screen
-    @IBAction func backAction(_ sender: Any) {
-        print("Player hit back on pairing screen to go to home menu")
-        navigationController?.dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
-    }
-    
     //Start the scan for new devices
-    @IBAction func refreshAction(_ sender: AnyObject) {
+    @IBAction func refreshButton(_ sender: Any) {
         disconnectFromDevice()
         self.peripherals = []
         self.RSSIs = []
         self.baseTableView.reloadData()
         startScan()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,9 +93,7 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
     }
     
     @IBAction func backButton(_ sender: Any) {
-        let screenTransition = ScreenTransitions()
-        
-        screenTransition.popScreen(nc: navigationController!)
+        fadeOutAnimationPop()
     }
     
     
@@ -242,10 +230,9 @@ class ViewControllerPairing : UIViewController, CBCentralManagerDelegate, CBPeri
         //Once connected, move to new view controller to manage incoming and outgoing data
         let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
         
-        let uartViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
+        let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
         
-        //Psh it reall good
-        navigationController?.pushViewController(uartViewController, animated: true)
+        fadeOutAnimationPush(vc: newViewController)
         
         print("Go to gamemode classic")
     }

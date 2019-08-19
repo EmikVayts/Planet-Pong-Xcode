@@ -42,9 +42,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-Rf-ZHP">
-                                <rect key="frame" x="-161" y="0.0" width="736" height="736"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA6-Et-Wof">
                                 <rect key="frame" x="10.333333333333343" y="622.33333333333337" width="393.33333333333326" height="98.333333333333371"/>
                                 <constraints>
@@ -107,9 +104,6 @@
                                     <outlet property="delegate" destination="s6h-Zo-tC7" id="sD9-kA-Vcs"/>
                                 </connections>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PurpleFadeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-vp-yZ8">
-                                <rect key="frame" x="25.666666666666657" y="0.0" width="363" height="736"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAIR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNT-Np-hW7">
                                 <rect key="frame" x="72.333333333333343" y="10" width="269.33333333333326" height="62"/>
                                 <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="38"/>
@@ -138,6 +132,9 @@
                                     <constraint firstAttribute="width" secondItem="m8J-wc-UYT" secondAttribute="height" id="vGQ-Kf-nnQ"/>
                                 </constraints>
                                 <state key="normal" image="RerackIcon"/>
+                                <connections>
+                                    <action selector="refreshButton:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="yMe-1t-Uqw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCHING FOR NEARBY MACHINES..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ds-nP-9MJ">
                                 <rect key="frame" x="20.666666666666657" y="72" width="372.66666666666674" height="37"/>
@@ -151,12 +148,10 @@
                             <constraint firstItem="8uS-Yp-wvg" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" multiplier="0.35" id="1YW-cO-GsJ"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.15" id="3Y0-VY-7LF"/>
                             <constraint firstItem="nA6-Et-Wof" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="8ni-Ao-Fem"/>
-                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="9w0-h4-az0"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="leading" secondItem="M0w-Ty-hJr" secondAttribute="leading" constant="10" id="Aww-nJ-QIC"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.9" id="BCi-bM-JEJ"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="top" secondItem="M0w-Ty-hJr" secondAttribute="top" constant="10" id="BaN-bg-HUA"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="C9z-Z5-zq4"/>
-                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" id="D03-R7-RuB"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" multiplier="0.05" id="FNt-or-wgA"/>
                             <constraint firstItem="m8J-wc-UYT" firstAttribute="top" secondItem="M0w-Ty-hJr" secondAttribute="top" constant="10" id="FgI-ys-Kb4"/>
                             <constraint firstItem="nA6-Et-Wof" firstAttribute="top" secondItem="3Oe-26-u35" secondAttribute="bottom" id="GLu-eC-Sxu"/>
@@ -171,14 +166,10 @@
                             <constraint firstItem="3Oe-26-u35" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="QVm-fz-arf"/>
                             <constraint firstItem="iJd-RF-aiZ" firstAttribute="leading" secondItem="M0w-Ty-hJr" secondAttribute="leading" id="S69-FI-myd"/>
                             <constraint firstItem="3Oe-26-u35" firstAttribute="top" secondItem="iJd-RF-aiZ" secondAttribute="bottom" id="WHa-al-syC"/>
-                            <constraint firstItem="A7e-vp-yZ8" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" id="YLF-it-Cfi"/>
                             <constraint firstItem="nA6-Et-Wof" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.95" id="adk-Ue-weu"/>
-                            <constraint firstAttribute="bottom" secondItem="A7e-vp-yZ8" secondAttribute="bottom" id="cJe-A7-l7K"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="top" secondItem="GNT-Np-hW7" secondAttribute="bottom" id="fEy-rn-chI"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="bottom" secondItem="c0C-I3-lok" secondAttribute="bottom" id="fqn-k2-nke"/>
-                            <constraint firstItem="0HR-Rf-ZHP" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" id="iel-lD-bgc"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="top" secondItem="c0C-I3-lok" secondAttribute="top" id="noC-0T-98l"/>
-                            <constraint firstItem="A7e-vp-yZ8" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="qz5-Yj-PzH"/>
                             <constraint firstItem="3Oe-26-u35" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.25" id="vBq-gk-YjC"/>
                             <constraint firstAttribute="trailing" secondItem="iJd-RF-aiZ" secondAttribute="trailing" id="vEz-UJ-4BT"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.65" id="vsc-Wg-ciJ"/>
@@ -530,9 +521,7 @@ Vote for Planet Pong!</string>
     <resources>
         <image name="BackArrowIcon" width="326.66665649414062" height="320"/>
         <image name="PlanetPongMachineOn" width="272.33334350585938" height="306.33334350585938"/>
-        <image name="PurpleFadeBackground" width="363" height="640"/>
         <image name="RerackIcon" width="127" height="127"/>
-        <image name="StarsBackground" width="736" height="736"/>
         <image name="TenCups" width="223.66667175292969" height="156"/>
     </resources>
 </document>

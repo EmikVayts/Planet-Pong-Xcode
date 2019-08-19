@@ -21,15 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="k3H-NC-kQ4">
-                                <rect key="frame" x="-392" y="0.0" width="1104" height="568"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="yps-4w-P2U">
+                                <rect key="frame" x="80" y="204" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yps-4w-P2U" secondAttribute="height" id="N85-zG-X0Y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k3H-NC-kQ4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ARu-Ob-69o"/>
-                            <constraint firstItem="k3H-NC-kQ4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DcU-h2-s4k"/>
-                            <constraint firstItem="k3H-NC-kQ4" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="PWd-mD-P3v"/>
+                            <constraint firstItem="yps-4w-P2U" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="c0C-Zi-mdn"/>
+                            <constraint firstItem="yps-4w-P2U" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gBy-ge-0jZ"/>
+                            <constraint firstItem="yps-4w-P2U" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n8V-WP-M4a"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="StarsBackground" width="1104" height="1104"/>
+        <image name="logo2.png" width="322.8865966796875" height="350.35052490234375"/>
     </resources>
 </document>

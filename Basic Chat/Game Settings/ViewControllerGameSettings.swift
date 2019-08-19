@@ -10,8 +10,9 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
-class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
+class ViewControllerGameSettings : SpaceVibe, UITextFieldDelegate {
     //UI Objects
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var numberOfPlayers: UITextField!
@@ -50,15 +51,13 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
     
     //actions
     @IBAction func backButton(_ sender: Any) {
-        let screenTransition = ScreenTransitions()
-        
-        screenTransition.popScreen(nc: navigationController!)
+        fadeOutAnimationPop()
     }
     
     @IBAction func randomButton(_ sender: Any){
         if (activeField != nil) {
-            let firstName = ["Big", "Yeller", "Yoited", "Fat", "Juicy", "Full", "Crazy", "Cash", "Sad", "Yay", "Giant", "Ugly", "Special", "Lil", "Silly", "Hot", "Nice", "Magic", "Clean", "Sugar", "Salty", "Young", "Wide", "Single", "Sexy", "Mega", "Tasty", "Mama", "Father", "Funny", "Fast", "Dank", "Wet", "Fire", "Lit", "Fly", "Clutch", "Magnum", "Small", "Psycho", "Party", "Poopy", "Good", "Rowdy", "Girly", "Funky", "Trigga", "Space", "Sir", "Miss", "Dilly", "Ya", "Yee", "Chunky", "Mighty", "Dark", "Bloody", "Lethal", "Freaky", "Super", "Slow", "Tall", "Short", "Classy", "Drunk", "Wasted", "Boom", "Pregnant", "Double", "Frat", "Beer", "Cool", "Triple", "Smelly", "Grumpy", "The", "A", "Bunk", "Epic", "Soviet", "Asian", "Greek", "American", "White", "Black", "Gay", "Straight", "No Homo", "Savage", "Ballistic", "Horny", "Trap", "Boss", "Wild", "Green", "Purple", "Red", "Blue", "Moist", "Shy", "Awkward", "Weird", "Strange", "Odd", "Magical", "NBA", "GTA", "German", "Jewish", "Super", "Holy", "Hockey", "Soccer", "Baseball", "Football", "Road", "Basketball", "Legal", "Illegal"]
-            let lastName = ["Mep", "Load", "Jelly", "Nibby", "Kermit", "Marmes", "Mama", "Papa", "Squared", "Frog", "Nut", "Send", "Money", "Dump", "Guy", "Daddy", "Fetus", "Mommy", "Girl", "Time", "People", "Club", "Baller", "Shooter", "Sniper", "Diaper", "Player", "Dupes", "Bling", "Tank", "Beast", "Goat", "Mix", "Chop", "Dupes", "Manny", "Ween", "Chap", "Baf", "Golfer", "Piss", "Bunch", "Power", "Pong", "Planet", "Blunt", "Beats", "Dilly", "Yeet", "Dog", "Snake", "Clown", "King", "Slam", "Chug", "Duck", "Cat", "Kitty", "Kiki", "Love", "Man", "Gun", "Yoit", "Ligun", "Bigun", "Freak", "Meep", "Crayon", "Freshman", "Sophomore", "Junior", "Senior", "Teacher", "Blonde", "Midget", "Mess", "Fight", "Blaw", "Bang", "Party", "Fool", "Zoom", "Stick", "Juul", "Vape", "Whammy", "Frat", "Nerd", "Jock", "Dangle", "Tart", "Pickle", "Toast", "Twerk", "Globs", "Bimbo", "Nibs", "Mc Chicks", "Dick", "Slav", "Eggroll", "Rice", "Chicken", "Pie", "Fiducc", "Dunk", "Boat", "Camper", "Wife", "Crown", "Feet", "Hands", "Dome", "Head", "Top", "Education", "Finesse", "Brew", "Crown", "Crush", "Dew", "Claw", "Rhino", "Cheese", "Milk", "Egg", "Ma", "Bro", "Homie", "Sista", "Queen", "Prince", "Maid", "Nurse", "Hacker", "Cadet", "Station", "House", "Crib", "Baby", "Bomb", "Grenade", "AK47", "Vodka", "Plant", "Animal", "Text", "Johnson", "Dawg", "Brat", "Dab", "Weed", "Soap", "Bars", "Swede", "Puck", "Celly", "Ram", "Lover", "Watermelon", "Sensei", "Felony", "Crime"]
+            let firstName = ["Big", "Yeller", "Yoited", "Fat", "Juicy", "Full", "Crazy", "Cash", "Sad", "Yay", "Giant", "Ugly", "Special", "Lil", "Silly", "Hot", "Nice", "Magic", "Clean", "Sugar", "Salty", "Young", "Wide", "Single", "Sexy", "Mega", "Tasty", "Mama", "Father", "Funny", "Fast", "Dank", "Wet", "Fire", "Lit", "Fly", "Clutch", "Magnum", "Small", "Psycho", "Party", "Poopy", "Good", "Rowdy", "Girly", "Funky", "Trigga", "Space", "Sir", "Miss", "Dilly", "Ya", "Yee", "Chunky", "Mighty", "Dark", "Bloody", "Lethal", "Freaky", "Super", "Slow", "Tall", "Short", "Classy", "Drunk", "Wasted", "Boom", "Pregnant", "Double", "Frat", "Beer", "Cool", "Triple", "Smelly", "Grumpy", "The", "A", "Bunk", "Epic", "Soviet", "Asian", "Greek", "American", "White", "Black", "Gay", "Straight", "No Homo", "Savage", "Ballistic", "Horny", "Trap", "Boss", "Wild", "Green", "Purple", "Red", "Blue", "Moist", "Shy", "Awkward", "Weird", "Strange", "Odd", "Magical", "NBA", "GTA", "German", "Jewish", "Super", "Holy", "Hockey", "Soccer", "Baseball", "Football", "Road", "Basketball", "Legal", "Illegal", "Explosive"]
+            let lastName = ["Mep", "Load", "Jelly", "Nibby", "Kermit", "Marmes", "Mama", "Papa", "Squared", "Frog", "Nut", "Send", "Money", "Dump", "Guy", "Daddy", "Fetus", "Mommy", "Girl", "Time", "People", "Club", "Baller", "Shooter", "Sniper", "Diaper", "Player", "Dupes", "Bling", "Tank", "Beast", "Goat", "Mix", "Chop", "Dupes", "Manny", "Ween", "Chap", "Baf", "Golfer", "Piss", "Bunch", "Power", "Pong", "Planet", "Blunt", "Beats", "Dilly", "Yeet", "Dog", "Snake", "Clown", "King", "Slam", "Chug", "Duck", "Cat", "Kitty", "Kiki", "Love", "Man", "Gun", "Yoit", "Ligun", "Bigun", "Freak", "Meep", "Crayon", "Freshman", "Sophomore", "Junior", "Senior", "Teacher", "Blonde", "Midget", "Mess", "Fight", "Blaw", "Bang", "Party", "Fool", "Zoom", "Stick", "Juul", "Vape", "Whammy", "Frat", "Nerd", "Jock", "Dangle", "Tart", "Pickle", "Toast", "Twerk", "Globs", "Bimbo", "Nibs", "Mc Chicks", "Dick", "Slav", "Eggroll", "Rice", "Chicken", "Pie", "Fiducc", "Dunk", "Boat", "Camper", "Wife", "Crown", "Feet", "Hands", "Dome", "Head", "Top", "Education", "Finesse", "Brew", "Crown", "Crush", "Dew", "Claw", "Rhino", "Cheese", "Milk", "Egg", "Ma", "Bro", "Homie", "Sista", "Queen", "Prince", "Maid", "Nurse", "Hacker", "Cadet", "Station", "House", "Crib", "Baby", "Bomb", "Grenade", "AK47", "Vodka", "Plant", "Animal", "Text", "Johnson", "Dawg", "Brat", "Dab", "Weed", "Soap", "Bars", "Swede", "Puck", "Celly", "Ram", "Lover", "Watermelon", "Sensei", "Felony", "Crime", "Tits"]
             
             let firstNameFinal = firstName.randomElement()
             
@@ -235,9 +234,26 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
         newViewController.playerNames[1] = nameInput2.text!
         newViewController.playerNames[2] = nameInput3.text!
         
+        audioPlayer.stop()
         
-        let screenTransition = ScreenTransitions()
-        screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
+        //Setup the audio
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "warSong", ofType: "mp3")!))
+            audioPlayer.numberOfLoops = -1
+            audioPlayer.prepareToPlay()
+        } catch {
+            print(error)
+        }
+        
+        //Actually play the audio
+        audioPlayer.play()
+        
+        //If theres a song playing set volume to 0, otherwise set volume to 1
+        if (AVAudioSession.sharedInstance().isOtherAudioPlaying) {
+            audioPlayer.setVolume(0.0, fadeDuration: 0)
+        }
+        
+        fadeOutAnimationPush(vc: newViewController)
     }
     
     
@@ -284,7 +300,7 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
         minusButton.layer.cornerRadius = 3;
         
         //Create the stars and purple fade for aesthetic
-        let image = UIImage(named: "StarsBackground")
+        /*let image = UIImage(named: "StarsBackground")
         let imageView = UIImageView(image: image!)
         imageView.frame = self.view.frame
         imageView.layer.zPosition = -100
@@ -294,7 +310,7 @@ class ViewControllerGameSettings : UIViewController, UITextFieldDelegate {
         let imageView1 = UIImageView(image: image1!)
         imageView1.tintColor = .purple
         imageView1.frame = self.view.frame
-        view.addSubview(imageView1)
+        view.addSubview(imageView1)*/
         
         // Observe keyboard change
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

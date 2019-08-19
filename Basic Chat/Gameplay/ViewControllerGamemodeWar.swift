@@ -17,7 +17,7 @@ import UIKit
 import CoreBluetooth
 import StatusAlert
 
-class ViewControllerGamemodeWar: UIViewController, CBPeripheralManagerDelegate {
+class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
     
     //The object holding the information for one move
     class UndoTurn {

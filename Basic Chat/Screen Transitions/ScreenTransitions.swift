@@ -16,7 +16,7 @@ class ScreenTransitions {
 
         //Add the fade transition
         let transition = CATransition()
-        transition.duration = 0.25
+        transition.duration = 0.001
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.fade
         
@@ -30,7 +30,7 @@ class ScreenTransitions {
         
         //Add the fade transition
         let transition = CATransition()
-        transition.duration = 0.25
+        transition.duration = 0.001
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         transition.type = CATransitionType.fade
         
