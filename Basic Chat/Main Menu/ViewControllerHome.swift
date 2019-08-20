@@ -12,6 +12,8 @@ import AVFoundation
 
 //Initialize the audio player
 var audioPlayer = AVAudioPlayer()
+var sfxPlayer = AVAudioPlayer()
+var musicToggle = true
 
 class ViewControllerHome: SpaceVibe {
     
@@ -30,10 +32,12 @@ class ViewControllerHome: SpaceVibe {
     @IBAction func musicButtonPressed(_ sender: Any) {
         if (musicButton.alpha == 1) {
             musicButton.alpha = 0.25
+            musicToggle = false
             audioPlayer.setVolume(0.0, fadeDuration: 0)
         } else {
             musicButton.alpha = 1
             audioPlayer.setVolume(1.0, fadeDuration: 0)
+            musicToggle = true
         }
     }
     

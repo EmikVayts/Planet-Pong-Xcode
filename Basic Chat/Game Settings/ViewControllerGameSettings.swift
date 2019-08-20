@@ -226,17 +226,18 @@ class ViewControllerGameSettings : SpaceVibe, UITextFieldDelegate {
     
     //Actually start the game now
     @IBAction func startGame(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
+        let storyboard = UIStoryboard(name: "Spinner", bundle: nil)
         
-        let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
-        newViewController.bluetoothEnabled = bluetoothEnabled
-        newViewController.playerNames[0] = nameInput1.text!
-        newViewController.playerNames[1] = nameInput2.text!
-        newViewController.playerNames[2] = nameInput3.text!
+        let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerSpinner") as! ViewControllerSpinner
+        //newViewController.bluetoothEnabled = bluetoothEnabled
+        //newViewController.playerNames[0] = nameInput1.text!
+        //newViewController.playerNames[1] = nameInput2.text!
+        //newViewController.playerNames[2] = nameInput3.text!
         
         audioPlayer.stop()
         
         //Setup the audio
+        //Actually make the setup INSIDE of the game controller
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "warSong", ofType: "mp3")!))
             audioPlayer.numberOfLoops = -1
@@ -246,10 +247,10 @@ class ViewControllerGameSettings : SpaceVibe, UITextFieldDelegate {
         }
         
         //Actually play the audio
-        audioPlayer.play()
+        //audioPlayer.play()
         
         //If theres a song playing set volume to 0, otherwise set volume to 1
-        if (AVAudioSession.sharedInstance().isOtherAudioPlaying) {
+        if (AVAudioSession.sharedInstance().isOtherAudioPlaying || musicToggle == false) {
             audioPlayer.setVolume(0.0, fadeDuration: 0)
         }
         

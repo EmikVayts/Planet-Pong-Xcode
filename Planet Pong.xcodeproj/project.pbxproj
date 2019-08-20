@@ -17,6 +17,8 @@
 		040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */; };
 		040E757A22AF4E8900E4B1F7 /* GameResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040E757922AF4E8900E4B1F7 /* GameResults.storyboard */; };
 		040E757C22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E757B22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift */; };
+		040EB82E230BAF6D00AB482D /* spinner1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 040EB82C230BAF6C00AB482D /* spinner1.mp3 */; };
+		040EB82F230BAF6D00AB482D /* spinner2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 040EB82D230BAF6D00AB482D /* spinner2.mp3 */; };
 		040F5FB622A4E35F00D243D3 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB522A4E35F00D243D3 /* logo1.png */; };
 		040F5FBA22A4E56C00D243D3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040F5FB922A4E56C00D243D3 /* Home.storyboard */; };
 		044DAC7D230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */; };
@@ -99,6 +101,8 @@
 		046E00EB23091B83000029D8 /* icon-messages-app-iPhone-60x45@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046E009D23091B83000029D8 /* icon-messages-app-iPhone-60x45@3x.png */; };
 		046E00EC23091B83000029D8 /* icon-messages-app-iPhone-60x45@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 046E009E23091B83000029D8 /* icon-messages-app-iPhone-60x45@2x.png */; };
 		046E00EF23091FDC000029D8 /* SpaceVibe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00EE23091FDC000029D8 /* SpaceVibe.swift */; };
+		046E00F1230A5FEF000029D8 /* Spinner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E00F0230A5FEF000029D8 /* Spinner.storyboard */; };
+		046E00F3230A604F000029D8 /* ViewControllerSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
 		0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */; };
 		0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */; };
@@ -140,6 +144,8 @@
 		040E757722AF4E4D00E4B1F7 /* ViewControllerTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTutorial.swift; sourceTree = "<group>"; };
 		040E757922AF4E8900E4B1F7 /* GameResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameResults.storyboard; sourceTree = "<group>"; };
 		040E757B22AF4EAE00E4B1F7 /* ViewControllerGameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGameResults.swift; sourceTree = "<group>"; };
+		040EB82C230BAF6C00AB482D /* spinner1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spinner1.mp3; path = "Basic Chat/SFX/spinner1.mp3"; sourceTree = SOURCE_ROOT; };
+		040EB82D230BAF6D00AB482D /* spinner2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = spinner2.mp3; path = "Basic Chat/SFX/spinner2.mp3"; sourceTree = SOURCE_ROOT; };
 		040F5FB522A4E35F00D243D3 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
 		040F5FB722A4E4F600D243D3 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
 		040F5FB922A4E56C00D243D3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 		046E009D23091B83000029D8 /* icon-messages-app-iPhone-60x45@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPhone-60x45@3x.png"; sourceTree = "<group>"; };
 		046E009E23091B83000029D8 /* icon-messages-app-iPhone-60x45@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-messages-app-iPhone-60x45@2x.png"; sourceTree = "<group>"; };
 		046E00EE23091FDC000029D8 /* SpaceVibe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceVibe.swift; sourceTree = "<group>"; };
+		046E00F0230A5FEF000029D8 /* Spinner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spinner.storyboard; sourceTree = "<group>"; };
+		046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpinner.swift; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
 		0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerClassicScores.swift; sourceTree = "<group>"; };
 		0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerScores.swift; sourceTree = "<group>"; };
@@ -335,6 +343,8 @@
 				040E756422ADD72200E4B1F7 /* GamemodeClassic.storyboard */,
 				7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */,
 				044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */,
+				046E00F0230A5FEF000029D8 /* Spinner.storyboard */,
+				046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -585,6 +595,8 @@
 		04D4C6D12303AEAA0079A72B /* SFX */ = {
 			isa = PBXGroup;
 			children = (
+				040EB82C230BAF6C00AB482D /* spinner1.mp3 */,
+				040EB82D230BAF6D00AB482D /* spinner2.mp3 */,
 				046E003D2308BB9C000029D8 /* sniperSong.mp3 */,
 				04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */,
 				046E003F2308BBA1000029D8 /* warSong.mp3 */,
@@ -731,6 +743,7 @@
 			files = (
 				046E00A223091B83000029D8 /* Reaper@0.5x.png in Resources */,
 				046E00E723091B83000029D8 /* icon-messages-app-27x20@2x.png in Resources */,
+				040EB82E230BAF6D00AB482D /* spinner1.mp3 in Resources */,
 				046E00B423091B83000029D8 /* CameraArtboard 1@0.5x friends.png in Resources */,
 				046E00CA23091B83000029D8 /* Icon-App-20x20@1x.png in Resources */,
 				046E00AD23091B83000029D8 /* BackArrowIcon.png in Resources */,
@@ -801,11 +814,13 @@
 				046628752307E26A00F3ADA4 /* Myriad Pro Black Italic.otf in Resources */,
 				046E00BA23091B83000029D8 /* CameraArtboard 4@0.5x drop.png in Resources */,
 				046E00BB23091B83000029D8 /* logo1.JPG in Resources */,
+				046E00F1230A5FEF000029D8 /* Spinner.storyboard in Resources */,
 				046E00D923091B83000029D8 /* iTunesArtwork@3x.png in Resources */,
 				046E00B123091B83000029D8 /* settingsWheel.png in Resources */,
 				046E00D223091B83000029D8 /* Icon-App-60x60@3x.png in Resources */,
 				046E00C623091B83000029D8 /* iTunesArtwork@1x.png in Resources */,
 				040E757222AF4CF500E4B1F7 /* GameSettings.storyboard in Resources */,
+				040EB82F230BAF6D00AB482D /* spinner2.mp3 in Resources */,
 				046E00B323091B83000029D8 /* greenPlanet.png in Resources */,
 				046E00AA23091B83000029D8 /* Overtime@0.5x.png in Resources */,
 				046E00E223091B83000029D8 /* icon-messages-app-iPadAir-67x50@2x.png in Resources */,
@@ -888,6 +903,7 @@
 				040E756722ADDB0900E4B1F7 /* ViewControllerHome.swift in Sources */,
 				044DAC7D230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift in Sources */,
 				7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */,
+				046E00F3230A604F000029D8 /* ViewControllerSpinner.swift in Sources */,
 				04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */,
 				046E00EF23091FDC000029D8 /* SpaceVibe.swift in Sources */,
 				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,

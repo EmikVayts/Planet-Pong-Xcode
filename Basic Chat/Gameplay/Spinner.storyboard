@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Spinner-->
+        <scene sceneID="TYW-8J-OG6">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerSpinner" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OuY-eB-eRb" customClass="ViewControllerSpinner" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZPc-EC-jkf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4U-um-Rhl" userLabel="ThreeSpinner">
+                                <rect key="frame" x="52" y="293" width="310.5" height="310.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f4U-um-Rhl" secondAttribute="height" id="w3l-ZW-R8G"/>
+                                </constraints>
+                                <state key="normal" image="ThreeSpinner"/>
+                                <connections>
+                                    <action selector="spinTheWheel:" destination="OuY-eB-eRb" eventType="touchUpInside" id="O0c-NF-Bcc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinnerArm" translatesAutoresizingMaskIntoConstraints="NO" id="qgl-qD-WeV">
+                                <rect key="frame" x="103.5" y="429.5" width="207" height="37.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f4U-um-Rhl" firstAttribute="centerX" secondItem="ZPc-EC-jkf" secondAttribute="centerX" id="1Y3-cZ-e5o"/>
+                            <constraint firstItem="qgl-qD-WeV" firstAttribute="centerX" secondItem="ZPc-EC-jkf" secondAttribute="centerX" id="7Cz-5E-Qra"/>
+                            <constraint firstItem="qgl-qD-WeV" firstAttribute="centerY" secondItem="ZPc-EC-jkf" secondAttribute="centerY" id="Kuy-9b-EpI"/>
+                            <constraint firstItem="f4U-um-Rhl" firstAttribute="centerY" secondItem="ZPc-EC-jkf" secondAttribute="centerY" id="XL2-v7-EVG"/>
+                            <constraint firstItem="f4U-um-Rhl" firstAttribute="width" secondItem="8Dl-1k-8et" secondAttribute="width" multiplier="0.75" id="hhK-rh-qCL"/>
+                            <constraint firstItem="qgl-qD-WeV" firstAttribute="width" secondItem="8Dl-1k-8et" secondAttribute="width" multiplier="0.5" id="inT-yj-j0d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Dl-1k-8et"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hZC-Lh-KSa"/>
+                    <connections>
+                        <outlet property="spinner" destination="qgl-qD-WeV" id="ozx-LT-r5P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erp-Gr-hxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713.04347826086962" y="59.598214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ZM-eZ-RpL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="PMz-tg-eBR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k26-xl-DOV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OuY-eB-eRb" kind="relationship" relationship="rootViewController" id="JHB-Td-cZy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xif-YP-CJV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="59.598214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SpinnerArm" width="350" height="37.5"/>
+        <image name="ThreeSpinner" width="514" height="514"/>
+    </resources>
+</document>

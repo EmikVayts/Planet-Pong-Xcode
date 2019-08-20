@@ -181,8 +181,10 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
         cupColor4 = [4, 4, 4, 4, 4, 4, 4, 4, 4, 4];*/
         
         //Set the turn of the player currently going (From 0-3)
-        turn = 0
+        //turn = 0
         round = 1
+        
+        
         
         //Set if the previous shot was a make or miss
         previousShotMade=false
@@ -208,8 +210,9 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
             updateIncomingData()
         } else {
             //Initialize labels
-            let attrString = NSAttributedString(string: "\(playerNames[0]) Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
-            self.playerTurn.attributedText = attrString
+            /*let attrString = NSAttributedString(string: "\(playerNames[0]) Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
+            self.playerTurn.attributedText = attrString*/
+            updatePlayerLabelOnly()
         }
         
         print("We chilling")
@@ -218,7 +221,7 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         print("We still chilling")
-        createPopup(imageFile: "", titleText: "GAME BEGIN", messageText: "\(playerNames[0]) START!", duration: 2)
+        createPopup(imageFile: "", titleText: "GAME BEGIN", messageText: "\(playerNames[turn]) START!", duration: 2)
         ratchetFix = false
         print("Problem 1")
         styleButton()
@@ -441,8 +444,6 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
             
             createPopup(imageFile: "", titleText: "RERACK", messageText: "", duration: 2)
             
-            let rackColor = turn+1
-            
             var currentCupConfig = [Int]()
             
             //Save the current cup configuration to the undo stack
@@ -581,8 +582,7 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
                 self.outgoingData()
                 
                 //Initialize labels
-                let attrString = NSAttributedString(string: "Player 1 Turn #1", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
-                self.playerTurn.attributedText = attrString
+                self.updatePlayerLabelOnly()
                 
                 self.updateCups()
             } else {
@@ -789,6 +789,10 @@ class ViewControllerGamemodeWar: SpaceVibe, CBPeripheralManagerDelegate {
         islandCheck()
         
         //Pick the background color of the players name and turn label
+        updatePlayerLabelOnly()
+    }
+    
+    func updatePlayerLabelOnly() {
         if (self.turn==0) {
             let attrString = NSAttributedString(string: "\(playerNames[0]) Turn #\(self.round)", attributes: [NSAttributedString.Key.strokeColor: UIColor.white, NSAttributedString.Key.backgroundColor: UIColor.red, NSAttributedString.Key.strokeWidth: -7.0])
             self.playerTurn.attributedText = attrString
