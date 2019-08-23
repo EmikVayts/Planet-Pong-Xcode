@@ -13,14 +13,18 @@ import StatusAlert
 
 class ViewControllerSpinner: SpaceVibe {
     
+    var numPlayers = 3 //Spinner can work for 2-4 players (If only 1 player bypass the spinner)
+    var playerNames = ["Tony", "Yolanda", "Bethany", "Charles"]
     var spinTime = 0.5
     var destAngle = 17.0
     var pass = 0
     var passTotal = 14
     var animationType = UIView.AnimationOptions.curveLinear
+    var gameSelected = "war"
     
     var spun = false
     @IBOutlet weak var spinner: UIImageView!
+    @IBOutlet weak var threeSpinner: UIButton!
     
     @IBAction func spinTheWheel(_ sender: Any) {
         if (!spun) {
@@ -31,11 +35,20 @@ class ViewControllerSpinner: SpaceVibe {
             
             pass = 0
             
-            let passVals = [11,13,15]
+            var passVals = [Int]()
+            if (numPlayers == 2) {
+                passVals = [12,14]
+                destAngle = 90.0
+            } else if (numPlayers == 3) {
+                passVals = [11,13,15]
+                destAngle = 30.0
+            } else if (numPlayers == 4) {
+                passVals = [10,12,14,16]
+                destAngle = 0.0
+            }
             passTotal = passVals.randomElement()!
             
             spinTime = 0.05
-            destAngle = 30.0
             
             spun = true
 
@@ -71,22 +84,38 @@ class ViewControllerSpinner: SpaceVibe {
                 playSFX(sound: "spinner2")
                 
                 //Delay it for a second before fading to the next screen
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // Change `2.0` to the desired number of seconds.
-                    let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     
-                    let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
-                    newViewController.bluetoothEnabled = false
+                    var newViewController: ViewControllerGamemode?
+                    
+                    //SETTINGS UNIQUE TO EACH GAMEMODE
+                    
+                    if (self.gameSelected == "war") {
+                        let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
+                        
+                        newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
+
+                    }
+                    
+                    //SETTINGS UNIVERSAL FOR ALL GAMEMODES
+                    
+                    newViewController!.bluetoothEnabled = false
+                    
+                    newViewController!.numPlayers = self.numPlayers
+                    
+                    newViewController!.playerNames = self.playerNames
                     
                     if (self.passTotal == 11) {
-                        newViewController.turn = 1
+                        newViewController?.turn = 1
                     } else if (self.passTotal == 13) {
-                        newViewController.turn = 2
+                        newViewController?.turn = 2
                     } else if (self.passTotal == 15) {
-                        newViewController.turn = 0
+                        newViewController?.turn = 0
                     }
-                    //newViewController.updatePlayerLabel()
                     
-                    self.fadeOutAnimationPush(vc: newViewController)
+                    newViewController?.firstPlayer = newViewController!.turn
+                    
+                    self.fadeOutAnimationPush(vc: newViewController!)
                 }
 
                 
@@ -119,7 +148,13 @@ class ViewControllerSpinner: SpaceVibe {
                 
                 self.spinTime += 0.01 * Double(self.pass)
                 
-                self.destAngle += 60.0
+                if (self.numPlayers == 2) {
+                    self.destAngle += 90.0
+                } else if (self.numPlayers == 3) {
+                    self.destAngle += 60
+                } else if (self.numPlayers == 4) {
+                    self.destAngle += 45
+                }
                 
                 if ((self.destAngle) >= 180.0) {
                     self.destAngle = -180.0+((self.destAngle) .truncatingRemainder(dividingBy: 180.0))
@@ -141,7 +176,14 @@ class ViewControllerSpinner: SpaceVibe {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.spinner.transform = CGAffineTransform(rotationAngle: CGFloat((-30.0 * .pi) / 180.0))
-        
+        if (numPlayers == 2) {
+            threeSpinner.setImage(UIImage(named: "TwoSpinner"), for: .normal)
+        } else if (numPlayers == 3) {
+            threeSpinner.setImage(UIImage(named: "ThreeSpinner"), for: .normal)
+            self.spinner.transform = CGAffineTransform(rotationAngle: CGFloat((-30.0 * .pi) / 180.0))
+        } else if (numPlayers == 4) {
+            threeSpinner.setImage(UIImage(named: "FourSpinner"), for: .normal)
+            self.spinner.transform = CGAffineTransform(rotationAngle: CGFloat((-45.0 * .pi) / 180.0))
+        }
     }
 }

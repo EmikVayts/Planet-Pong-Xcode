@@ -46,6 +46,7 @@
                     <navigationItem key="navigationItem" id="hZC-Lh-KSa"/>
                     <connections>
                         <outlet property="spinner" destination="qgl-qD-WeV" id="ozx-LT-r5P"/>
+                        <outlet property="threeSpinner" destination="f4U-um-Rhl" id="85o-xV-bJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erp-Gr-hxj" userLabel="First Responder" sceneMemberID="firstResponder"/>

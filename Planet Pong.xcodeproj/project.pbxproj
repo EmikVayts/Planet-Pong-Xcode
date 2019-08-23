@@ -121,6 +121,7 @@
 		04DB86E422EFFC82007E673C /* VideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E322EFFC82007E673C /* VideoLooperView.swift */; };
 		04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E522EFFD9A007E673C /* VideoClip.swift */; };
 		04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */; };
+		04F6BE98230E413100B9C023 /* ViewControllerGamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6BE97230E413100B9C023 /* ViewControllerGamemode.swift */; };
 		7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */; };
 		B1A0C03A91272541C6B0FDD6 /* Pods_Planet_Pong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */; };
 		D50657241DF2F4C8002B7557 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50657231DF2F4C8002B7557 /* UUIDKey.swift */; };
@@ -256,6 +257,7 @@
 		04DB86E522EFFD9A007E673C /* VideoClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClip.swift; sourceTree = "<group>"; };
 		04DED16122FF1307000D9928 /* Myriad Pro Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Semibold.ttf"; path = "Myriad Pro/Myriad Pro Semibold.ttf"; sourceTree = "<group>"; };
 		04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHallOfFame.swift; sourceTree = "<group>"; };
+		04F6BE97230E413100B9C023 /* ViewControllerGamemode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemode.swift; sourceTree = "<group>"; };
 		1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planet_Pong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeClassic.swift; sourceTree = "<group>"; };
 		9F8849BABDA5D961FCD7C601 /* Pods-Planet Pong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planet Pong.debug.xcconfig"; path = "Target Support Files/Pods-Planet Pong/Pods-Planet Pong.debug.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				044DAC7C230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift */,
 				046E00F0230A5FEF000029D8 /* Spinner.storyboard */,
 				046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */,
+				04F6BE97230E413100B9C023 /* ViewControllerGamemode.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 				04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */,
+				04F6BE98230E413100B9C023 /* ViewControllerGamemode.swift in Sources */,
 				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
 				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
 			);
