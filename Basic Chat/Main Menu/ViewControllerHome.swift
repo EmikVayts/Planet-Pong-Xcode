@@ -56,6 +56,17 @@ class ViewControllerHome: SpaceVibe {
     }
     
     
+    @IBAction func goToSettings(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        guard let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerSettings") as?
+            ViewControllerSettings else {
+                return
+        }
+        
+        fadeOutAnimationPush(vc: newViewController)
+    }
+    
+    
     @IBAction func motdPressed(_ sender: Any) {
         motd.shake()
         motd.setTitle(motdMessages.randomElement(), for: .normal)
@@ -148,8 +159,10 @@ class ViewControllerHome: SpaceVibe {
                 return
         }
         
-        let screenTransition = ScreenTransitions()
-        screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
+        fadeOutAnimationPush(vc: newViewController)
+        
+        //let screenTransition = ScreenTransitions()
+        //screenTransition.pushScreen(vc: newViewController, nc: navigationController!)
 
     }
     

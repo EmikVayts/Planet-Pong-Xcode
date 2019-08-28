@@ -127,6 +127,15 @@ class SpaceVibe: UIViewController {
         })
     }
     
+    func fadeOutAnimationPopTo(vc: UIViewController) {
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveLinear, animations: {
+            self.view.alpha = 0.0
+        }, completion: {
+            (finished: Bool) in
+            self.popScreenTo(vc: vc)
+        })
+    }
+    
     //Push to new view
     func pushScreen (vc: SpaceVibe) {
         //Values to pass on the position of the stars and purple fade
@@ -158,6 +167,20 @@ class SpaceVibe: UIViewController {
         navigationController?.view.layer.add(transition, forKey: nil)
         navigationController?.dismiss(animated: false, completion: nil)
         navigationController?.popViewController(animated: false)
+    }
+    
+    //Pop view to a specific view
+    func popScreenTo(vc: UIViewController) {
+        
+        //Add the fade transition
+        let transition = CATransition()
+        transition.duration = 0.001
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        
+        navigationController?.view.layer.add(transition, forKey: nil)
+        navigationController?.dismiss(animated: false, completion: nil)
+        navigationController?.popToViewController(vc, animated: false)
     }
     
     //Counter for changing stars and purple fade thingy

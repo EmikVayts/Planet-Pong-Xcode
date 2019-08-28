@@ -14,6 +14,7 @@ import StatusAlert
 class ViewControllerSpinner: SpaceVibe {
     
     var numPlayers = 3 //Spinner can work for 2-4 players (If only 1 player bypass the spinner)
+    var playerPerTeam = 1
     var playerNames = ["Tony", "Yolanda", "Bethany", "Charles"]
     var spinTime = 0.5
     var destAngle = 17.0
@@ -36,14 +37,14 @@ class ViewControllerSpinner: SpaceVibe {
             pass = 0
             
             var passVals = [Int]()
-            if (numPlayers == 2) {
-                passVals = [12,14]
+            if (numPlayers == 2 || playerPerTeam==2) {
+                passVals = [11,13]
                 destAngle = 90.0
             } else if (numPlayers == 3) {
                 passVals = [11,13,15]
                 destAngle = 30.0
             } else if (numPlayers == 4) {
-                passVals = [10,12,14,16]
+                passVals = [9,11,13,15]
                 destAngle = 0.0
             }
             passTotal = passVals.randomElement()!
@@ -101,16 +102,42 @@ class ViewControllerSpinner: SpaceVibe {
                     
                     newViewController!.bluetoothEnabled = false
                     
-                    newViewController!.numPlayers = self.numPlayers
+                    newViewController!.numPlayers = 4//self.numPlayers
+                    
+                    newViewController!.playerPerTeam = self.playerPerTeam
                     
                     newViewController!.playerNames = self.playerNames
                     
-                    if (self.passTotal == 11) {
-                        newViewController?.turn = 1
-                    } else if (self.passTotal == 13) {
-                        newViewController?.turn = 2
-                    } else if (self.passTotal == 15) {
-                        newViewController?.turn = 0
+                    if (self.playerPerTeam == 2) {
+                        if (self.passTotal == 13) {
+                            newViewController?.turn = 0
+                        } else if (self.passTotal == 11) {
+                            newViewController?.turn = 2
+                        }
+                    } else if (self.numPlayers==2) {
+                        if (self.passTotal == 13) {
+                            newViewController?.turn = 0
+                        } else if (self.passTotal == 11) {
+                            newViewController?.turn = 1
+                        }
+                    } else if (self.numPlayers==3) {
+                        if (self.passTotal == 11) {
+                            newViewController?.turn = 1
+                        } else if (self.passTotal == 13) {
+                            newViewController?.turn = 2
+                        } else if (self.passTotal == 15) {
+                            newViewController?.turn = 0
+                        }
+                    } else if (self.numPlayers==4) {
+                        if (self.passTotal == 9) {
+                            newViewController?.turn = 0
+                        } else if (self.passTotal == 11) {
+                            newViewController?.turn = 1
+                        } else if (self.passTotal == 13) {
+                            newViewController?.turn = 2
+                        } else if (self.passTotal == 15) {
+                            newViewController?.turn = 3
+                        }
                     }
                     
                     newViewController?.firstPlayer = newViewController!.turn
@@ -176,7 +203,7 @@ class ViewControllerSpinner: SpaceVibe {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (numPlayers == 2) {
+        if (numPlayers == 2 || playerPerTeam==2) {
             threeSpinner.setImage(UIImage(named: "TwoSpinner"), for: .normal)
         } else if (numPlayers == 3) {
             threeSpinner.setImage(UIImage(named: "ThreeSpinner"), for: .normal)

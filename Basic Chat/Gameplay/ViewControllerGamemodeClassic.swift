@@ -53,7 +53,13 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
         
         //cupColor = [3, 2, 2, 2, 1, 2, 3, 2, 2, 3]; //Set the colors for DARTS mode
         
-        cupColorMultiple = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]];
+        if (playerPerTeam==1) {
+            cupColorMultiple = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]];
+        } else {
+            playerColors = [UIColor.red, UIColor.red, UIColor.green, UIColor.green]
+            playerColorsNum = [1, 1, 2, 2]
+            cupColorMultiple = [[1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2], [1, 1, 2, 2]];
+        }
         
         boardType = "multiple"
         
@@ -85,6 +91,9 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
     
     //UI Buttons press
     @IBAction func undoButtonPress(_ sender: Any) {
+        
+        var removedAlready = false
+        
         print("undo button pressed")
         //Check if there are any more moves to undo
         if (undoArray.count > 0) {
@@ -101,15 +110,36 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
                 
                 streak.text = "\(currentStreak[turn])"
                 
-                if (turn==0) {
-                    cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 1
-                } else if (turn==1) {
-                    cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 2
-                } else if (turn==2) {
-                    cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 3
-                } else if (turn==3) {
-                    cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 4
+                if (playerPerTeam==1) {
+                    if (turn==0) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 1
+                    } else if (turn==1) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 2
+                    } else if (turn==2) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 3
+                    } else if (turn==3) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 4
+                    }
+                } else {
+                    if (turn==0) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 1
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][1] = 1
+                        cupsRemaining[1] += 1
+                    } else if (turn==1) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 1
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][0] = 1
+                        cupsRemaining[0] += 1
+                    } else if (turn==2) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 2
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][3] = 2
+                        cupsRemaining[3] += 1
+                    } else if (turn==3) {
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][turn] = 2
+                        cupColorMultiple[undoArray[undoArray.count-1].cupChanged][2] = 2
+                        cupsRemaining[2] += 1
+                    }
                 }
+                
                 print("make undo")
                 cupsRemaining[turn] += 1
                 
@@ -160,11 +190,31 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
                 self.updateCups()
                 
                 islandCheck()
+            } else if (undoArray[undoArray.count-1].moveType == "rebutal") {
+                cupColorMultiple = undoArray[undoArray.count-1].cupConfigurationAll
+                activePlayers = undoArray[undoArray.count-1].activePlayers
+                finalRound = undoArray[undoArray.count-1].finalRound
+                lastCup = undoArray[undoArray.count-1].lastCup
+                cupsRemaining = undoArray[undoArray.count-1].cupsRemaining
+                
+                //Get rid of the top undo item
+                undoArray.remove(at: undoArray.count-1)
+                if (undoArray.count == 0) {
+                    undo.alpha = 0.25
+                }
+                
+                removedAlready = true
+                
+                //Undo one more time to return to the previous turn
+                undoButtonPress(undo!)
             }
-            //Get rid of the top undo item
-            undoArray.remove(at: undoArray.count-1)
-            if (undoArray.count == 0) {
-                undo.alpha = 0.25
+            
+            if (!removedAlready) {
+                //Get rid of the top undo item
+                undoArray.remove(at: undoArray.count-1)
+                if (undoArray.count == 0) {
+                    undo.alpha = 0.25
+                }
             }
         }
     }
@@ -410,6 +460,22 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
         }
     }*/
     
+    func doublesMirrorBoard(cupNumber: Int, cupColor: Int, inc: Int) {
+        if (self.turn==0) {
+            self.cupColorMultiple[cupNumber][1] = cupColor
+            cupsRemaining[1] += inc
+        } else if (self.turn==1) {
+            self.cupColorMultiple[cupNumber][0] = cupColor
+            cupsRemaining[0] += inc
+        } else if (self.turn==2) {
+            self.cupColorMultiple[cupNumber][3] = cupColor
+            cupsRemaining[3] += inc
+        } else if (self.turn==3) {
+            self.cupColorMultiple[cupNumber][2] = cupColor
+            cupsRemaining[2] += inc
+        }
+    }
+    
     //What happens when a cup is hit
     override func cupHit(cupNumber: Int) {
         
@@ -428,6 +494,10 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
             //Classic mode response to cup getting hit
             print("Cup hit!")
             self.cupColorMultiple[cupNumber][self.turn] = 0
+            if (playerPerTeam==2) {
+                doublesMirrorBoard(cupNumber: cupNumber, cupColor: 0, inc: -1)
+            }
+            
             self.updateCup(cup: cupNumber)
             
             cupsRemaining[turn] -= 1
@@ -447,9 +517,17 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
                 createPopup(imageFile: "", titleText: "LAST CUP", messageText: "", duration: 2)
             }
             
-            //Check for final cup remaining
+            print("Cups remaining:")
+            print(cupsRemaining[turn])
+            
+            //Check for final cup hit
             if (cupsRemaining[turn]==0) {
-                createPopup(imageFile: "", titleText: "PLAYER \(turn+1) WINS", messageText: "", duration: 2)
+                //createPopup(imageFile: "", titleText: "PLAYER \(turn+1) WINS", messageText: "", duration: 2)
+                if (finalRound == -1) {
+                    print("Setting the final round due to no cups remaining!")
+                    finalRound = round
+                    lastCup = turn
+                }
             }
             
             self.previousShotMade = false
@@ -547,6 +625,47 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
         } else {
             streak.textColor = UIColor.white
             fireIcon.image = UIImage(named: "fireIcon")
+        }
+        
+        //Check for winning condition
+        if (playerPerTeam==2) {
+            
+        } else {
+            if ((round == finalRound + 1) && finalRound != -1 && turn==lastCup) {
+                print("check for win")
+                
+                undoArray.append(UndoTurn(moveType: "rebutal", cupConfigurationAll: cupColorMultiple, activePlayers: activePlayers, finalRound: finalRound, lastCup: lastCup, cupsRemaining: cupsRemaining))
+                
+                //All players have gotten a chance to hit all cups after the last cup was hit
+                var activePlayerNum = 4
+                for i in 0...numPlayers-1 {
+                    if (cupsRemaining[i] != 0) {
+                        activePlayerNum -= 1
+                        activePlayers[i] = 0
+                        print("make a player inactive")
+                    }
+                }
+                //If more than 1 players are active we have a rebutal on our hands
+                if (activePlayerNum > 1) {
+                    for i in 0...numPlayers-1 {
+                        if (cupsRemaining[i] == 0) {
+                            self.cupColorMultiple[1][i] = playerColorsNum[i]
+                            self.cupColorMultiple[3][i] = playerColorsNum[i]
+                            self.cupColorMultiple[4][i] = playerColorsNum[i]
+                            cupsRemaining[i] += 3
+                        }
+                    }
+                    
+                    print("final round = -1")
+                    //Game keeps going on baby, pprepare for another potential rebutal?
+                    finalRound = -1
+                    
+                } else {
+                    //The player assigned to the lastCup variable is the winner!
+                    //YOIT!
+                    print("player won")
+                }
+            }
         }
         
         //Island check

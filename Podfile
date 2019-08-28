@@ -7,5 +7,9 @@ target 'Planet Pong' do
   # Pods for Planet Pong
 
     pod 'StatusAlert', '~> 1.1.1'
+    
+    pod 'Firebase/Analytics'
+    
+    pod 'Firebase/Auth'
 
 end

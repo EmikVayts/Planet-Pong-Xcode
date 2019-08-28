@@ -104,6 +104,9 @@
                                     <constraint firstAttribute="width" secondItem="Yj3-wC-eYt" secondAttribute="height" id="TV5-H5-jkW"/>
                                 </constraints>
                                 <state key="normal" image="SettingsIcon"/>
+                                <connections>
+                                    <action selector="goToSettings:" destination="aIw-Nz-iXk" eventType="touchUpInside" id="dmi-n5-Xto"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="K9x-R2-Xoz">
                                 <rect key="frame" x="0.0" y="62" width="320" height="160"/>
@@ -266,6 +269,51 @@ For a more immersive experience, check out the Planet Pong controller!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNi-El-01l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3497" y="711"/>
+        </scene>
+        <!--View Controller Settings-->
+        <scene sceneID="zok-da-P29">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerSettings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wrj-0S-eQJ" customClass="ViewControllerSettings" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wFH-yy-Vl6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUv-ZS-nTy" userLabel="Game Mode">
+                                <rect key="frame" x="56" y="30" width="208" height="48"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpq-Ys-kaJ" userLabel="BackButton">
+                                <rect key="frame" x="10" y="30" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lpq-Ys-kaJ" secondAttribute="height" id="nFU-xg-Xhy"/>
+                                </constraints>
+                                <state key="normal" image="BackArrowIcon"/>
+                                <connections>
+                                    <action selector="return:" destination="wrj-0S-eQJ" eventType="touchUpInside" id="MeJ-KH-1xo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lpq-Ys-kaJ" firstAttribute="leading" secondItem="NWY-ch-eIC" secondAttribute="leading" constant="10" id="2Du-C0-fbO"/>
+                            <constraint firstItem="vUv-ZS-nTy" firstAttribute="centerX" secondItem="wFH-yy-Vl6" secondAttribute="centerX" id="8Pk-tr-nfZ"/>
+                            <constraint firstItem="lpq-Ys-kaJ" firstAttribute="width" secondItem="NWY-ch-eIC" secondAttribute="width" multiplier="0.15" id="LB0-S6-1S8"/>
+                            <constraint firstItem="lpq-Ys-kaJ" firstAttribute="top" secondItem="NWY-ch-eIC" secondAttribute="top" constant="10" id="VUd-xr-EVT"/>
+                            <constraint firstItem="vUv-ZS-nTy" firstAttribute="bottom" secondItem="lpq-Ys-kaJ" secondAttribute="bottom" id="cAT-cw-Mig"/>
+                            <constraint firstItem="vUv-ZS-nTy" firstAttribute="width" secondItem="wFH-yy-Vl6" secondAttribute="width" multiplier="0.65" id="owv-Y8-tbM"/>
+                            <constraint firstItem="vUv-ZS-nTy" firstAttribute="top" secondItem="lpq-Ys-kaJ" secondAttribute="top" id="vkZ-kE-rch"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NWY-ch-eIC"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="lpq-Ys-kaJ" id="aot-gJ-NwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7uk-H6-yrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="999"/>
         </scene>
         <!--View Controller Hall Of Fame-->
         <scene sceneID="Idi-x1-7Hs">
@@ -519,6 +567,7 @@ Press 'Play' on the homescreen to begin.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="BackArrowIcon" width="490" height="480"/>
         <image name="Logo1" width="217.5" height="236"/>
         <image name="MusicIcon" width="112.5" height="112.5"/>
         <image name="SettingsIcon" width="112.5" height="112.5"/>

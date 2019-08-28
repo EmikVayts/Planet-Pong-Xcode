@@ -103,6 +103,7 @@
 		046E00EF23091FDC000029D8 /* SpaceVibe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00EE23091FDC000029D8 /* SpaceVibe.swift */; };
 		046E00F1230A5FEF000029D8 /* Spinner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046E00F0230A5FEF000029D8 /* Spinner.storyboard */; };
 		046E00F3230A604F000029D8 /* ViewControllerSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */; };
+		0474385D2311E39D00EBCDF6 /* ViewControllerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474385C2311E39D00EBCDF6 /* ViewControllerSettings.swift */; };
 		0482ADD522BFF0F700D6FF10 /* Scores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0482ADD022BFF0F700D6FF10 /* Scores.storyboard */; };
 		0482ADD622BFF0F700D6FF10 /* ViewControllerClassicScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */; };
 		0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */; };
@@ -113,6 +114,7 @@
 		0499223722FC795900735F7D /* bluePlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223622FC795800735F7D /* bluePlanet.png */; };
 		0499223922FC795F00735F7D /* redPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223822FC795F00735F7D /* redPlanet.png */; };
 		049ACEC92305135800A551F3 /* ScreenTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ACEC82305135800A551F3 /* ScreenTransitions.swift */; };
+		04A40D7E2315F62800CFC0D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */; };
 		04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8F0622E432CC0049138E /* ViewControllerRules.swift */; };
 		04D4C6D32303AEC90079A72B /* mainMenuSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */; };
 		04D87EF022C1A1C100D92C3F /* Aldrich-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */; };
@@ -238,6 +240,7 @@
 		046E00EE23091FDC000029D8 /* SpaceVibe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceVibe.swift; sourceTree = "<group>"; };
 		046E00F0230A5FEF000029D8 /* Spinner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Spinner.storyboard; sourceTree = "<group>"; };
 		046E00F2230A604F000029D8 /* ViewControllerSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpinner.swift; sourceTree = "<group>"; };
+		0474385C2311E39D00EBCDF6 /* ViewControllerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSettings.swift; sourceTree = "<group>"; };
 		0482ADD022BFF0F700D6FF10 /* Scores.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scores.storyboard; sourceTree = "<group>"; };
 		0482ADD122BFF0F700D6FF10 /* ViewControllerClassicScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerClassicScores.swift; sourceTree = "<group>"; };
 		0482ADD222BFF0F700D6FF10 /* ViewControllerScores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerScores.swift; sourceTree = "<group>"; };
@@ -248,6 +251,7 @@
 		0499223622FC795800735F7D /* bluePlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePlanet.png; path = "Basic Chat/Graphics/bluePlanet.png"; sourceTree = SOURCE_ROOT; };
 		0499223822FC795F00735F7D /* redPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redPlanet.png; path = "Basic Chat/Graphics/redPlanet.png"; sourceTree = SOURCE_ROOT; };
 		049ACEC82305135800A551F3 /* ScreenTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitions.swift; sourceTree = "<group>"; };
+		04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04CE8F0622E432CC0049138E /* ViewControllerRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRules.swift; sourceTree = "<group>"; };
 		04D4C6D22303AEC90079A72B /* mainMenuSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mainMenuSong.mp3; path = "Basic Chat/SFX/mainMenuSong.mp3"; sourceTree = SOURCE_ROOT; };
 		04D87EEF22C1A1C100D92C3F /* Aldrich-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aldrich-Regular.ttf"; sourceTree = "<group>"; };
@@ -367,6 +371,7 @@
 				04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */,
 				0457BBC722F2A79100188610 /* ViewControllerRulesSelection.swift */,
 				0457BBC922F2A80600188610 /* ViewControllerRulesController.swift */,
+				0474385C2311E39D00EBCDF6 /* ViewControllerSettings.swift */,
 			);
 			path = "Main Menu";
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 		D5B24DDA1DEE393B00D33B5A /* Basic Chat */ = {
 			isa = PBXGroup;
 			children = (
+				04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */,
 				046E00ED23091FB7000029D8 /* Graphic Effects */,
 				046E004223091B83000029D8 /* Graphics */,
 				049ACEC72305133800A551F3 /* Screen Transitions */,
@@ -818,6 +824,7 @@
 				046E00BA23091B83000029D8 /* CameraArtboard 4@0.5x drop.png in Resources */,
 				046E00BB23091B83000029D8 /* logo1.JPG in Resources */,
 				046E00F1230A5FEF000029D8 /* Spinner.storyboard in Resources */,
+				04A40D7E2315F62800CFC0D1 /* GoogleService-Info.plist in Resources */,
 				046E00D923091B83000029D8 /* iTunesArtwork@3x.png in Resources */,
 				046E00B123091B83000029D8 /* settingsWheel.png in Resources */,
 				046E00D223091B83000029D8 /* Icon-App-60x60@3x.png in Resources */,
@@ -877,11 +884,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -921,6 +934,7 @@
 				04F6BE98230E413100B9C023 /* ViewControllerGamemode.swift in Sources */,
 				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
 				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
+				0474385D2311E39D00EBCDF6 /* ViewControllerSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

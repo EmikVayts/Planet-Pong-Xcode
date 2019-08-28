@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ViewControllerHallOfFame: UIViewController {
+class ViewControllerHallOfFame: SpaceVibe {
     
     @IBOutlet weak var backButton: UIButton!
     
