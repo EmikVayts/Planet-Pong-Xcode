@@ -30,6 +30,110 @@
             </objects>
             <point key="canvasLocation" x="-1626" y="18"/>
         </scene>
+        <!--View Controller Bluetooth Mode-->
+        <scene sceneID="ZRD-6V-ehj">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerBluetoothMode" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oVF-I9-zUP" customClass="ViewControllerBluetoothMode" customModule="Planet_Pong" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQS-59-74s"/>
+                        <viewControllerLayoutGuide type="bottom" id="WEC-Fh-shC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OY9-eK-mPE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtA-7Z-Wc9">
+                                <rect key="frame" x="10.333333333333343" y="411" width="393.33333333333326" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EtA-7Z-Wc9" secondAttribute="height" multiplier="4" id="DL8-6e-fNT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="14"/>
+                                <state key="normal" title="                   PLAY WITHOUT A MACHINE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pairWithoutMachinePressed:" destination="oVF-I9-zUP" eventType="touchUpInside" id="g9s-Dj-N38"/>
+                                    <action selector="playWithoutDevice:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="hUp-ST-r67"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N30-Xc-bET" userLabel="PLAY WITH A MACHINE">
+                                <rect key="frame" x="10.333333333333343" y="227" width="393.33333333333326" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="N30-Xc-bET" secondAttribute="height" multiplier="4" id="3Z1-e2-WUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="14"/>
+                                <state key="normal" title="                   PAIR WITH A MACHINE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pairWithMachinePressed:" destination="oVF-I9-zUP" eventType="touchUpInside" id="x9H-6r-v3o"/>
+                                    <action selector="playWithoutDevice:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="pj1-IC-JDu"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TenCups" translatesAutoresizingMaskIntoConstraints="NO" id="eL8-oL-nyI">
+                                <rect key="frame" x="31" y="429.66666666666669" width="83" height="60.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eL8-oL-nyI" secondAttribute="height" multiplier="160:117" id="c1h-ub-qHp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlanetPongMachineOn" translatesAutoresizingMaskIntoConstraints="NO" id="k4L-Tg-xkj">
+                                <rect key="frame" x="31" y="234" width="83" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k4L-Tg-xkj" secondAttribute="height" multiplier="78:79" id="uKR-bg-kW5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c2-4R-SwO">
+                                <rect key="frame" x="155.33333333333334" y="312.66666666666669" width="103.33333333333334" height="110.66666666666669"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0c2-4R-SwO" secondAttribute="height" multiplier="103:110" id="vHx-lP-9Me"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYC-mB-DVb" userLabel="BackButton">
+                                <rect key="frame" x="10" y="10" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HYC-mB-DVb" secondAttribute="height" id="5rK-EX-aO3"/>
+                                </constraints>
+                                <state key="normal" image="BackArrowIcon"/>
+                                <connections>
+                                    <action selector="backButton:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="0iV-Co-Ukg"/>
+                                    <action selector="backButton:" destination="oVF-I9-zUP" eventType="touchUpInside" id="afy-dl-KdS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HYC-mB-DVb" firstAttribute="top" secondItem="OY9-eK-mPE" secondAttribute="top" constant="10" id="Ar7-bZ-SKT"/>
+                            <constraint firstItem="N30-Xc-bET" firstAttribute="centerX" secondItem="OY9-eK-mPE" secondAttribute="centerX" id="BiG-GG-YmV"/>
+                            <constraint firstItem="eL8-oL-nyI" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.2" id="Gq3-NS-foe"/>
+                            <constraint firstItem="N30-Xc-bET" firstAttribute="centerY" secondItem="OY9-eK-mPE" secondAttribute="centerY" multiplier="0.75" id="I3u-6o-iHn"/>
+                            <constraint firstItem="k4L-Tg-xkj" firstAttribute="centerY" secondItem="OY9-eK-mPE" secondAttribute="centerY" multiplier="0.75" id="Jf8-6n-GsO"/>
+                            <constraint firstItem="EtA-7Z-Wc9" firstAttribute="centerX" secondItem="OY9-eK-mPE" secondAttribute="centerX" id="RYh-Fm-6Ay"/>
+                            <constraint firstItem="N30-Xc-bET" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.95" id="WPg-yO-AxH"/>
+                            <constraint firstItem="HYC-mB-DVb" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.15" id="ZLM-Jw-AAE"/>
+                            <constraint firstItem="EtA-7Z-Wc9" firstAttribute="centerY" secondItem="OY9-eK-mPE" secondAttribute="centerY" multiplier="1.25" id="hOf-6h-sMf"/>
+                            <constraint firstItem="k4L-Tg-xkj" firstAttribute="centerX" secondItem="OY9-eK-mPE" secondAttribute="centerX" multiplier="0.35" id="lyP-Hc-BRy"/>
+                            <constraint firstItem="EtA-7Z-Wc9" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.95" id="m9a-mf-TvK"/>
+                            <constraint firstItem="HYC-mB-DVb" firstAttribute="leading" secondItem="OY9-eK-mPE" secondAttribute="leading" constant="10" id="nbI-Zr-HVj"/>
+                            <constraint firstItem="k4L-Tg-xkj" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.2" id="oGV-vN-G4d"/>
+                            <constraint firstItem="eL8-oL-nyI" firstAttribute="centerX" secondItem="OY9-eK-mPE" secondAttribute="centerX" multiplier="0.35" id="onk-We-xtw"/>
+                            <constraint firstItem="eL8-oL-nyI" firstAttribute="centerY" secondItem="OY9-eK-mPE" secondAttribute="centerY" multiplier="1.25" id="pA9-tm-6FJ"/>
+                            <constraint firstItem="0c2-4R-SwO" firstAttribute="width" secondItem="OY9-eK-mPE" secondAttribute="width" multiplier="0.25" id="sEV-kH-gja"/>
+                            <constraint firstItem="0c2-4R-SwO" firstAttribute="centerX" secondItem="OY9-eK-mPE" secondAttribute="centerX" id="zIp-7B-xqe"/>
+                            <constraint firstItem="0c2-4R-SwO" firstAttribute="centerY" secondItem="OY9-eK-mPE" secondAttribute="centerY" id="zaj-v3-gp8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pairWithMachine" destination="N30-Xc-bET" id="mIy-R9-wAv"/>
+                        <outlet property="pairWithoutMachine" destination="EtA-7Z-Wc9" id="kZv-fB-JUY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0S0-G8-Twh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-757" y="444"/>
+        </scene>
         <!--Pairing-->
         <scene sceneID="ICt-bz-slO">
             <objects>
@@ -42,27 +146,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA6-Et-Wof">
-                                <rect key="frame" x="10.333333333333343" y="622.33333333333337" width="393.33333333333326" height="98.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nA6-Et-Wof" secondAttribute="height" multiplier="4" id="Vgc-5O-FQi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="14"/>
-                                <state key="normal" title="                   PLAY WITHOUT A MACHINE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="playWithoutDevice:" destination="s6h-Zo-tC7" eventType="touchUpInside" id="NzE-cq-UGr"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TenCups" translatesAutoresizingMaskIntoConstraints="NO" id="8uS-Yp-wvg">
-                                <rect key="frame" x="31" y="647" width="83" height="60.333333333333371"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8uS-Yp-wvg" secondAttribute="height" multiplier="160:117" id="Brh-KZ-aHE"/>
-                                </constraints>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJd-RF-aiZ">
-                                <rect key="frame" x="0.0" y="109" width="414" height="403"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BlueCell" rowHeight="98" id="LJh-m2-NaE" customClass="PeripheralTableViewCell" customModule="Planet_Pong" customModuleProvider="target">
@@ -110,12 +195,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oe-26-u35">
-                                <rect key="frame" x="155.33333333333334" y="511.99999999999994" width="103.33333333333334" height="110.33333333333331"/>
-                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0C-I3-lok" userLabel="BackButton">
                                 <rect key="frame" x="10" y="10" width="62" height="62"/>
                                 <constraints>
@@ -145,32 +224,22 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" multiplier="0.35" id="1YW-cO-GsJ"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.15" id="3Y0-VY-7LF"/>
-                            <constraint firstItem="nA6-Et-Wof" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="8ni-Ao-Fem"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="leading" secondItem="M0w-Ty-hJr" secondAttribute="leading" constant="10" id="Aww-nJ-QIC"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.9" id="BCi-bM-JEJ"/>
                             <constraint firstItem="c0C-I3-lok" firstAttribute="top" secondItem="M0w-Ty-hJr" secondAttribute="top" constant="10" id="BaN-bg-HUA"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="C9z-Z5-zq4"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" multiplier="0.05" id="FNt-or-wgA"/>
                             <constraint firstItem="m8J-wc-UYT" firstAttribute="top" secondItem="M0w-Ty-hJr" secondAttribute="top" constant="10" id="FgI-ys-Kb4"/>
-                            <constraint firstItem="nA6-Et-Wof" firstAttribute="top" secondItem="3Oe-26-u35" secondAttribute="bottom" id="GLu-eC-Sxu"/>
-                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.2" id="JbN-vl-kpk"/>
-                            <constraint firstItem="3Oe-26-u35" firstAttribute="height" secondItem="M0w-Ty-hJr" secondAttribute="height" multiplier="0.15" id="K5S-bQ-7au"/>
                             <constraint firstItem="iJd-RF-aiZ" firstAttribute="top" secondItem="4ds-nP-9MJ" secondAttribute="bottom" id="Kv7-E0-PYi"/>
                             <constraint firstItem="m8J-wc-UYT" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.15" id="MEi-G8-yF6"/>
-                            <constraint firstItem="nA6-Et-Wof" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" multiplier="1.825" id="MuV-Am-fzB"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="OFT-z6-LII"/>
                             <constraint firstAttribute="trailing" secondItem="m8J-wc-UYT" secondAttribute="trailing" constant="10" id="OZk-Wf-uSj"/>
-                            <constraint firstItem="8uS-Yp-wvg" firstAttribute="centerY" secondItem="M0w-Ty-hJr" secondAttribute="centerY" multiplier="1.84" id="QAC-HK-aRy"/>
-                            <constraint firstItem="3Oe-26-u35" firstAttribute="centerX" secondItem="M0w-Ty-hJr" secondAttribute="centerX" id="QVm-fz-arf"/>
                             <constraint firstItem="iJd-RF-aiZ" firstAttribute="leading" secondItem="M0w-Ty-hJr" secondAttribute="leading" id="S69-FI-myd"/>
-                            <constraint firstItem="3Oe-26-u35" firstAttribute="top" secondItem="iJd-RF-aiZ" secondAttribute="bottom" id="WHa-al-syC"/>
-                            <constraint firstItem="nA6-Et-Wof" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.95" id="adk-Ue-weu"/>
                             <constraint firstItem="4ds-nP-9MJ" firstAttribute="top" secondItem="GNT-Np-hW7" secondAttribute="bottom" id="fEy-rn-chI"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="bottom" secondItem="c0C-I3-lok" secondAttribute="bottom" id="fqn-k2-nke"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="top" secondItem="c0C-I3-lok" secondAttribute="top" id="noC-0T-98l"/>
-                            <constraint firstItem="3Oe-26-u35" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.25" id="vBq-gk-YjC"/>
+                            <constraint firstAttribute="bottom" secondItem="iJd-RF-aiZ" secondAttribute="bottom" id="tZM-JE-sFS"/>
                             <constraint firstAttribute="trailing" secondItem="iJd-RF-aiZ" secondAttribute="trailing" id="vEz-UJ-4BT"/>
                             <constraint firstItem="GNT-Np-hW7" firstAttribute="width" secondItem="M0w-Ty-hJr" secondAttribute="width" multiplier="0.65" id="vsc-Wg-ciJ"/>
                         </constraints>
@@ -189,7 +258,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="baseTableView" destination="iJd-RF-aiZ" id="Bqn-an-Cdy"/>
-                        <outlet property="playWithoutDeviceButton" destination="nA6-Et-Wof" id="FMK-NJ-Mq5"/>
                         <outlet property="refreshButton" destination="wI8-q6-jjP" id="Cid-ow-d87"/>
                     </connections>
                 </viewController>

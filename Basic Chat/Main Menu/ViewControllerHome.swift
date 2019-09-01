@@ -130,13 +130,13 @@ class ViewControllerHome: SpaceVibe {
         hallOfFameButton.layer.cornerRadius = 3;
     }
     
-    //Action to go to pairing screen
+    //Action for when you hit play
     @IBAction func goToPairing(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Pairing", bundle: Bundle.main)
         
-        let newViewController = (storyboard.instantiateViewController(withIdentifier: "ViewControllerPairing") as?
-            ViewControllerPairing)!
-        
+        let newViewController = (storyboard.instantiateViewController(withIdentifier: "ViewControllerBluetoothMode") as?
+            ViewControllerBluetoothMode)!
+                
         fadeOutAnimationPush(vc: newViewController)
     }
     

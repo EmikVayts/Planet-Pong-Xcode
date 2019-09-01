@@ -37,19 +37,6 @@ class ViewControllerPairing : SpaceVibe, CBCentralManagerDelegate, CBPeripheralD
     //UI
     @IBOutlet weak var baseTableView: UITableView!
     @IBOutlet weak var refreshButton: UIBarButtonItem!
-    @IBOutlet weak var playWithoutDeviceButton: UIButton!
-    
-    //Go to the new game without all the bluetooth stuff
-    @IBAction func playWithoutDevice(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "GameSettings", bundle: nil)
-        
-        let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGameSettings") as! ViewControllerGameSettings
-        newViewController.bluetoothEnabled = false
-        
-        fadeOutAnimationPush(vc: newViewController)
-        
-        print("Go to gamemode war without bluetooth functionality")
-    }
     
     //Start the scan for new devices
     @IBAction func refreshButton(_ sender: Any) {
@@ -65,11 +52,6 @@ class ViewControllerPairing : SpaceVibe, CBCentralManagerDelegate, CBPeripheralD
         self.baseTableView.delegate = self
         self.baseTableView.dataSource = self
         self.baseTableView.reloadData()
-        
-        //Style the button
-        playWithoutDeviceButton.layer.borderColor = UIColor.white.cgColor;
-        playWithoutDeviceButton.layer.borderWidth = 1;
-        playWithoutDeviceButton.layer.cornerRadius = 3;
         
         /*Our key player in this app will be our CBCentralManager. CBCentralManager objects are used to manage discovered or connected remote peripheral devices (represented by CBPeripheral objects), including scanning for, discovering, and connecting to advertising peripherals.
          */

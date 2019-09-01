@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Myriad Pro Semibold.ttf">
+            <string>MyriadPro-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller Login-->
+        <scene sceneID="wM9-Gn-O8J">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OB4-JS-56o" customClass="ViewControllerLogin" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CVv-cF-aPb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Ra-Us-L3H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BDb-Zd-D9d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLV-Cn-bPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.7391304347827" y="111.83035714285714"/>
+        </scene>
+        <!--View Controller Register-->
+        <scene sceneID="IKd-bF-TLo">
+            <objects>
+                <viewController storyboardIdentifier="ViewControllerRegister" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sxm-85-yEt" customClass="ViewControllerRegister" customModule="Planet_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqU-9A-GJ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZ8-nA-Nio" userLabel="Email">
+                                <rect key="frame" x="41.5" y="147.5" width="331" height="41"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amu-Gd-m5I" userLabel="Password">
+                                <rect key="frame" x="41.5" y="203.5" width="331" height="41"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-xI-qUz">
+                                <rect key="frame" x="103.5" y="407" width="207" height="82"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="30"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressRegister:" destination="sxm-85-yEt" eventType="touchUpInside" id="Dnn-B8-fs3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJU-PO-xs1" userLabel="Username">
+                                <rect key="frame" x="41.5" y="91.5" width="331" height="41"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Semibold" family="Myriad Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="amu-Gd-m5I" firstAttribute="top" secondItem="FZ8-nA-Nio" secondAttribute="bottom" constant="15" id="Ewg-ZK-3M0"/>
+                            <constraint firstItem="FZ8-nA-Nio" firstAttribute="centerX" secondItem="hqU-9A-GJ4" secondAttribute="centerX" id="Mai-Sv-OAm"/>
+                            <constraint firstItem="WJU-PO-xs1" firstAttribute="height" secondItem="mwh-BK-5Dc" secondAttribute="height" multiplier="0.05" id="ROY-kK-OoV"/>
+                            <constraint firstItem="amu-Gd-m5I" firstAttribute="height" secondItem="mwh-BK-5Dc" secondAttribute="height" multiplier="0.05" id="Vcp-8b-gFh"/>
+                            <constraint firstItem="qWz-xI-qUz" firstAttribute="centerY" secondItem="hqU-9A-GJ4" secondAttribute="centerY" id="a2w-aq-Z0u"/>
+                            <constraint firstItem="qWz-xI-qUz" firstAttribute="centerX" secondItem="hqU-9A-GJ4" secondAttribute="centerX" id="aRY-rl-BGZ"/>
+                            <constraint firstItem="qWz-xI-qUz" firstAttribute="width" secondItem="mwh-BK-5Dc" secondAttribute="width" multiplier="0.5" id="b9A-iR-jiO"/>
+                            <constraint firstItem="FZ8-nA-Nio" firstAttribute="height" secondItem="mwh-BK-5Dc" secondAttribute="height" multiplier="0.05" id="dzB-9x-RB6"/>
+                            <constraint firstItem="amu-Gd-m5I" firstAttribute="centerX" secondItem="hqU-9A-GJ4" secondAttribute="centerX" id="e1j-iY-drM"/>
+                            <constraint firstItem="FZ8-nA-Nio" firstAttribute="width" secondItem="mwh-BK-5Dc" secondAttribute="width" multiplier="0.8" id="fFi-pw-aSV"/>
+                            <constraint firstItem="qWz-xI-qUz" firstAttribute="height" secondItem="mwh-BK-5Dc" secondAttribute="height" multiplier="0.1" id="jis-G3-qd5"/>
+                            <constraint firstItem="WJU-PO-xs1" firstAttribute="centerX" secondItem="hqU-9A-GJ4" secondAttribute="centerX" id="k7d-NO-4JS"/>
+                            <constraint firstItem="WJU-PO-xs1" firstAttribute="bottom" secondItem="FZ8-nA-Nio" secondAttribute="top" constant="-15" id="qs7-wl-lUT"/>
+                            <constraint firstItem="WJU-PO-xs1" firstAttribute="centerY" secondItem="hqU-9A-GJ4" secondAttribute="centerY" multiplier="0.25" id="rUA-fw-Djf"/>
+                            <constraint firstItem="WJU-PO-xs1" firstAttribute="width" secondItem="mwh-BK-5Dc" secondAttribute="width" multiplier="0.8" id="sGP-jW-GmJ"/>
+                            <constraint firstItem="amu-Gd-m5I" firstAttribute="width" secondItem="mwh-BK-5Dc" secondAttribute="width" multiplier="0.8" id="yJc-28-haI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mwh-BK-5Dc"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="FZ8-nA-Nio" id="PaO-2M-S43"/>
+                        <outlet property="passwordField" destination="amu-Gd-m5I" id="lmb-kh-Jxq"/>
+                        <outlet property="usernameField" destination="WJU-PO-xs1" id="esU-3P-6yq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ9-kL-jD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.7391304347827" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bmc-Am-6QA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="AE1-1c-4pb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1GN-XK-ICs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OB4-JS-56o" kind="relationship" relationship="rootViewController" id="n6L-OK-C0F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1f-Qf-IN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>

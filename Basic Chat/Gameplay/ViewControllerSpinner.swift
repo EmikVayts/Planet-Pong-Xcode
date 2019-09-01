@@ -92,9 +92,9 @@ class ViewControllerSpinner: SpaceVibe {
                     //SETTINGS UNIQUE TO EACH GAMEMODE
                     
                     if (self.gameSelected == "war") {
-                        let storyboard = UIStoryboard(name: "GamemodeClassic", bundle: nil)
+                        let storyboard = UIStoryboard(name: "GamemodeWar", bundle: nil)
                         
-                        newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeClassic") as! ViewControllerGamemodeClassic
+                        newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerGamemodeWar") as! ViewControllerGamemodeWar
 
                     }
                     
@@ -102,7 +102,7 @@ class ViewControllerSpinner: SpaceVibe {
                     
                     newViewController!.bluetoothEnabled = false
                     
-                    newViewController!.numPlayers = 4//self.numPlayers
+                    newViewController!.numPlayers = 3//self.numPlayers
                     
                     newViewController!.playerPerTeam = self.playerPerTeam
                     

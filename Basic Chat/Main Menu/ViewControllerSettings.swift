@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Firebase
 
 class ViewControllerSettings: SpaceVibe {
     
@@ -32,7 +31,36 @@ class ViewControllerSettings: SpaceVibe {
         //}
     }
     
+    @IBAction func loginPressed(_ sender: Any) {
+        //let authUI = FUIAuth.defaultAuthUI()
+        
+        //guard authUI != nil else {
+        //    return
+        //}
+        
+        //authUI?.delegate = self
+        
+        //let authViewController = authUI!.authViewController()
+        let storyboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+        guard let newViewController = storyboard.instantiateViewController(withIdentifier: "ViewControllerRegister") as?
+            ViewControllerRegister else {
+                return
+        }
+        
+        fadeOutAnimationPush(vc: newViewController)
+    }
+    
     @IBAction func `return`(_ sender: Any) {
         fadeOutAnimationPop()
     }
 }
+
+/*extension SpaceVibe: FUIAuthDelegate {
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?,error: Error?) {
+        guard error == nil else {
+            return
+        }
+        
+        //authDataResult?.user.uid
+    }
+}*/

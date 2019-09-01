@@ -35,9 +35,19 @@ class UndoTurn {
         self.cupConfiguration = cupConfiguration
     }
     
+    
+    //Make
     init(moveType: String, cupChanged: Int) {
         self.moveType = moveType
         self.cupChanged = cupChanged
+    }
+    
+    //Make with lastcup hit
+    init(moveType: String, cupChanged: Int, finalRound: Int, lastCup: Int) {
+        self.moveType = moveType
+        self.cupChanged = cupChanged
+        self.finalRound = finalRound
+        self.lastCup = lastCup
     }
     
     init(moveType: String, cupChanged: Int, prevCupColor: Int) {
@@ -128,6 +138,7 @@ class ViewControllerGamemode: SpaceVibe, CBPeripheralManagerDelegate {
     var playerColors = [UIColor.red, UIColor.green, UIColor.purple, UIColor.blue]
     var playerColorsNum = [1, 2, 3, 4]
     var playerPerTeam = 1
+    var shotsPerPlayer = 1
     
     //Tracking how many cups each player has, useful for some gamemodes
     var cupsRemaining = [1, 1, 1, 1]
@@ -157,7 +168,7 @@ class ViewControllerGamemode: SpaceVibe, CBPeripheralManagerDelegate {
     var blackOverlay:UIView?
     var quitButton:UIButton?
     
-    //Game condition
+    //Game condition to see when the game is over
     var lastCup = -1
     var finalRound = -1
     

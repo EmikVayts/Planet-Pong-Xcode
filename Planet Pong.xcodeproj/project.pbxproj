@@ -113,6 +113,7 @@
 		0499223522FC795400735F7D /* greenPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223422FC795400735F7D /* greenPlanet.png */; };
 		0499223722FC795900735F7D /* bluePlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223622FC795800735F7D /* bluePlanet.png */; };
 		0499223922FC795F00735F7D /* redPlanet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0499223822FC795F00735F7D /* redPlanet.png */; };
+		049A51592318BD9E007D28ED /* ViewControllerBluetoothMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A51582318BD9E007D28ED /* ViewControllerBluetoothMode.swift */; };
 		049ACEC92305135800A551F3 /* ScreenTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ACEC82305135800A551F3 /* ScreenTransitions.swift */; };
 		04A40D7E2315F62800CFC0D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */; };
 		04CE8F0722E432CC0049138E /* ViewControllerRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CE8F0622E432CC0049138E /* ViewControllerRules.swift */; };
@@ -123,6 +124,9 @@
 		04DB86E422EFFC82007E673C /* VideoLooperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E322EFFC82007E673C /* VideoLooperView.swift */; };
 		04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB86E522EFFD9A007E673C /* VideoClip.swift */; };
 		04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */; };
+		04EAC36F2316C17100919990 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EAC36E2316C17100919990 /* Login.storyboard */; };
+		04EAC3722316C1CA00919990 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAC3712316C1CA00919990 /* ViewControllerLogin.swift */; };
+		04EAC3742316C2E100919990 /* ViewControllerRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EAC3732316C2E100919990 /* ViewControllerRegister.swift */; };
 		04F6BE98230E413100B9C023 /* ViewControllerGamemode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6BE97230E413100B9C023 /* ViewControllerGamemode.swift */; };
 		7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */; };
 		B1A0C03A91272541C6B0FDD6 /* Pods_Planet_Pong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */; };
@@ -250,6 +254,7 @@
 		0499223422FC795400735F7D /* greenPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = greenPlanet.png; path = "Basic Chat/Graphics/greenPlanet.png"; sourceTree = SOURCE_ROOT; };
 		0499223622FC795800735F7D /* bluePlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluePlanet.png; path = "Basic Chat/Graphics/bluePlanet.png"; sourceTree = SOURCE_ROOT; };
 		0499223822FC795F00735F7D /* redPlanet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redPlanet.png; path = "Basic Chat/Graphics/redPlanet.png"; sourceTree = SOURCE_ROOT; };
+		049A51582318BD9E007D28ED /* ViewControllerBluetoothMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBluetoothMode.swift; sourceTree = "<group>"; };
 		049ACEC82305135800A551F3 /* ScreenTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitions.swift; sourceTree = "<group>"; };
 		04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04CE8F0622E432CC0049138E /* ViewControllerRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRules.swift; sourceTree = "<group>"; };
@@ -261,6 +266,9 @@
 		04DB86E522EFFD9A007E673C /* VideoClip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoClip.swift; sourceTree = "<group>"; };
 		04DED16122FF1307000D9928 /* Myriad Pro Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Myriad Pro Semibold.ttf"; path = "Myriad Pro/Myriad Pro Semibold.ttf"; sourceTree = "<group>"; };
 		04E0570122EEA2DC00AAD456 /* ViewControllerHallOfFame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHallOfFame.swift; sourceTree = "<group>"; };
+		04EAC36E2316C17100919990 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		04EAC3712316C1CA00919990 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLogin.swift; sourceTree = "<group>"; };
+		04EAC3732316C2E100919990 /* ViewControllerRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRegister.swift; sourceTree = "<group>"; };
 		04F6BE97230E413100B9C023 /* ViewControllerGamemode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemode.swift; sourceTree = "<group>"; };
 		1C17D20A246241E38D6F83C3 /* Pods_Planet_Pong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Planet_Pong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA0D5932259653500D999BB /* ViewControllerGamemodeClassic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGamemodeClassic.swift; sourceTree = "<group>"; };
@@ -338,6 +346,7 @@
 				D5B24DEF1DEF153A00D33B5A /* PeripheralTableViewCell.swift */,
 				D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */,
 				D50657231DF2F4C8002B7557 /* UUIDKey.swift */,
+				049A51582318BD9E007D28ED /* ViewControllerBluetoothMode.swift */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -624,6 +633,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		04EAC3702316C17B00919990 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04EAC36E2316C17100919990 /* Login.storyboard */,
+				04EAC3712316C1CA00919990 /* ViewControllerLogin.swift */,
+				04EAC3732316C2E100919990 /* ViewControllerRegister.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		21408B3B462819635B24DC53 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +682,7 @@
 		D5B24DDA1DEE393B00D33B5A /* Basic Chat */ = {
 			isa = PBXGroup;
 			children = (
+				04EAC3702316C17B00919990 /* Login */,
 				04A40D7D2315F62800CFC0D1 /* GoogleService-Info.plist */,
 				046E00ED23091FB7000029D8 /* Graphic Effects */,
 				046E004223091B83000029D8 /* Graphics */,
@@ -696,6 +716,7 @@
 				D5B24DD51DEE393B00D33B5A /* Frameworks */,
 				D5B24DD61DEE393B00D33B5A /* Resources */,
 				868C0701DB2D45C982B35011 /* [CP] Embed Pods Frameworks */,
+				8CC9CCE415F96587F7837660 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -758,6 +779,7 @@
 				046E00AD23091B83000029D8 /* BackArrowIcon.png in Resources */,
 				046E00C423091B83000029D8 /* purplefadebackground.png in Resources */,
 				046E00C323091B83000029D8 /* starsbackground.png in Resources */,
+				04EAC36F2316C17100919990 /* Login.storyboard in Resources */,
 				046E00C923091B83000029D8 /* Icon-App-40x40@1x.png in Resources */,
 				046E00A823091B83000029D8 /* Pantsdown@0.5x.png in Resources */,
 				046E00C023091B83000029D8 /* unnamed.jpg in Resources */,
@@ -884,21 +906,69 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/StatusAlert/StatusAlert.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StatusAlert.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CC9CCE415F96587F7837660 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Planet Pong/Pods-Planet Pong-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -920,6 +990,7 @@
 				044DAC7D230267AE00BCA1C1 /* ViewControllerGamemodeWar.swift in Sources */,
 				7DA0D5942259653500D999BB /* ViewControllerGamemodeClassic.swift in Sources */,
 				046E00F3230A604F000029D8 /* ViewControllerSpinner.swift in Sources */,
+				04EAC3742316C2E100919990 /* ViewControllerRegister.swift in Sources */,
 				04E0570222EEA2DC00AAD456 /* ViewControllerHallOfFame.swift in Sources */,
 				046E00EF23091FDC000029D8 /* SpaceVibe.swift in Sources */,
 				040E756F22AF49D700E4B1F7 /* ViewControllerGamemodeSelection.swift in Sources */,
@@ -929,9 +1000,11 @@
 				0482ADD722BFF0F700D6FF10 /* ViewControllerScores.swift in Sources */,
 				0457BBCA22F2A80600188610 /* ViewControllerRulesController.swift in Sources */,
 				D50657261DF45E04002B7557 /* UartModuleViewController.swift in Sources */,
+				049A51592318BD9E007D28ED /* ViewControllerBluetoothMode.swift in Sources */,
 				D5B24DF11DEF153A00D33B5A /* PeripheralTableViewCell.swift in Sources */,
 				04DB86E622EFFD9A007E673C /* VideoClip.swift in Sources */,
 				04F6BE98230E413100B9C023 /* ViewControllerGamemode.swift in Sources */,
+				04EAC3722316C1CA00919990 /* ViewControllerLogin.swift in Sources */,
 				040E757822AF4E4D00E4B1F7 /* ViewControllerTutorial.swift in Sources */,
 				040E757422AF4D2500E4B1F7 /* ViewControllerGameSettings.swift in Sources */,
 				0474385D2311E39D00EBCDF6 /* ViewControllerSettings.swift in Sources */,

@@ -49,7 +49,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     override func viewDidAppear(_ animated: Bool) {
         self.baseTextView.text = ""
         
-        
     }
     
     override func viewDidDisappear(_ animated: Bool) {

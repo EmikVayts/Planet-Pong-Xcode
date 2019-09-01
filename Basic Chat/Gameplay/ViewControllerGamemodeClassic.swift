@@ -520,16 +520,6 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
             print("Cups remaining:")
             print(cupsRemaining[turn])
             
-            //Check for final cup hit
-            if (cupsRemaining[turn]==0) {
-                //createPopup(imageFile: "", titleText: "PLAYER \(turn+1) WINS", messageText: "", duration: 2)
-                if (finalRound == -1) {
-                    print("Setting the final round due to no cups remaining!")
-                    finalRound = round
-                    lastCup = turn
-                }
-            }
-            
             self.previousShotMade = false
             
             //Check if an island cup was hit
@@ -554,7 +544,17 @@ class ViewControllerGamemodeClassic: ViewControllerGamemode {
                 }
             }
             
-            undoArray.append(UndoTurn(moveType: "make", cupChanged: cupNumber))
+            undoArray.append(UndoTurn(moveType: "make", cupChanged: cupNumber, finalRound: finalRound, lastCup: lastCup))
+            
+            //Check for game condition if final cup hit
+            if (cupsRemaining[turn]==0) {
+                //createPopup(imageFile: "", titleText: "PLAYER \(turn+1) WINS", messageText: "", duration: 2)
+                if (finalRound == -1) {
+                    print("Setting the final round due to no cups remaining!")
+                    finalRound = round
+                    lastCup = turn
+                }
+            }
             
             islandCheck()
             
