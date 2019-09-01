@@ -14,6 +14,4 @@ target 'Planet Pong' do
     
     pod 'Firebase/Database'
     
-    pod 'FirebaseUI'
-
 end
