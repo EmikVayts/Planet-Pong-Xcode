@@ -1,3 +1,5 @@
-# Basic-Chat
-Bluetooth Low Energy App for iOS using Swift.
-Looking to learn how Bluetooth Low Energy works in iOS & Swift 3? Well look no farther, we've got what you've been waiting for!
+# Planet Pong
+
+This is the first version of my cup pong app, Planet Pong.
+
+For more information check out https://planetpong.us
